@@ -4,563 +4,625 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Language Learning</title>
+  <style>
+    body, html {
+      height: 100%;
+    }
+
+    #prompt {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 8em;
+      font-weight: 900;
+      left: 0;
+      position: fixed;
+      right: 0;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
 </head>
 <body>
 <script>
   const data = {
-    jp: {
+    languages: [{
+      lang: 'ja-JP',
       characterSets: [{
         name: 'Katakana',
-        characters: []
+        characters: [{
+          character: 'ア',
+          sound: 'a',
+          vowel: 'A',
+          consonant: '∅',
+        }, {
+          character: 'イ',
+          sound: 'i',
+          vowel: 'I',
+          consonant: '∅',
+        }, {
+          character: 'ウ',
+          sound: 'u',
+          vowel: 'U',
+          consonant: '∅',
+        }, {
+          character: 'エ',
+          sound: 'e',
+          vowel: 'E',
+          consonant: '∅',
+        }, {
+          character: 'オ',
+          sound: 'o',
+          vowel: 'O',
+          consonant: '∅',
+        }, {
+          character: 'カ',
+          sound: 'ka',
+          vowel: 'A',
+          consonant: 'K',
+        }, {
+          character: 'キ',
+          sound: 'ki',
+          vowel: 'I',
+          consonant: 'K',
+        }, {
+          character: 'ク',
+          sound: 'ku',
+          vowel: 'U',
+          consonant: 'K',
+        }, {
+          character: 'ケ',
+          sound: 'ke',
+          vowel: 'E',
+          consonant: 'K',
+        }, {
+          character: 'コ',
+          sound: 'ko',
+          vowel: 'O',
+          consonant: 'K',
+        }, {
+          character: 'キャ',
+          sound: 'kya',
+          vowel: 'YA',
+          consonant: 'K',
+        }, {
+          character: 'キュ',
+          sound: 'kyu',
+          vowel: 'YU',
+          consonant: 'K',
+        }, {
+          character: 'キョ',
+          sound: 'kyo',
+          vowel: 'YO',
+          consonant: 'K',
+        }, {
+          character: 'サ',
+          sound: 'sa',
+          vowel: 'A',
+          consonant: 'S',
+        }, {
+          character: 'シ',
+          sound: 'shi',
+          vowel: 'I',
+          consonant: 'S',
+        }, {
+          character: 'ス',
+          sound: 'su',
+          vowel: 'U',
+          consonant: 'S',
+        }, {
+          character: 'セ',
+          sound: 'se',
+          vowel: 'E',
+          consonant: 'S',
+        }, {
+          character: 'ソ',
+          sound: 'so',
+          vowel: 'O',
+          consonant: 'S',
+        }, {
+          character: 'シャ',
+          sound: 'sha',
+          vowel: 'YA',
+          consonant: 'S',
+        }, {
+          character: 'シュ',
+          sound: 'shu',
+          vowel: 'YU',
+          consonant: 'S',
+        }, {
+          character: 'ショ',
+          sound: 'sho',
+          vowel: 'YO',
+          consonant: 'S',
+        }, {
+          character: 'タ',
+          sound: 'ta',
+          vowel: 'A',
+          consonant: 'T',
+        }, {
+          character: 'チ',
+          sound: 'chi',
+          vowel: 'I',
+          consonant: 'T',
+        }, {
+          character: 'ツ',
+          sound: 'tsu',
+          vowel: 'U',
+          consonant: 'T',
+        }, {
+          character: 'テ',
+          sound: 'te',
+          vowel: 'E',
+          consonant: 'T',
+        }, {
+          character: 'ト',
+          sound: 'to',
+          vowel: 'O',
+          consonant: 'T',
+        }, {
+          character: 'チャ',
+          sound: 'cha',
+          vowel: 'YA',
+          consonant: 'T',
+        }, {
+          character: 'チュ',
+          sound: 'chu',
+          vowel: 'YU',
+          consonant: 'T',
+        }, {
+          character: 'チョ',
+          sound: 'cho',
+          vowel: 'YO',
+          consonant: 'T',
+        }, {
+          character: 'ナ',
+          sound: 'na',
+          vowel: 'A',
+          consonant: 'N',
+        }, {
+          character: 'ニ',
+          sound: 'ni',
+          vowel: 'I',
+          consonant: 'N',
+        }, {
+          character: 'ヌ',
+          sound: 'nu',
+          vowel: 'U',
+          consonant: 'N',
+        }, {
+          character: 'ネ',
+          sound: 'ne',
+          vowel: 'E',
+          consonant: 'N',
+        }, {
+          character: 'ノ',
+          sound: 'no',
+          vowel: 'O',
+          consonant: 'N',
+        }, {
+          character: 'ニャ',
+          sound: 'nya',
+          vowel: 'YA',
+          consonant: 'N',
+        }, {
+          character: 'ニュ',
+          sound: 'nyu',
+          vowel: 'YU',
+          consonant: 'N',
+        }, {
+          character: 'ニョ',
+          sound: 'nyo',
+          vowel: 'YO',
+          consonant: 'N',
+        }, {
+          character: 'ハ',
+          sound: 'ha',
+          vowel: 'A',
+          consonant: 'H',
+        }, {
+          character: 'ヒ',
+          sound: 'hi',
+          vowel: 'I',
+          consonant: 'H',
+        }, {
+          character: 'フ',
+          sound: 'fu',
+          vowel: 'U',
+          consonant: 'H',
+        }, {
+          character: 'ヘ',
+          sound: 'he',
+          vowel: 'E',
+          consonant: 'H',
+        }, {
+          character: 'ホ',
+          sound: 'ho',
+          vowel: 'O',
+          consonant: 'H',
+        }, {
+          character: 'ヒャ',
+          sound: 'hya',
+          vowel: 'YA',
+          consonant: 'H',
+        }, {
+          character: 'ヒュ',
+          sound: 'hyu',
+          vowel: 'YU',
+          consonant: 'H',
+        }, {
+          character: 'ヒョ',
+          sound: 'hyo',
+          vowel: 'YO',
+          consonant: 'H',
+        }, {
+          character: 'マ',
+          sound: 'ma',
+          vowel: 'A',
+          consonant: 'M',
+        }, {
+          character: 'ミ',
+          sound: 'mi',
+          vowel: 'I',
+          consonant: 'M',
+        }, {
+          character: 'ム',
+          sound: 'mu',
+          vowel: 'U',
+          consonant: 'M',
+        }, {
+          character: 'メ',
+          sound: 'me',
+          vowel: 'E',
+          consonant: 'M',
+        }, {
+          character: 'モ',
+          sound: 'mo',
+          vowel: 'O',
+          consonant: 'M',
+        }, {
+          character: 'ミャ',
+          sound: 'mya',
+          vowel: 'YA',
+          consonant: 'M',
+        }, {
+          character: 'ミュ',
+          sound: 'myu',
+          vowel: 'YU',
+          consonant: 'M',
+        }, {
+          character: 'ミョ',
+          sound: 'myo',
+          vowel: 'YO',
+          consonant: 'M',
+        }, {
+          character: 'ヤ',
+          sound: 'ya',
+          vowel: 'A',
+          consonant: 'Y',
+        }, {
+          character: 'ユ',
+          sound: 'yu',
+          vowel: 'U',
+          consonant: 'Y',
+        }, {
+          character: 'ヨ',
+          sound: 'yo',
+          vowel: 'O',
+          consonant: 'Y',
+        }, {
+          character: 'ラ',
+          sound: 'ra',
+          vowel: 'A',
+          consonant: 'R',
+        }, {
+          character: 'リ',
+          sound: 'ri',
+          vowel: 'I',
+          consonant: 'R',
+        }, {
+          character: 'ル',
+          sound: 'ru',
+          vowel: 'U',
+          consonant: 'R',
+        }, {
+          character: 'レ',
+          sound: 're',
+          vowel: 'E',
+          consonant: 'R',
+        }, {
+          character: 'ロ',
+          sound: 'ro',
+          vowel: 'O',
+          consonant: 'R',
+        }, {
+          character: 'リャ',
+          sound: 'rya',
+          vowel: 'YA',
+          consonant: 'R',
+        }, {
+          character: 'リュ',
+          sound: 'ryu',
+          vowel: 'YU',
+          consonant: 'R',
+        }, {
+          character: 'リョ',
+          sound: 'ryo',
+          vowel: 'YO',
+          consonant: 'R',
+        }, {
+          character: 'ワ',
+          sound: 'wa',
+          vowel: 'A',
+          consonant: 'W',
+        }, {
+          character: 'ヰ',
+          sound: 'wi',
+          vowel: 'I',
+          consonant: 'W',
+        }, {
+          character: 'ヱ',
+          sound: 'we',
+          vowel: 'E',
+          consonant: 'W',
+        }, {
+          character: 'ヲ',
+          sound: 'wo',
+          vowel: 'O',
+          consonant: 'W',
+        }, {
+          character: 'ン',
+          sound: 'n',
+          vowel: '∅',
+          consonant: 'N',
+        }, {
+          character: 'ガ',
+          sound: 'ga',
+          vowel: 'A',
+          consonant: 'G',
+        }, {
+          character: 'ギ',
+          sound: 'gi',
+          vowel: 'I',
+          consonant: 'G',
+        }, {
+          character: 'グ',
+          sound: 'gu',
+          vowel: 'U',
+          consonant: 'G',
+        }, {
+          character: 'ゲ',
+          sound: 'ge',
+          vowel: 'E',
+          consonant: 'G',
+        }, {
+          character: 'ゴ',
+          sound: 'go',
+          vowel: 'O',
+          consonant: 'G',
+        }, {
+          character: 'ギャ',
+          sound: 'gya',
+          vowel: 'YA',
+          consonant: 'G',
+        }, {
+          character: 'ギュ',
+          sound: 'gyu',
+          vowel: 'YU',
+          consonant: 'G',
+        }, {
+          character: 'ギョ',
+          sound: 'gyo',
+          vowel: 'YO',
+          consonant: 'G',
+        }, {
+          character: 'ザ',
+          sound: 'za',
+          vowel: 'A',
+          consonant: 'Z',
+        }, {
+          character: 'ジ',
+          sound: 'ji',
+          vowel: 'I',
+          consonant: 'Z',
+        }, {
+          character: 'ズ',
+          sound: 'zu',
+          vowel: 'U',
+          consonant: 'Z',
+        }, {
+          character: 'ゼ',
+          sound: 'ze',
+          vowel: 'E',
+          consonant: 'Z',
+        }, {
+          character: 'ゾ',
+          sound: 'zo',
+          vowel: 'O',
+          consonant: 'Z',
+        }, {
+          character: 'ジャ',
+          sound: 'ja',
+          vowel: 'YA',
+          consonant: 'Z',
+        }, {
+          character: 'ジュ',
+          sound: 'ju',
+          vowel: 'YU',
+          consonant: 'Z',
+        }, {
+          character: 'ジョ',
+          sound: 'jo',
+          vowel: 'YO',
+          consonant: 'Z',
+        }, {
+          character: 'ダ',
+          sound: 'da',
+          vowel: 'A',
+          consonant: 'D',
+        }, {
+          character: 'ヂ',
+          sound: 'ji',
+          vowel: 'I',
+          consonant: 'D',
+        }, {
+          character: 'ヅ',
+          sound: 'zu',
+          vowel: 'U',
+          consonant: 'D',
+        }, {
+          character: 'デ',
+          sound: 'de',
+          vowel: 'E',
+          consonant: 'D',
+        }, {
+          character: 'ド',
+          sound: 'do',
+          vowel: 'O',
+          consonant: 'D',
+        }, {
+          character: 'ヂャ',
+          sound: 'ja',
+          vowel: 'YA',
+          consonant: 'D',
+        }, {
+          character: 'ヂュ',
+          sound: 'ju',
+          vowel: 'YU',
+          consonant: 'D',
+        }, {
+          character: 'ヂョ',
+          sound: 'jo',
+          vowel: 'YO',
+          consonant: 'D',
+        }, {
+          character: 'バ',
+          sound: 'ba',
+          vowel: 'A',
+          consonant: 'B',
+        }, {
+          character: 'ビ',
+          sound: 'bi',
+          vowel: 'I',
+          consonant: 'B',
+        }, {
+          character: 'ブ',
+          sound: 'bu',
+          vowel: 'U',
+          consonant: 'B',
+        }, {
+          character: 'ベ',
+          sound: 'be',
+          vowel: 'E',
+          consonant: 'B',
+        }, {
+          character: 'ボ',
+          sound: 'bo',
+          vowel: 'O',
+          consonant: 'B',
+        }, {
+          character: 'ビャ',
+          sound: 'bya',
+          vowel: 'YA',
+          consonant: 'B',
+        }, {
+          character: 'ビュ',
+          sound: 'byu',
+          vowel: 'YU',
+          consonant: 'B',
+        }, {
+          character: 'ビョ',
+          sound: 'byo',
+          vowel: 'YO',
+          consonant: 'B',
+        }, {
+          character: 'パ',
+          sound: 'pa',
+          vowel: 'A',
+          consonant: 'P',
+        }, {
+          character: 'ピ',
+          sound: 'pi',
+          vowel: 'I',
+          consonant: 'P',
+        }, {
+          character: 'プ',
+          sound: 'pu',
+          vowel: 'U',
+          consonant: 'P',
+        }, {
+          character: 'ペ',
+          sound: 'pe',
+          vowel: 'E',
+          consonant: 'P',
+        }, {
+          character: 'ポ',
+          sound: 'po',
+          vowel: 'O',
+          consonant: 'P',
+        }, {
+          character: 'ピャ',
+          sound: 'pya',
+          vowel: 'YA',
+          consonant: 'P',
+        }, {
+          character: 'ピュ',
+          sound: 'pyu',
+          vowel: 'YU',
+          consonant: 'P',
+        }, {
+          character: 'ピョ',
+          sound: 'pyo',
+          vowel: 'YO',
+          consonant: 'P',
+        }]
       }]
+    }]
+  };
+
+  function getVoices(language) {
+    return speechSynthesis.getVoices().filter(voice => voice.lang.startsWith(language));
+  }
+
+  function speak(text, language) {
+    const voices = language instanceof Array ? language : getVoices(language);
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.voice = voices[0];
+    utterance.rate = 2 / 3;
+    speechSynthesis.speak(utterance);
+  }
+
+  function speakIn(language) {
+    const voices = getVoices(language);
+    return function (text) {
+      speak(text, voices);
     }
   }
+
+  const state = {
+    language: 0,
+    characterSet: 0,
+    character: 0
+  };
+
+  function main() {
+    const p = document.getElementById('prompt');
+    const speakInLang = speakIn(data.languages[state.language].lang);
+    p.innerHTML = 'click';
+    document.addEventListener('click', () => {
+      const char = data.languages[state.language].characterSets[state.characterSet].characters[state.character];
+      p.innerHTML = char.character;
+      setTimeout(() => speakInLang(char.character), 500);
+      state.character++;
+    });
+  }
+
+  Promise.all([
+    new Promise((resolve, reject) => document.addEventListener('DOMContentLoaded', resolve)),
+    new Promise((resolve, reject) => speechSynthesis.addEventListener('voiceschanged', resolve))
+  ]).then(main);
 </script>
-
-character: 'ア',
-sound: 'a',
-vowel: 'A',
-consonant: '∅',
-
-character: 'イ',
-sound: 'i',
-vowel: 'I',
-consonant: '∅',
-
-character: 'ウ',
-sound: 'u',
-vowel: 'U',
-consonant: '∅',
-
-character: 'エ',
-sound: 'e',
-vowel: 'E',
-consonant: '∅',
-
-character: 'オ',
-sound: 'o',
-vowel: 'O',
-consonant: '∅',
-
-character: 'カ',
-sound: 'ka',
-vowel: 'A',
-consonant: 'K',
-
-character: 'キ',
-sound: 'ki',
-vowel: 'I',
-consonant: 'K',
-
-character: 'ク',
-sound: 'ku',
-vowel: 'U',
-consonant: 'K',
-
-character: 'ケ',
-sound: 'ke',
-vowel: 'E',
-consonant: 'K',
-
-character: 'コ',
-sound: 'ko',
-vowel: 'O',
-consonant: 'K',
-
-character: 'キャ',
-sound: 'kya',
-vowel: 'YA',
-consonant: 'K',
-
-character: 'キュ',
-sound: 'kyu',
-vowel: 'YU',
-consonant: 'K',
-
-character: 'キョ',
-sound: 'kyo',
-vowel: 'YO',
-consonant: 'K',
-
-character: 'サ',
-sound: 'sa',
-vowel: 'A',
-consonant: 'S',
-
-character: 'シ',
-sound: 'shi',
-vowel: 'I',
-consonant: 'S',
-
-character: 'ス',
-sound: 'su',
-vowel: 'U',
-consonant: 'S',
-
-character: 'セ',
-sound: 'se',
-vowel: 'E',
-consonant: 'S',
-
-character: 'ソ',
-sound: 'so',
-vowel: 'O',
-consonant: 'S',
-
-character: 'シャ',
-sound: 'sha',
-vowel: 'YA',
-consonant: 'S',
-
-character: 'シュ',
-sound: 'shu',
-vowel: 'YU',
-consonant: 'S',
-
-character: 'ショ',
-sound: 'sho',
-vowel: 'YO',
-consonant: 'S',
-
-character: 'タ',
-sound: 'ta',
-vowel: 'A',
-consonant: 'T',
-
-character: 'チ',
-sound: 'chi',
-vowel: 'I',
-consonant: 'T',
-
-character: 'ツ',
-sound: 'tsu',
-vowel: 'U',
-consonant: 'T',
-
-character: 'テ',
-sound: 'te',
-vowel: 'E',
-consonant: 'T',
-
-character: 'ト',
-sound: 'to',
-vowel: 'O',
-consonant: 'T',
-
-character: 'チャ',
-sound: 'cha',
-vowel: 'YA',
-consonant: 'T',
-
-character: 'チュ',
-sound: 'chu',
-vowel: 'YU',
-consonant: 'T',
-
-character: 'チョ',
-sound: 'cho',
-vowel: 'YO',
-consonant: 'T',
-
-character: 'ナ',
-sound: 'na',
-vowel: 'A',
-consonant: 'N',
-
-character: 'ニ',
-sound: 'ni',
-vowel: 'I',
-consonant: 'N',
-
-character: 'ヌ',
-sound: 'nu',
-vowel: 'U',
-consonant: 'N',
-
-character: 'ネ',
-sound: 'ne',
-vowel: 'E',
-consonant: 'N',
-
-character: 'ノ',
-sound: 'no',
-vowel: 'O',
-consonant: 'N',
-
-character: 'ニャ',
-sound: 'nya',
-vowel: 'YA',
-consonant: 'N',
-
-character: 'ニュ',
-sound: 'nyu',
-vowel: 'YU',
-consonant: 'N',
-
-character: 'ニョ',
-sound: 'nyo',
-vowel: 'YO',
-consonant: 'N',
-
-character: 'ハ',
-sound: 'ha',
-vowel: 'A',
-consonant: 'H',
-
-character: 'ヒ',
-sound: 'hi',
-vowel: 'I',
-consonant: 'H',
-
-character: 'フ',
-sound: 'fu',
-vowel: 'U',
-consonant: 'H',
-
-character: 'ヘ',
-sound: 'he',
-vowel: 'E',
-consonant: 'H',
-
-character: 'ホ',
-sound: 'ho',
-vowel: 'O',
-consonant: 'H',
-
-character: 'ヒャ',
-sound: 'hya',
-vowel: 'YA',
-consonant: 'H',
-
-character: 'ヒュ',
-sound: 'hyu',
-vowel: 'YU',
-consonant: 'H',
-
-character: 'ヒョ',
-sound: 'hyo',
-vowel: 'YO',
-consonant: 'H',
-
-character: 'マ',
-sound: 'ma',
-vowel: 'A',
-consonant: 'M',
-
-character: 'ミ',
-sound: 'mi',
-vowel: 'I',
-consonant: 'M',
-
-character: 'ム',
-sound: 'mu',
-vowel: 'U',
-consonant: 'M',
-
-character: 'メ',
-sound: 'me',
-vowel: 'E',
-consonant: 'M',
-
-character: 'モ',
-sound: 'mo',
-vowel: 'O',
-consonant: 'M',
-
-character: 'ミャ',
-sound: 'mya',
-vowel: 'YA',
-consonant: 'M',
-
-character: 'ミュ',
-sound: 'myu',
-vowel: 'YU',
-consonant: 'M',
-
-character: 'ミョ',
-sound: 'myo',
-vowel: 'YO',
-consonant: 'M',
-
-character: 'ヤ',
-sound: 'ya',
-vowel: 'A',
-consonant: 'Y',
-
-character: 'ユ',
-sound: 'yu',
-vowel: 'U',
-consonant: 'Y',
-
-character: 'ヨ',
-sound: 'yo',
-vowel: 'O',
-consonant: 'Y',
-
-character: 'ラ',
-sound: 'ra',
-vowel: 'A',
-consonant: 'R',
-
-character: 'リ',
-sound: 'ri',
-vowel: 'I',
-consonant: 'R',
-
-character: 'ル',
-sound: 'ru',
-vowel: 'U',
-consonant: 'R',
-
-character: 'レ',
-sound: 're',
-vowel: 'E',
-consonant: 'R',
-
-character: 'ロ',
-sound: 'ro',
-vowel: 'O',
-consonant: 'R',
-
-character: 'リャ',
-sound: 'rya',
-vowel: 'YA',
-consonant: 'R',
-
-character: 'リュ',
-sound: 'ryu',
-vowel: 'YU',
-consonant: 'R',
-
-character: 'リョ',
-sound: 'ryo',
-vowel: 'YO',
-consonant: 'R',
-
-character: 'ワ',
-sound: 'wa',
-vowel: 'A',
-consonant: 'W',
-
-character: 'ヰ',
-sound: 'wi',
-vowel: 'I',
-consonant: 'W',
-
-character: 'ヱ',
-sound: 'we',
-vowel: 'E',
-consonant: 'W',
-
-character: 'ヲ',
-sound: 'wo',
-vowel: 'O',
-consonant: 'W',
-
-character: 'ン',
-sound: 'n',
-vowel: '∅',
-consonant: 'N',
-
-character: 'ガ',
-sound: 'ga',
-vowel: 'A',
-consonant: 'G',
-
-character: 'ギ',
-sound: 'gi',
-vowel: 'I',
-consonant: 'G',
-
-character: 'グ',
-sound: 'gu',
-vowel: 'U',
-consonant: 'G',
-
-character: 'ゲ',
-sound: 'ge',
-vowel: 'E',
-consonant: 'G',
-
-character: 'ゴ',
-sound: 'go',
-vowel: 'O',
-consonant: 'G',
-
-character: 'ギャ',
-sound: 'gya',
-vowel: 'YA',
-consonant: 'G',
-
-character: 'ギュ',
-sound: 'gyu',
-vowel: 'YU',
-consonant: 'G',
-
-character: 'ギョ',
-sound: 'gyo',
-vowel: 'YO',
-consonant: 'G',
-
-character: 'ザ',
-sound: 'za',
-vowel: 'A',
-consonant: 'Z',
-
-character: 'ジ',
-sound: 'ji',
-vowel: 'I',
-consonant: 'Z',
-
-character: 'ズ',
-sound: 'zu',
-vowel: 'U',
-consonant: 'Z',
-
-character: 'ゼ',
-sound: 'ze',
-vowel: 'E',
-consonant: 'Z',
-
-character: 'ゾ',
-sound: 'zo',
-vowel: 'O',
-consonant: 'Z',
-
-character: 'ジャ',
-sound: 'ja',
-vowel: 'YA',
-consonant: 'Z',
-
-character: 'ジュ',
-sound: 'ju',
-vowel: 'YU',
-consonant: 'Z',
-
-character: 'ジョ',
-sound: 'jo',
-vowel: 'YO',
-consonant: 'Z',
-
-character: 'ダ',
-sound: 'da',
-vowel: 'A',
-consonant: 'D',
-
-character: 'ヂ',
-sound: 'ji',
-vowel: 'I',
-consonant: 'D',
-
-character: 'ヅ',
-sound: 'zu',
-vowel: 'U',
-consonant: 'D',
-
-character: 'デ',
-sound: 'de',
-vowel: 'E',
-consonant: 'D',
-
-character: 'ド',
-sound: 'do',
-vowel: 'O',
-consonant: 'D',
-
-character: 'ヂャ',
-sound: 'ja',
-vowel: 'YA',
-consonant: 'D',
-
-character: 'ヂュ',
-sound: 'ju',
-vowel: 'YU',
-consonant: 'D',
-
-character: 'ヂョ',
-sound: 'jo',
-vowel: 'YO',
-consonant: 'D',
-
-character: 'バ',
-sound: 'ba',
-vowel: 'A',
-consonant: 'B',
-
-character: 'ビ',
-sound: 'bi',
-vowel: 'I',
-consonant: 'B',
-
-character: 'ブ',
-sound: 'bu',
-vowel: 'U',
-consonant: 'B',
-
-character: 'ベ',
-sound: 'be',
-vowel: 'E',
-consonant: 'B',
-
-character: 'ボ',
-sound: 'bo',
-vowel: 'O',
-consonant: 'B',
-
-character: 'ビャ',
-sound: 'bya',
-vowel: 'YA',
-consonant: 'B',
-
-character: 'ビュ',
-sound: 'byu',
-vowel: 'YU',
-consonant: 'B',
-
-character: 'ビョ',
-sound: 'byo',
-vowel: 'YO',
-consonant: 'B',
-
-character: 'パ',
-sound: 'pa',
-vowel: 'A',
-consonant: 'P',
-
-character: 'ピ',
-sound: 'pi',
-vowel: 'I',
-consonant: 'P',
-
-character: 'プ',
-sound: 'pu',
-vowel: 'U',
-consonant: 'P',
-
-character: 'ペ',
-sound: 'pe',
-vowel: 'E',
-consonant: 'P',
-
-character: 'ポ',
-sound: 'po',
-vowel: 'O',
-consonant: 'P',
-
-character: 'ピャ',
-sound: 'pya',
-vowel: 'YA',
-consonant: 'P',
-
-character: 'ピュ',
-sound: 'pyu',
-vowel: 'YU',
-consonant: 'P',
-
-character: 'ピョ',
-sound: 'pyo',
-vowel: 'YO',
-consonant: 'P',
-
+<main>
+  <div id="prompt">Loading...</div>
+</main>
 </body>
 </html>
