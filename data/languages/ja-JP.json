@@ -1,0 +1,783 @@
+{
+  "lang": "ja-JP",
+  "characterSets": [
+    {
+      "name": "Katakana",
+      "classifications": [
+        {
+          "name": "Vowels",
+          "property": "vowel"
+        },
+        {
+          "name": "Consonants",
+          "property": "consonant"
+        }
+      ],
+      "characters": [
+        {
+          "character": "ア",
+          "roman": "a",
+          "vowel": "A",
+          "consonant": "∅",
+          "ipa": ""
+        },
+        {
+          "character": "イ",
+          "roman": "i",
+          "vowel": "I",
+          "consonant": "∅",
+          "ipa": ""
+        },
+        {
+          "character": "ウ",
+          "roman": "u",
+          "vowel": "U",
+          "consonant": "∅",
+          "ipa": ""
+        },
+        {
+          "character": "エ",
+          "roman": "e",
+          "vowel": "E",
+          "consonant": "∅",
+          "ipa": ""
+        },
+        {
+          "character": "オ",
+          "roman": "o",
+          "vowel": "O",
+          "consonant": "∅",
+          "ipa": ""
+        },
+        {
+          "character": "カ",
+          "roman": "ka",
+          "vowel": "A",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "キ",
+          "roman": "ki",
+          "vowel": "I",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "ク",
+          "roman": "ku",
+          "vowel": "U",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "ケ",
+          "roman": "ke",
+          "vowel": "E",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "コ",
+          "roman": "ko",
+          "vowel": "O",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "キャ",
+          "roman": "kya",
+          "vowel": "YA",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "キュ",
+          "roman": "kyu",
+          "vowel": "YU",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "キョ",
+          "roman": "kyo",
+          "vowel": "YO",
+          "consonant": "K",
+          "ipa": ""
+        },
+        {
+          "character": "サ",
+          "roman": "sa",
+          "vowel": "A",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "シ",
+          "roman": "shi",
+          "vowel": "I",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "ス",
+          "roman": "su",
+          "vowel": "U",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "セ",
+          "roman": "se",
+          "vowel": "E",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "ソ",
+          "roman": "so",
+          "vowel": "O",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "シャ",
+          "roman": "sha",
+          "vowel": "YA",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "シュ",
+          "roman": "shu",
+          "vowel": "YU",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "ショ",
+          "roman": "sho",
+          "vowel": "YO",
+          "consonant": "S",
+          "ipa": ""
+        },
+        {
+          "character": "タ",
+          "roman": "ta",
+          "vowel": "A",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "チ",
+          "roman": "chi",
+          "vowel": "I",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "ツ",
+          "roman": "tsu",
+          "vowel": "U",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "テ",
+          "roman": "te",
+          "vowel": "E",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "ト",
+          "roman": "to",
+          "vowel": "O",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "チャ",
+          "roman": "cha",
+          "vowel": "YA",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "チュ",
+          "roman": "chu",
+          "vowel": "YU",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "チョ",
+          "roman": "cho",
+          "vowel": "YO",
+          "consonant": "T",
+          "ipa": ""
+        },
+        {
+          "character": "ナ",
+          "roman": "na",
+          "vowel": "A",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ニ",
+          "roman": "ni",
+          "vowel": "I",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ヌ",
+          "roman": "nu",
+          "vowel": "U",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ネ",
+          "roman": "ne",
+          "vowel": "E",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ノ",
+          "roman": "no",
+          "vowel": "O",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ニャ",
+          "roman": "nya",
+          "vowel": "YA",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ニュ",
+          "roman": "nyu",
+          "vowel": "YU",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ニョ",
+          "roman": "nyo",
+          "vowel": "YO",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ハ",
+          "roman": "ha",
+          "vowel": "A",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ヒ",
+          "roman": "hi",
+          "vowel": "I",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "フ",
+          "roman": "fu",
+          "vowel": "U",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ヘ",
+          "roman": "he",
+          "vowel": "E",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ホ",
+          "roman": "ho",
+          "vowel": "O",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ヒャ",
+          "roman": "hya",
+          "vowel": "YA",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ヒュ",
+          "roman": "hyu",
+          "vowel": "YU",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "ヒョ",
+          "roman": "hyo",
+          "vowel": "YO",
+          "consonant": "H",
+          "ipa": ""
+        },
+        {
+          "character": "マ",
+          "roman": "ma",
+          "vowel": "A",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ミ",
+          "roman": "mi",
+          "vowel": "I",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ム",
+          "roman": "mu",
+          "vowel": "U",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "メ",
+          "roman": "me",
+          "vowel": "E",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "モ",
+          "roman": "mo",
+          "vowel": "O",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ミャ",
+          "roman": "mya",
+          "vowel": "YA",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ミュ",
+          "roman": "myu",
+          "vowel": "YU",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ミョ",
+          "roman": "myo",
+          "vowel": "YO",
+          "consonant": "M",
+          "ipa": ""
+        },
+        {
+          "character": "ヤ",
+          "roman": "ya",
+          "vowel": "A",
+          "consonant": "Y",
+          "ipa": ""
+        },
+        {
+          "character": "ユ",
+          "roman": "yu",
+          "vowel": "U",
+          "consonant": "Y",
+          "ipa": ""
+        },
+        {
+          "character": "ヨ",
+          "roman": "yo",
+          "vowel": "O",
+          "consonant": "Y",
+          "ipa": ""
+        },
+        {
+          "character": "ラ",
+          "roman": "ra",
+          "vowel": "A",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "リ",
+          "roman": "ri",
+          "vowel": "I",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "ル",
+          "roman": "ru",
+          "vowel": "U",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "レ",
+          "roman": "re",
+          "vowel": "E",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "ロ",
+          "roman": "ro",
+          "vowel": "O",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "リャ",
+          "roman": "rya",
+          "vowel": "YA",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "リュ",
+          "roman": "ryu",
+          "vowel": "YU",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "リョ",
+          "roman": "ryo",
+          "vowel": "YO",
+          "consonant": "R",
+          "ipa": ""
+        },
+        {
+          "character": "ワ",
+          "roman": "wa",
+          "vowel": "A",
+          "consonant": "W",
+          "ipa": ""
+        },
+        {
+          "character": "ヰ",
+          "roman": "wi",
+          "vowel": "I",
+          "consonant": "W",
+          "ipa": ""
+        },
+        {
+          "character": "ヱ",
+          "roman": "we",
+          "vowel": "E",
+          "consonant": "W",
+          "ipa": ""
+        },
+        {
+          "character": "ヲ",
+          "roman": "wo",
+          "vowel": "O",
+          "consonant": "W",
+          "ipa": ""
+        },
+        {
+          "character": "ン",
+          "roman": "n",
+          "vowel": "∅",
+          "consonant": "N",
+          "ipa": ""
+        },
+        {
+          "character": "ガ",
+          "roman": "ga",
+          "vowel": "A",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ギ",
+          "roman": "gi",
+          "vowel": "I",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "グ",
+          "roman": "gu",
+          "vowel": "U",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ゲ",
+          "roman": "ge",
+          "vowel": "E",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ゴ",
+          "roman": "go",
+          "vowel": "O",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ギャ",
+          "roman": "gya",
+          "vowel": "YA",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ギュ",
+          "roman": "gyu",
+          "vowel": "YU",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ギョ",
+          "roman": "gyo",
+          "vowel": "YO",
+          "consonant": "G",
+          "ipa": ""
+        },
+        {
+          "character": "ザ",
+          "roman": "za",
+          "vowel": "A",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ジ",
+          "roman": "ji",
+          "vowel": "I",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ズ",
+          "roman": "zu",
+          "vowel": "U",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ゼ",
+          "roman": "ze",
+          "vowel": "E",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ゾ",
+          "roman": "zo",
+          "vowel": "O",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ジャ",
+          "roman": "ja",
+          "vowel": "YA",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ジュ",
+          "roman": "ju",
+          "vowel": "YU",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ジョ",
+          "roman": "jo",
+          "vowel": "YO",
+          "consonant": "Z",
+          "ipa": ""
+        },
+        {
+          "character": "ダ",
+          "roman": "da",
+          "vowel": "A",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ヂ",
+          "roman": "ji",
+          "vowel": "I",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ヅ",
+          "roman": "zu",
+          "vowel": "U",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "デ",
+          "roman": "de",
+          "vowel": "E",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ド",
+          "roman": "do",
+          "vowel": "O",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ヂャ",
+          "roman": "ja",
+          "vowel": "YA",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ヂュ",
+          "roman": "ju",
+          "vowel": "YU",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "ヂョ",
+          "roman": "jo",
+          "vowel": "YO",
+          "consonant": "D",
+          "ipa": ""
+        },
+        {
+          "character": "バ",
+          "roman": "ba",
+          "vowel": "A",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ビ",
+          "roman": "bi",
+          "vowel": "I",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ブ",
+          "roman": "bu",
+          "vowel": "U",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ベ",
+          "roman": "be",
+          "vowel": "E",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ボ",
+          "roman": "bo",
+          "vowel": "O",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ビャ",
+          "roman": "bya",
+          "vowel": "YA",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ビュ",
+          "roman": "byu",
+          "vowel": "YU",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "ビョ",
+          "roman": "byo",
+          "vowel": "YO",
+          "consonant": "B",
+          "ipa": ""
+        },
+        {
+          "character": "パ",
+          "roman": "pa",
+          "vowel": "A",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ピ",
+          "roman": "pi",
+          "vowel": "I",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "プ",
+          "roman": "pu",
+          "vowel": "U",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ペ",
+          "roman": "pe",
+          "vowel": "E",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ポ",
+          "roman": "po",
+          "vowel": "O",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ピャ",
+          "roman": "pya",
+          "vowel": "YA",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ピュ",
+          "roman": "pyu",
+          "vowel": "YU",
+          "consonant": "P",
+          "ipa": ""
+        },
+        {
+          "character": "ピョ",
+          "roman": "pyo",
+          "vowel": "YO",
+          "consonant": "P",
+          "ipa": ""
+        }
+      ]
+    }
+  ]
+}

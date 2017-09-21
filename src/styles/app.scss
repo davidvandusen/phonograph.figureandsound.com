@@ -1,0 +1,156 @@
+* {
+  user-select: none;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+}
+
+button {
+  background: rgb(0, 109, 149);
+  border: 0;
+  border-radius: 14px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 7px 28px;
+}
+
+%interactable {
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+%activatable-row {
+  padding: 14px 28px 14px 21px;
+  position: relative;
+
+  &.active:after {
+    content: '●';
+    position: absolute;
+    right: 21px;
+    top: 14px;
+  }
+}
+
+%disableable-item {
+  padding: 7px;
+
+  &.disabled {
+    background: rgba(0, 0, 0, 0.0675);
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.language,
+.character-set {
+  @extend %interactable;
+  @extend %activatable-row;
+}
+
+.character-classification-name {
+  font-weight: 800;
+  padding: 14px 21px 7px;
+}
+
+.character-classification-values {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px 14px 14px;
+}
+
+.character-classification-value {
+  @extend %interactable;
+  @extend %disableable-item;
+
+  min-width: 21px;
+  text-align: center;
+}
+
+.group-action {
+  color: rgba(0,0,0,0.5);
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 7px;
+
+  &:hover {
+    color: rgba(0,0,0,0.75);
+  }
+}
+
+.display-character {
+  animation: show-character 1 125ms;
+  font-size: 161px;
+  line-height: 1;
+  text-align: center;
+
+  &.dismiss {
+    animation: hide-character 1 125ms;
+    opacity: 0;
+  }
+}
+
+.display-character-response input {
+  border: 1px solid rgba(0,0,0,0.25);
+  font-size: 21px;
+  padding: 6px;
+  text-align: center;
+}
+
+@keyframes show-character {
+  0% {
+    opacity: 0;
+    transform: translateX(49px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide-character {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-49px);
+  }
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-grow: 1;
+  height: 100vh;
+  justify-content: center;
+}
+
+.settings {
+  background: rgb(255, 255, 255);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100vh;
+  max-width: 360px;
+  overflow: auto;
+  width: 38.196601125%;
+}
