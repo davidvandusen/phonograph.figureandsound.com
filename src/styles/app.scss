@@ -144,6 +144,21 @@ button {
   flex-grow: 1;
   height: 100vh;
   justify-content: center;
+  position: relative;
+}
+
+.player-controls {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.player-control {
+  @extend %interactable;
+  @extend %disableable-item;
 }
 
 .settings {

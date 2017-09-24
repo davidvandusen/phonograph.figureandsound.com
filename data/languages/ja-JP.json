@@ -617,20 +617,6 @@
           "ipa": ""
         },
         {
-          "character": "ヂ",
-          "roman": "ji",
-          "vowel": "I",
-          "consonant": "D",
-          "ipa": ""
-        },
-        {
-          "character": "ヅ",
-          "roman": "zu",
-          "vowel": "U",
-          "consonant": "D",
-          "ipa": ""
-        },
-        {
           "character": "デ",
           "roman": "de",
           "vowel": "E",
@@ -641,27 +627,6 @@
           "character": "ド",
           "roman": "do",
           "vowel": "O",
-          "consonant": "D",
-          "ipa": ""
-        },
-        {
-          "character": "ヂャ",
-          "roman": "ja",
-          "vowel": "YA",
-          "consonant": "D",
-          "ipa": ""
-        },
-        {
-          "character": "ヂュ",
-          "roman": "ju",
-          "vowel": "YU",
-          "consonant": "D",
-          "ipa": ""
-        },
-        {
-          "character": "ヂョ",
-          "roman": "jo",
-          "vowel": "YO",
           "consonant": "D",
           "ipa": ""
         },

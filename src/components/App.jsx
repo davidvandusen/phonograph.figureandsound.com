@@ -13,9 +13,12 @@ class App extends Component {
       languages: null,
       language: null,
       characterSet: null,
-      character: null,
-      characterTransition: false,
-      disabledClassifications: null
+      characterPosition: null,
+      characterOrder: null,
+      disabledClassifications: null,
+      shuffle: false,
+      repeat: false,
+      response: ''
     };
   }
 
@@ -64,15 +67,17 @@ class App extends Component {
   }
 
   getLanguage() {
-    return this.state.language !== null ? this.state.languages[this.state.language] : null;
+    return this.state.languages[this.state.language];
   }
 
   setLanguage(idx) {
-    this.loadLanguage(this.state.languages[idx].lang).then(() => this.setState({
+    const language = this.state.languages[idx];
+    this.loadLanguage(language.lang).then(() => this.setState({
       language: idx,
       characterSet: null,
-      disabledClasses: null,
-      character: null
+      disabledClassifications: null,
+      characterOrder: null,
+      characterPosition: null
     }));
   }
 
@@ -91,11 +96,24 @@ class App extends Component {
     const characterSet = characterSets[idx];
     const disabledClassifications = {};
     characterSet.classifications.forEach(classification => disabledClassifications[classification.property] = []);
+    const characterOrder = Object.keys(characterSet.characters);
     this.setState({
       characterSet: idx,
       disabledClassifications,
-      character: null
+      characterOrder,
+      characterPosition: null
     });
+  }
+
+  shuffledCharacters() {
+    const characterOrder = [];
+    const defaultOrder = Object.keys(this.getCharacterSet().characters);
+    while (defaultOrder.length) {
+      const i = Math.floor(Math.random() * defaultOrder.length);
+      characterOrder.push(defaultOrder[i]);
+      defaultOrder.splice(i, 1);
+    }
+    return characterOrder;
   }
 
   getClassificationValues(property) {
@@ -105,9 +123,11 @@ class App extends Component {
     }, []);
   }
 
-  getCharacter() {
+  getCharacter(position) {
     const characters = this.getCharacterSet().characters;
-    return characters[this.state.character];
+    const characterPosition = position === undefined ? this.state.characterPosition : position;
+    const characterIndex = this.state.characterOrder[characterPosition];
+    return characters[characterIndex];
   }
 
   toggleClassification(property, value) {
@@ -124,9 +144,8 @@ class App extends Component {
     values.forEach(value => this.toggleClassification(property, value));
   }
 
-  characterExcluded(idx) {
-    const characters = this.getCharacterSet().characters;
-    const character = characters[idx];
+  characterExcluded(position) {
+    const character = this.getCharacter(position);
     for (const property in this.state.disabledClassifications) {
       const classification = this.state.disabledClassifications[property];
       if (classification.includes(character[property])) return true;
@@ -136,20 +155,34 @@ class App extends Component {
 
   advanceCharacter() {
     const characters = this.getCharacterSet().characters;
-    let character = this.state.character;
-    if (character === null) character = 0;
-    else character++;
-    while (character < characters.length && this.characterExcluded(character)) character++;
-    if (character === characters.length) character = null;
+    let characterPosition = this.state.characterPosition;
+    let fromBegining = false;
+    if (characterPosition === null) {
+      fromBegining = true;
+      characterPosition = 0;
+    } else {
+      characterPosition++;
+    }
+    while (characterPosition < characters.length && this.characterExcluded(characterPosition)) {
+      characterPosition++;
+    }
+    if (characterPosition === characters.length) {
+      if (fromBegining) {
+        return Promise.reject('All characters have been excluded. Enable some character sets.');
+      }
+      characterPosition = null;
+    }
     return new Promise((resolve, reject) => {
-      this.setState({
-        character,
-        characterTransition: false
-      }, resolve);
+      this.setState({characterPosition: characterPosition}, resolve);
     });
   }
 
   startQuiz() {
+    if (this.state.shuffle) {
+      this.setState({
+        characterOrder: this.shuffledCharacters()
+      });
+    }
     this.advanceCharacter().then(() => {
       this.responseInput.focus();
     });
@@ -158,22 +191,28 @@ class App extends Component {
   moveToNextCharacter() {
     const character = this.getCharacter();
     const language = this.getLanguage();
-    speak(character.character, language.lang);
-    setTimeout(() => {
-      this.setState({characterTransition: true});
-    }, 500);
-    setTimeout(() => {
-      this.responseInput.value = '';
-      this.advanceCharacter();
-    }, 750);
+    speak(character.character, language.lang).then(() => {
+      this.setState({response: ''}, () => {
+        this.advanceCharacter();
+      });
+    });
   }
 
-  typeResponse() {
-    const value = this.responseInput.value;
-    const character = this.getCharacter();
-    if (value.toLowerCase() === character.roman.toLowerCase()) {
-      this.moveToNextCharacter();
-    }
+  onResponseType() {
+    this.setState({response: this.responseInput.value}, () => {
+      const character = this.getCharacter();
+      if (this.state.response.toLowerCase() === character.roman.toLowerCase()) {
+        this.moveToNextCharacter();
+      }
+    });
+  }
+
+  toggleRepeat() {
+    this.setState({repeat: !this.state.repeat});
+  }
+
+  toggleShuffle() {
+    this.setState({shuffle: !this.state.shuffle});
   }
 
   renderMainUI() {
@@ -230,18 +269,29 @@ class App extends Component {
           )}
         </div>
         <div className="content">
-          {this.state.characterSet !== null && this.state.character === null && (
+          {this.state.characterSet !== null && this.state.characterPosition === null && (
             <button onClick={() => this.startQuiz()}>Start</button>
           )}
-          {this.state.characterSet !== null && this.state.character !== null && (
-            <div className={active(this.state.characterTransition, 'display-character', 'dismiss')}>
+          {this.state.characterSet !== null && this.state.characterPosition !== null && (
+            <div className="display-character">
               <label htmlFor="response-input">{this.getCharacter().character}</label>
               <div className="display-character-response">
                 <input
-                  ref={el => this.responseInput = el}
                   id="response-input"
-                  onInput={() => this.typeResponse()}/>
+                  value={this.state.response}
+                  ref={el => this.responseInput = el}
+                  onChange={() => this.onResponseType()} />
               </div>
+            </div>
+          )}
+          {this.state.characterSet !== null && (
+            <div className="player-controls">
+              <div
+                className={disabled(!this.state.repeat, 'player-control')}
+                onClick={() => this.toggleRepeat()}>🔁</div>
+              <div
+                className={disabled(!this.state.shuffle, 'player-control')}
+                onClick={() => this.toggleShuffle()}>🔀</div>
             </div>
           )}
           {this.state.characterSet === null && (

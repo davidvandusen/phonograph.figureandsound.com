@@ -7,7 +7,10 @@ function speak(text, language) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.voice = voices[0];
   utterance.rate = 2 / 3;
-  speechSynthesis.speak(utterance);
+  return new Promise((resolve, reject) => {
+    utterance.onend = resolve;
+    speechSynthesis.speak(utterance);
+  });
 }
 
 function speakIn(language) {
