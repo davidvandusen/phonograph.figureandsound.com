@@ -1,6 +1,7 @@
 require('../styles/app.scss');
 
 import React, {Component} from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {speak} from '../lib/speechSynthesis';
 import {active, disabled} from '../lib/className';
 
@@ -105,9 +106,13 @@ class App extends Component {
     });
   }
 
+  defaultCharacterOrder() {
+    return Object.keys(this.getCharacterSet().characters);
+  }
+
   shuffledCharacters() {
     const characterOrder = [];
-    const defaultOrder = Object.keys(this.getCharacterSet().characters);
+    const defaultOrder = this.defaultCharacterOrder();
     while (defaultOrder.length) {
       const i = Math.floor(Math.random() * defaultOrder.length);
       characterOrder.push(defaultOrder[i]);
@@ -153,45 +158,60 @@ class App extends Component {
     return false;
   }
 
-  advanceCharacter() {
+  advanceCharacter(from, by = 1) {
     const characters = this.getCharacterSet().characters;
-    let characterPosition = this.state.characterPosition;
-    let fromBegining = false;
+    let characterPosition = from === undefined ? this.state.characterPosition : from;
+    let fromBeginning = false;
     if (characterPosition === null) {
-      fromBegining = true;
+      fromBeginning = true;
       characterPosition = 0;
     } else {
-      characterPosition++;
+      characterPosition += by;
+    }
+    if (characterPosition < 0) {
+      return Promise.resolve();
     }
     while (characterPosition < characters.length && this.characterExcluded(characterPosition)) {
-      characterPosition++;
+      characterPosition += by;
     }
     if (characterPosition === characters.length) {
-      if (fromBegining) {
+      if (fromBeginning) {
         return Promise.reject('All characters have been excluded. Enable some character sets.');
       }
       characterPosition = null;
+      if (this.state.repeat) {
+        this.startQuiz();
+        return Promise.resolve();
+      }
     }
     return new Promise((resolve, reject) => {
-      this.setState({characterPosition: characterPosition}, resolve);
+      this.setState({characterPosition: characterPosition}, () => {
+        resolve();
+      });
+    });
+  }
+
+  setCharacterOrder() {
+    const characterOrder = this.state.shuffle ? this.shuffledCharacters() : this.defaultCharacterOrder();
+    return new Promise((resolve, reject) => {
+      this.setState({characterOrder}, resolve);
     });
   }
 
   startQuiz() {
-    if (this.state.shuffle) {
-      this.setState({
-        characterOrder: this.shuffledCharacters()
-      });
-    }
-    this.advanceCharacter().then(() => {
-      this.responseInput.focus();
+    this.setCharacterOrder().then(() => {
+      this.advanceCharacter(null);
     });
   }
 
-  moveToNextCharacter() {
+  speakCharacter() {
     const character = this.getCharacter();
     const language = this.getLanguage();
-    speak(character.character, language.lang).then(() => {
+    return speak(character.character, language.lang);
+  }
+
+  moveToNextCharacter() {
+    this.speakCharacter().then(() => {
       this.setState({response: ''}, () => {
         this.advanceCharacter();
       });
@@ -212,7 +232,17 @@ class App extends Component {
   }
 
   toggleShuffle() {
-    this.setState({shuffle: !this.state.shuffle});
+    this.setState({shuffle: !this.state.shuffle}, () => {
+      if (this.state.characterPosition !== null) this.setCharacterOrder();
+    });
+  }
+
+  canGoBack() {
+    return this.state.characterPosition !== null && this.state.characterPosition !== 0;
+  }
+
+  canGoForward() {
+    return this.state.characterPosition !== null;
   }
 
   renderMainUI() {
@@ -273,8 +303,19 @@ class App extends Component {
             <button onClick={() => this.startQuiz()}>Start</button>
           )}
           {this.state.characterSet !== null && this.state.characterPosition !== null && (
-            <div className="display-character">
-              <label htmlFor="response-input">{this.getCharacter().character}</label>
+            <div className="present-character">
+              <ReactCSSTransitionGroup
+                transitionName="display-character"
+                transitionEnterTimeout={555}
+                transitionLeaveTimeout={255}>
+                <label
+                  className="display-character"
+                  key={this.getCharacter().character}
+                  htmlFor="response-input"
+                  onClick={() => this.speakCharacter()}>
+                  {this.getCharacter().character}
+                </label>
+              </ReactCSSTransitionGroup>
               <div className="display-character-response">
                 <input
                   id="response-input"
@@ -287,11 +328,33 @@ class App extends Component {
           {this.state.characterSet !== null && (
             <div className="player-controls">
               <div
+                title="Repeat"
                 className={disabled(!this.state.repeat, 'player-control')}
-                onClick={() => this.toggleRepeat()}>🔁</div>
+                onClick={() => this.toggleRepeat()}>
+                R
+              </div>
               <div
+                title="Shuffle"
                 className={disabled(!this.state.shuffle, 'player-control')}
-                onClick={() => this.toggleShuffle()}>🔀</div>
+                onClick={() => this.toggleShuffle()}>
+                S
+              </div>
+              <div
+                title="Previous Character"
+                className={disabled(!this.canGoBack(), 'player-control')}
+                onClick={() => {
+                  if (this.canGoBack()) this.advanceCharacter(undefined, -1);
+                }}>
+                ◄
+              </div>
+              <div
+                title="Next Character"
+                className={disabled(!this.canGoForward(), 'player-control')}
+                onClick={() => {
+                  if (this.canGoForward()) this.moveToNextCharacter();
+                }}>
+                ►
+              </div>
             </div>
           )}
           {this.state.characterSet === null && (

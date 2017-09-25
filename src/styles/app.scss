@@ -91,45 +91,58 @@ button {
   }
 }
 
-.display-character {
-  animation: show-character 1 125ms;
-  font-size: 161px;
-  line-height: 1;
-  text-align: center;
+.present-character {
+  height: 231px;
+  position: relative;
+  width: 100%;
+}
 
-  &.dismiss {
-    animation: hide-character 1 125ms;
-    opacity: 0;
-  }
+.display-character {
+  font-size: 161px;
+  left: 0;
+  line-height: 161px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.display-character-enter {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.display-character-enter.display-character-enter-active {
+  opacity: 1;
+  transition: all 250ms 300ms;
+  transform: translateX(0);
+}
+
+.display-character-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.display-character-leave.display-character-leave-active {
+  opacity: 0;
+  transition: all 250ms;
+  transform: translateX(-50px);
+}
+
+.display-character-response {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .display-character-response input {
   border: 1px solid rgba(0,0,0,0.25);
   font-size: 21px;
+  outline: none;
   padding: 6px;
   text-align: center;
-}
-
-@keyframes show-character {
-  0% {
-    opacity: 0;
-    transform: translateX(49px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes hide-character {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-49px);
-  }
 }
 
 .app {
@@ -148,7 +161,7 @@ button {
 }
 
 .player-controls {
-  bottom: 0;
+  bottom: 21px;
   display: flex;
   justify-content: center;
   left: 0;
@@ -159,6 +172,11 @@ button {
 .player-control {
   @extend %interactable;
   @extend %disableable-item;
+  font-size: 28px;
+  height: 28px;
+  line-height: 28px;
+  min-width: 28px;
+  text-align: center;
 }
 
 .settings {
