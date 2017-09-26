@@ -1452,6 +1452,1244 @@
           "ipa": ""
         }
       ]
+    },
+    {
+      "name": "Numbers (0-99)",
+      "arrangement": [
+        "tens",
+        "ones"
+      ],
+      "classifications": [
+        {
+          "name": "Ones",
+          "property": "ones"
+        },
+        {
+          "name": "Tens",
+          "property": "tens"
+        }
+      ],
+      "characters": [
+        {
+          "character": "零",
+          "ones": "0",
+          "tens": "0",
+          "roman": "0"
+        },
+        {
+          "character": "一",
+          "ones": "1",
+          "tens": "0",
+          "roman": "1"
+        },
+        {
+          "character": "二",
+          "ones": "2",
+          "tens": "0",
+          "roman": "2"
+        },
+        {
+          "character": "三",
+          "ones": "3",
+          "tens": "0",
+          "roman": "3"
+        },
+        {
+          "character": "四",
+          "ones": "4",
+          "tens": "0",
+          "roman": "4"
+        },
+        {
+          "character": "五",
+          "ones": "5",
+          "tens": "0",
+          "roman": "5"
+        },
+        {
+          "character": "六",
+          "ones": "6",
+          "tens": "0",
+          "roman": "6"
+        },
+        {
+          "character": "七",
+          "ones": "7",
+          "tens": "0",
+          "roman": "7"
+        },
+        {
+          "character": "八",
+          "ones": "8",
+          "tens": "0",
+          "roman": "8"
+        },
+        {
+          "character": "九",
+          "ones": "9",
+          "tens": "0",
+          "roman": "9"
+        },
+        {
+          "character": "十",
+          "ones": "0",
+          "tens": "1",
+          "roman": "10"
+        },
+        {
+          "character": "十一",
+          "ones": "1",
+          "tens": "1",
+          "roman": "11"
+        },
+        {
+          "character": "十二",
+          "ones": "2",
+          "tens": "1",
+          "roman": "12"
+        },
+        {
+          "character": "十三",
+          "ones": "3",
+          "tens": "1",
+          "roman": "13"
+        },
+        {
+          "character": "十四",
+          "ones": "4",
+          "tens": "1",
+          "roman": "14"
+        },
+        {
+          "character": "十五",
+          "ones": "5",
+          "tens": "1",
+          "roman": "15"
+        },
+        {
+          "character": "十六",
+          "ones": "6",
+          "tens": "1",
+          "roman": "16"
+        },
+        {
+          "character": "十七",
+          "ones": "7",
+          "tens": "1",
+          "roman": "17"
+        },
+        {
+          "character": "十八",
+          "ones": "8",
+          "tens": "1",
+          "roman": "18"
+        },
+        {
+          "character": "十九",
+          "ones": "9",
+          "tens": "1",
+          "roman": "19"
+        },
+        {
+          "character": "二十",
+          "ones": "0",
+          "tens": "2",
+          "roman": "20"
+        },
+        {
+          "character": "二十一",
+          "ones": "1",
+          "tens": "2",
+          "roman": "21"
+        },
+        {
+          "character": "二十二",
+          "ones": "2",
+          "tens": "2",
+          "roman": "22"
+        },
+        {
+          "character": "二十三",
+          "ones": "3",
+          "tens": "2",
+          "roman": "23"
+        },
+        {
+          "character": "二十四",
+          "ones": "4",
+          "tens": "2",
+          "roman": "24"
+        },
+        {
+          "character": "二十五",
+          "ones": "5",
+          "tens": "2",
+          "roman": "25"
+        },
+        {
+          "character": "二十六",
+          "ones": "6",
+          "tens": "2",
+          "roman": "26"
+        },
+        {
+          "character": "二十七",
+          "ones": "7",
+          "tens": "2",
+          "roman": "27"
+        },
+        {
+          "character": "二十八",
+          "ones": "8",
+          "tens": "2",
+          "roman": "28"
+        },
+        {
+          "character": "二十九",
+          "ones": "9",
+          "tens": "2",
+          "roman": "29"
+        },
+        {
+          "character": "三十",
+          "ones": "0",
+          "tens": "3",
+          "roman": "30"
+        },
+        {
+          "character": "三十一",
+          "ones": "1",
+          "tens": "3",
+          "roman": "31"
+        },
+        {
+          "character": "三十二",
+          "ones": "2",
+          "tens": "3",
+          "roman": "32"
+        },
+        {
+          "character": "三十三",
+          "ones": "3",
+          "tens": "3",
+          "roman": "33"
+        },
+        {
+          "character": "三十四",
+          "ones": "4",
+          "tens": "3",
+          "roman": "34"
+        },
+        {
+          "character": "三十五",
+          "ones": "5",
+          "tens": "3",
+          "roman": "35"
+        },
+        {
+          "character": "三十六",
+          "ones": "6",
+          "tens": "3",
+          "roman": "36"
+        },
+        {
+          "character": "三十七",
+          "ones": "7",
+          "tens": "3",
+          "roman": "37"
+        },
+        {
+          "character": "三十八",
+          "ones": "8",
+          "tens": "3",
+          "roman": "38"
+        },
+        {
+          "character": "三十九",
+          "ones": "9",
+          "tens": "3",
+          "roman": "39"
+        },
+        {
+          "character": "四十",
+          "ones": "0",
+          "tens": "4",
+          "roman": "40"
+        },
+        {
+          "character": "四十一",
+          "ones": "1",
+          "tens": "4",
+          "roman": "41"
+        },
+        {
+          "character": "四十二",
+          "ones": "2",
+          "tens": "4",
+          "roman": "42"
+        },
+        {
+          "character": "四十三",
+          "ones": "3",
+          "tens": "4",
+          "roman": "43"
+        },
+        {
+          "character": "四十四",
+          "ones": "4",
+          "tens": "4",
+          "roman": "44"
+        },
+        {
+          "character": "四十五",
+          "ones": "5",
+          "tens": "4",
+          "roman": "45"
+        },
+        {
+          "character": "四十六",
+          "ones": "6",
+          "tens": "4",
+          "roman": "46"
+        },
+        {
+          "character": "四十七",
+          "ones": "7",
+          "tens": "4",
+          "roman": "47"
+        },
+        {
+          "character": "四十八",
+          "ones": "8",
+          "tens": "4",
+          "roman": "48"
+        },
+        {
+          "character": "四十九",
+          "ones": "9",
+          "tens": "4",
+          "roman": "49"
+        },
+        {
+          "character": "五十",
+          "ones": "0",
+          "tens": "5",
+          "roman": "50"
+        },
+        {
+          "character": "五十一",
+          "ones": "1",
+          "tens": "5",
+          "roman": "51"
+        },
+        {
+          "character": "五十二",
+          "ones": "2",
+          "tens": "5",
+          "roman": "52"
+        },
+        {
+          "character": "五十三",
+          "ones": "3",
+          "tens": "5",
+          "roman": "53"
+        },
+        {
+          "character": "五十四",
+          "ones": "4",
+          "tens": "5",
+          "roman": "54"
+        },
+        {
+          "character": "五十五",
+          "ones": "5",
+          "tens": "5",
+          "roman": "55"
+        },
+        {
+          "character": "五十六",
+          "ones": "6",
+          "tens": "5",
+          "roman": "56"
+        },
+        {
+          "character": "五十七",
+          "ones": "7",
+          "tens": "5",
+          "roman": "57"
+        },
+        {
+          "character": "五十八",
+          "ones": "8",
+          "tens": "5",
+          "roman": "58"
+        },
+        {
+          "character": "五十九",
+          "ones": "9",
+          "tens": "5",
+          "roman": "59"
+        },
+        {
+          "character": "六十",
+          "ones": "0",
+          "tens": "6",
+          "roman": "60"
+        },
+        {
+          "character": "六十一",
+          "ones": "1",
+          "tens": "6",
+          "roman": "61"
+        },
+        {
+          "character": "六十二",
+          "ones": "2",
+          "tens": "6",
+          "roman": "62"
+        },
+        {
+          "character": "六十三",
+          "ones": "3",
+          "tens": "6",
+          "roman": "63"
+        },
+        {
+          "character": "六十四",
+          "ones": "4",
+          "tens": "6",
+          "roman": "64"
+        },
+        {
+          "character": "六十五",
+          "ones": "5",
+          "tens": "6",
+          "roman": "65"
+        },
+        {
+          "character": "六十六",
+          "ones": "6",
+          "tens": "6",
+          "roman": "66"
+        },
+        {
+          "character": "六十七",
+          "ones": "7",
+          "tens": "6",
+          "roman": "67"
+        },
+        {
+          "character": "六十八",
+          "ones": "8",
+          "tens": "6",
+          "roman": "68"
+        },
+        {
+          "character": "六十九",
+          "ones": "9",
+          "tens": "6",
+          "roman": "69"
+        },
+        {
+          "character": "七十",
+          "ones": "0",
+          "tens": "7",
+          "roman": "70"
+        },
+        {
+          "character": "七十一",
+          "ones": "1",
+          "tens": "7",
+          "roman": "71"
+        },
+        {
+          "character": "七十二",
+          "ones": "2",
+          "tens": "7",
+          "roman": "72"
+        },
+        {
+          "character": "七十三",
+          "ones": "3",
+          "tens": "7",
+          "roman": "73"
+        },
+        {
+          "character": "七十四",
+          "ones": "4",
+          "tens": "7",
+          "roman": "74"
+        },
+        {
+          "character": "七十五",
+          "ones": "5",
+          "tens": "7",
+          "roman": "75"
+        },
+        {
+          "character": "七十六",
+          "ones": "6",
+          "tens": "7",
+          "roman": "76"
+        },
+        {
+          "character": "七十七",
+          "ones": "7",
+          "tens": "7",
+          "roman": "77"
+        },
+        {
+          "character": "七十八",
+          "ones": "8",
+          "tens": "7",
+          "roman": "78"
+        },
+        {
+          "character": "七十九",
+          "ones": "9",
+          "tens": "7",
+          "roman": "79"
+        },
+        {
+          "character": "八十",
+          "ones": "0",
+          "tens": "8",
+          "roman": "80"
+        },
+        {
+          "character": "八十一",
+          "ones": "1",
+          "tens": "8",
+          "roman": "81"
+        },
+        {
+          "character": "八十二",
+          "ones": "2",
+          "tens": "8",
+          "roman": "82"
+        },
+        {
+          "character": "八十三",
+          "ones": "3",
+          "tens": "8",
+          "roman": "83"
+        },
+        {
+          "character": "八十四",
+          "ones": "4",
+          "tens": "8",
+          "roman": "84"
+        },
+        {
+          "character": "八十五",
+          "ones": "5",
+          "tens": "8",
+          "roman": "85"
+        },
+        {
+          "character": "八十六",
+          "ones": "6",
+          "tens": "8",
+          "roman": "86"
+        },
+        {
+          "character": "八十七",
+          "ones": "7",
+          "tens": "8",
+          "roman": "87"
+        },
+        {
+          "character": "八十八",
+          "ones": "8",
+          "tens": "8",
+          "roman": "88"
+        },
+        {
+          "character": "八十九",
+          "ones": "9",
+          "tens": "8",
+          "roman": "89"
+        },
+        {
+          "character": "九十",
+          "ones": "0",
+          "tens": "9",
+          "roman": "90"
+        },
+        {
+          "character": "九十一",
+          "ones": "1",
+          "tens": "9",
+          "roman": "91"
+        },
+        {
+          "character": "九十二",
+          "ones": "2",
+          "tens": "9",
+          "roman": "92"
+        },
+        {
+          "character": "九十三",
+          "ones": "3",
+          "tens": "9",
+          "roman": "93"
+        },
+        {
+          "character": "九十四",
+          "ones": "4",
+          "tens": "9",
+          "roman": "94"
+        },
+        {
+          "character": "九十五",
+          "ones": "5",
+          "tens": "9",
+          "roman": "95"
+        },
+        {
+          "character": "九十六",
+          "ones": "6",
+          "tens": "9",
+          "roman": "96"
+        },
+        {
+          "character": "九十七",
+          "ones": "7",
+          "tens": "9",
+          "roman": "97"
+        },
+        {
+          "character": "九十八",
+          "ones": "8",
+          "tens": "9",
+          "roman": "98"
+        },
+        {
+          "character": "九十九",
+          "ones": "9",
+          "tens": "9",
+          "roman": "99"
+        }
+      ]
+    },
+    {
+      "name": "Numbers (100-10000)",
+      "arrangement": [
+        "thousands",
+        "hundreds"
+      ],
+      "classifications": [
+        {
+          "name": "Hundreds",
+          "property": "hundreds"
+        },
+        {
+          "name": "Thousands",
+          "property": "thousands"
+        }
+      ],
+      "characters": [
+        {
+          "character": "百",
+          "hundreds": "1",
+          "thousands": "0",
+          "roman": "100"
+        },
+        {
+          "character": "二百",
+          "hundreds": "2",
+          "thousands": "0",
+          "roman": "200"
+        },
+        {
+          "character": "三百",
+          "hundreds": "3",
+          "thousands": "0",
+          "roman": "300"
+        },
+        {
+          "character": "四百",
+          "hundreds": "4",
+          "thousands": "0",
+          "roman": "400"
+        },
+        {
+          "character": "五百",
+          "hundreds": "5",
+          "thousands": "0",
+          "roman": "500"
+        },
+        {
+          "character": "六百",
+          "hundreds": "6",
+          "thousands": "0",
+          "roman": "600"
+        },
+        {
+          "character": "七百",
+          "hundreds": "7",
+          "thousands": "0",
+          "roman": "700"
+        },
+        {
+          "character": "八百",
+          "hundreds": "8",
+          "thousands": "0",
+          "roman": "800"
+        },
+        {
+          "character": "九百",
+          "hundreds": "9",
+          "thousands": "0",
+          "roman": "900"
+        },
+        {
+          "character": "千",
+          "hundreds": "0",
+          "thousands": "1",
+          "roman": "1000"
+        },
+        {
+          "character": "千百",
+          "hundreds": "1",
+          "thousands": "1",
+          "roman": "1100"
+        },
+        {
+          "character": "千二百",
+          "hundreds": "2",
+          "thousands": "1",
+          "roman": "1200"
+        },
+        {
+          "character": "千三百",
+          "hundreds": "3",
+          "thousands": "1",
+          "roman": "1300"
+        },
+        {
+          "character": "千四百",
+          "hundreds": "4",
+          "thousands": "1",
+          "roman": "1400"
+        },
+        {
+          "character": "千五百",
+          "hundreds": "5",
+          "thousands": "1",
+          "roman": "1500"
+        },
+        {
+          "character": "千六百",
+          "hundreds": "6",
+          "thousands": "1",
+          "roman": "1600"
+        },
+        {
+          "character": "千七百",
+          "hundreds": "7",
+          "thousands": "1",
+          "roman": "1700"
+        },
+        {
+          "character": "千八百",
+          "hundreds": "8",
+          "thousands": "1",
+          "roman": "1800"
+        },
+        {
+          "character": "千九百",
+          "hundreds": "9",
+          "thousands": "1",
+          "roman": "1900"
+        },
+        {
+          "character": "二千",
+          "hundreds": "0",
+          "thousands": "2",
+          "roman": "2000"
+        },
+        {
+          "character": "二千百",
+          "hundreds": "1",
+          "thousands": "2",
+          "roman": "2100"
+        },
+        {
+          "character": "二千二百",
+          "hundreds": "2",
+          "thousands": "2",
+          "roman": "2200"
+        },
+        {
+          "character": "二千三百",
+          "hundreds": "3",
+          "thousands": "2",
+          "roman": "2300"
+        },
+        {
+          "character": "二千四百",
+          "hundreds": "4",
+          "thousands": "2",
+          "roman": "2400"
+        },
+        {
+          "character": "二千五百",
+          "hundreds": "5",
+          "thousands": "2",
+          "roman": "2500"
+        },
+        {
+          "character": "二千六百",
+          "hundreds": "6",
+          "thousands": "2",
+          "roman": "2600"
+        },
+        {
+          "character": "二千七百",
+          "hundreds": "7",
+          "thousands": "2",
+          "roman": "2700"
+        },
+        {
+          "character": "二千八百",
+          "hundreds": "8",
+          "thousands": "2",
+          "roman": "2800"
+        },
+        {
+          "character": "二千九百",
+          "hundreds": "9",
+          "thousands": "2",
+          "roman": "2900"
+        },
+        {
+          "character": "三千",
+          "hundreds": "0",
+          "thousands": "3",
+          "roman": "3000"
+        },
+        {
+          "character": "三千百",
+          "hundreds": "1",
+          "thousands": "3",
+          "roman": "3100"
+        },
+        {
+          "character": "三千二百",
+          "hundreds": "2",
+          "thousands": "3",
+          "roman": "3200"
+        },
+        {
+          "character": "三千三百",
+          "hundreds": "3",
+          "thousands": "3",
+          "roman": "3300"
+        },
+        {
+          "character": "三千四百",
+          "hundreds": "4",
+          "thousands": "3",
+          "roman": "3400"
+        },
+        {
+          "character": "三千五百",
+          "hundreds": "5",
+          "thousands": "3",
+          "roman": "3500"
+        },
+        {
+          "character": "三千六百",
+          "hundreds": "6",
+          "thousands": "3",
+          "roman": "3600"
+        },
+        {
+          "character": "三千七百",
+          "hundreds": "7",
+          "thousands": "3",
+          "roman": "3700"
+        },
+        {
+          "character": "三千八百",
+          "hundreds": "8",
+          "thousands": "3",
+          "roman": "3800"
+        },
+        {
+          "character": "三千九百",
+          "hundreds": "9",
+          "thousands": "3",
+          "roman": "3900"
+        },
+        {
+          "character": "四千",
+          "hundreds": "0",
+          "thousands": "4",
+          "roman": "4000"
+        },
+        {
+          "character": "四千百",
+          "hundreds": "1",
+          "thousands": "4",
+          "roman": "4100"
+        },
+        {
+          "character": "四千二百",
+          "hundreds": "2",
+          "thousands": "4",
+          "roman": "4200"
+        },
+        {
+          "character": "四千三百",
+          "hundreds": "3",
+          "thousands": "4",
+          "roman": "4300"
+        },
+        {
+          "character": "四千四百",
+          "hundreds": "4",
+          "thousands": "4",
+          "roman": "4400"
+        },
+        {
+          "character": "四千五百",
+          "hundreds": "5",
+          "thousands": "4",
+          "roman": "4500"
+        },
+        {
+          "character": "四千六百",
+          "hundreds": "6",
+          "thousands": "4",
+          "roman": "4600"
+        },
+        {
+          "character": "四千七百",
+          "hundreds": "7",
+          "thousands": "4",
+          "roman": "4700"
+        },
+        {
+          "character": "四千八百",
+          "hundreds": "8",
+          "thousands": "4",
+          "roman": "4800"
+        },
+        {
+          "character": "四千九百",
+          "hundreds": "9",
+          "thousands": "4",
+          "roman": "4900"
+        },
+        {
+          "character": "五千",
+          "hundreds": "0",
+          "thousands": "5",
+          "roman": "5000"
+        },
+        {
+          "character": "五千百",
+          "hundreds": "1",
+          "thousands": "5",
+          "roman": "5100"
+        },
+        {
+          "character": "五千二百",
+          "hundreds": "2",
+          "thousands": "5",
+          "roman": "5200"
+        },
+        {
+          "character": "五千三百",
+          "hundreds": "3",
+          "thousands": "5",
+          "roman": "5300"
+        },
+        {
+          "character": "五千四百",
+          "hundreds": "4",
+          "thousands": "5",
+          "roman": "5400"
+        },
+        {
+          "character": "五千五百",
+          "hundreds": "5",
+          "thousands": "5",
+          "roman": "5500"
+        },
+        {
+          "character": "五千六百",
+          "hundreds": "6",
+          "thousands": "5",
+          "roman": "5600"
+        },
+        {
+          "character": "五千七百",
+          "hundreds": "7",
+          "thousands": "5",
+          "roman": "5700"
+        },
+        {
+          "character": "五千八百",
+          "hundreds": "8",
+          "thousands": "5",
+          "roman": "5800"
+        },
+        {
+          "character": "五千九百",
+          "hundreds": "9",
+          "thousands": "5",
+          "roman": "5900"
+        },
+        {
+          "character": "六千",
+          "hundreds": "0",
+          "thousands": "6",
+          "roman": "6000"
+        },
+        {
+          "character": "六千百",
+          "hundreds": "1",
+          "thousands": "6",
+          "roman": "6100"
+        },
+        {
+          "character": "六千二百",
+          "hundreds": "2",
+          "thousands": "6",
+          "roman": "6200"
+        },
+        {
+          "character": "六千三百",
+          "hundreds": "3",
+          "thousands": "6",
+          "roman": "6300"
+        },
+        {
+          "character": "六千四百",
+          "hundreds": "4",
+          "thousands": "6",
+          "roman": "6400"
+        },
+        {
+          "character": "六千五百",
+          "hundreds": "5",
+          "thousands": "6",
+          "roman": "6500"
+        },
+        {
+          "character": "六千六百",
+          "hundreds": "6",
+          "thousands": "6",
+          "roman": "6600"
+        },
+        {
+          "character": "六千七百",
+          "hundreds": "7",
+          "thousands": "6",
+          "roman": "6700"
+        },
+        {
+          "character": "六千八百",
+          "hundreds": "8",
+          "thousands": "6",
+          "roman": "6800"
+        },
+        {
+          "character": "六千九百",
+          "hundreds": "9",
+          "thousands": "6",
+          "roman": "6900"
+        },
+        {
+          "character": "七千",
+          "hundreds": "0",
+          "thousands": "7",
+          "roman": "7000"
+        },
+        {
+          "character": "七千百",
+          "hundreds": "1",
+          "thousands": "7",
+          "roman": "7100"
+        },
+        {
+          "character": "七千二百",
+          "hundreds": "2",
+          "thousands": "7",
+          "roman": "7200"
+        },
+        {
+          "character": "七千三百",
+          "hundreds": "3",
+          "thousands": "7",
+          "roman": "7300"
+        },
+        {
+          "character": "七千四百",
+          "hundreds": "4",
+          "thousands": "7",
+          "roman": "7400"
+        },
+        {
+          "character": "七千五百",
+          "hundreds": "5",
+          "thousands": "7",
+          "roman": "7500"
+        },
+        {
+          "character": "七千六百",
+          "hundreds": "6",
+          "thousands": "7",
+          "roman": "7600"
+        },
+        {
+          "character": "七千七百",
+          "hundreds": "7",
+          "thousands": "7",
+          "roman": "7700"
+        },
+        {
+          "character": "七千八百",
+          "hundreds": "8",
+          "thousands": "7",
+          "roman": "7800"
+        },
+        {
+          "character": "七千九百",
+          "hundreds": "9",
+          "thousands": "7",
+          "roman": "7900"
+        },
+        {
+          "character": "八千",
+          "hundreds": "0",
+          "thousands": "8",
+          "roman": "8000"
+        },
+        {
+          "character": "八千百",
+          "hundreds": "1",
+          "thousands": "8",
+          "roman": "8100"
+        },
+        {
+          "character": "八千二百",
+          "hundreds": "2",
+          "thousands": "8",
+          "roman": "8200"
+        },
+        {
+          "character": "八千三百",
+          "hundreds": "3",
+          "thousands": "8",
+          "roman": "8300"
+        },
+        {
+          "character": "八千四百",
+          "hundreds": "4",
+          "thousands": "8",
+          "roman": "8400"
+        },
+        {
+          "character": "八千五百",
+          "hundreds": "5",
+          "thousands": "8",
+          "roman": "8500"
+        },
+        {
+          "character": "八千六百",
+          "hundreds": "6",
+          "thousands": "8",
+          "roman": "8600"
+        },
+        {
+          "character": "八千七百",
+          "hundreds": "7",
+          "thousands": "8",
+          "roman": "8700"
+        },
+        {
+          "character": "八千八百",
+          "hundreds": "8",
+          "thousands": "8",
+          "roman": "8800"
+        },
+        {
+          "character": "八千九百",
+          "hundreds": "9",
+          "thousands": "8",
+          "roman": "8900"
+        },
+        {
+          "character": "九千",
+          "hundreds": "0",
+          "thousands": "9",
+          "roman": "9000"
+        },
+        {
+          "character": "九千百",
+          "hundreds": "1",
+          "thousands": "9",
+          "roman": "9100"
+        },
+        {
+          "character": "九千二百",
+          "hundreds": "2",
+          "thousands": "9",
+          "roman": "9200"
+        },
+        {
+          "character": "九千三百",
+          "hundreds": "3",
+          "thousands": "9",
+          "roman": "9300"
+        },
+        {
+          "character": "九千四百",
+          "hundreds": "4",
+          "thousands": "9",
+          "roman": "9400"
+        },
+        {
+          "character": "九千五百",
+          "hundreds": "5",
+          "thousands": "9",
+          "roman": "9500"
+        },
+        {
+          "character": "九千六百",
+          "hundreds": "6",
+          "thousands": "9",
+          "roman": "9600"
+        },
+        {
+          "character": "九千七百",
+          "hundreds": "7",
+          "thousands": "9",
+          "roman": "9700"
+        },
+        {
+          "character": "九千八百",
+          "hundreds": "8",
+          "thousands": "9",
+          "roman": "9800"
+        },
+        {
+          "character": "九千九百",
+          "hundreds": "9",
+          "thousands": "9",
+          "roman": "9900"
+        },
+        {
+          "character": "一万",
+          "hundreds": "0",
+          "thousands": "10",
+          "roman": "10000"
+        }
+      ]
     }
   ]
 }

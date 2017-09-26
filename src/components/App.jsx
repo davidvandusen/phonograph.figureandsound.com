@@ -198,6 +198,7 @@ class App extends Component {
   }
 
   speakCharacter() {
+    if (this.state.characterPosition === null) return Promise.resolve();
     const character = this.getCharacter();
     const language = this.getLanguage();
     return speak(character.character, language.lang);
@@ -328,8 +329,7 @@ class App extends Component {
                 <label
                   className="display-character"
                   key={this.getCharacter().character}
-                  htmlFor="response-input"
-                  onClick={() => this.speakCharacter()}>
+                  htmlFor="response-input">
                   {this.getCharacter().character}
                 </label>
               </ReactCSSTransitionGroup>
