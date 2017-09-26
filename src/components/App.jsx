@@ -52,6 +52,10 @@ class App extends Component {
       .catch(console.error.bind(console));
   }
 
+  componentDidUpdate() {
+    this.responseInput && this.responseInput.focus();
+  }
+
   renderLoadingScreen() {
     return <div>Loading...</div>;
   }
@@ -200,7 +204,12 @@ class App extends Component {
   }
 
   moveToNextCharacter() {
-    this.speakCharacter().then(() => {
+    // Sometimes the utterance doesn't trigger its end event, so
+    // automatically advance after a fixed amount of time if that happens
+    Promise.race([
+      this.speakCharacter(),
+      new Promise(resolve => setTimeout(resolve, 1000))
+    ]).then(() => {
       this.setState({response: ''}, () => {
         this.advanceCharacter();
       });
@@ -284,6 +293,25 @@ class App extends Component {
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+          {this.state.characterSet !== null && (
+            <div className="character-table">
+              <table>
+                <tbody>
+                {this.getClassificationValues(this.getCharacterSet().arrangement[0]).map(rowValue => (
+                  <tr key={rowValue}>
+                    {this.getClassificationValues(this.getCharacterSet().arrangement[1]).map(columnValue => (
+                      <td
+                        key={columnValue}
+                        className={active(this.state.characterPosition !== null && this.getCharacter()[this.getCharacterSet().arrangement[0]] === rowValue && this.getCharacter()[this.getCharacterSet().arrangement[1]] === columnValue)}>
+                        {(this.getCharacterSet().characters.find(character => character[this.getCharacterSet().arrangement[0]] === rowValue && character[this.getCharacterSet().arrangement[1]] === columnValue) || {}).character}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+                </tbody>
+              </table>
             </div>
           )}
         </div>

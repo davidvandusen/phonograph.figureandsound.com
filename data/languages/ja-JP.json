@@ -3,6 +3,10 @@
   "characterSets": [
     {
       "name": "Hiragana",
+      "arrangement": [
+        "consonant",
+        "vowel"
+      ],
       "classifications": [
         {
           "name": "Vowels",
@@ -390,21 +394,21 @@
           "character": "や",
           "roman": "ya",
           "ipa": "ja",
-          "vowel": "∅"
+          "vowel": "a"
         },
         {
           "consonant": "y",
           "character": "ゆ",
           "roman": "yu",
           "ipa": "jɯ",
-          "vowel": "∅"
+          "vowel": "u"
         },
         {
           "consonant": "y",
           "character": "よ",
           "roman": "yo",
           "ipa": "jo",
-          "vowel": "∅"
+          "vowel": "o"
         },
         {
           "consonant": "r",
@@ -469,7 +473,6 @@
           "ipa": "wa",
           "vowel": "a"
         },
-        {
         {
           "consonant": "w",
           "character": "を",
@@ -726,6 +729,10 @@
     },
     {
       "name": "Katakana",
+      "arrangement": [
+        "consonant",
+        "vowel"
+      ],
       "classifications": [
         {
           "name": "Vowels",
@@ -1197,13 +1204,6 @@
           "roman": "wo",
           "vowel": "o",
           "consonant": "w",
-          "ipa": ""
-        },
-        {
-          "character": "ン",
-          "roman": "n",
-          "vowel": "∅",
-          "consonant": "n",
           "ipa": ""
         },
         {
