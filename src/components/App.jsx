@@ -9,18 +9,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      loaded: false,
-      languages: null,
-      language: null,
-      characterSet: null,
-      characterPosition: null,
-      characterOrder: null,
-      disabledClassifications: null,
-      shuffle: false,
-      repeat: false,
-      response: ''
-    };
+    this.state = props;
   }
 
   loadLanguages() {
@@ -289,7 +278,7 @@ class App extends Component {
                         key={classificationValue}
                         className={disabled(this.state.disabledClassifications[classification.property].includes(classificationValue), 'character-classification-value')}
                         onClick={() => this.toggleClassification(classification.property, classificationValue)}>
-                        {classificationValue}
+                        {classificationValue.toUpperCase()}
                       </div>
                     ))}
                   </div>

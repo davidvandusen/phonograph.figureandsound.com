@@ -9,5 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     root.id = 'root';
     document.body.appendChild(root);
   }
-  render(<App />, root);
+  let defaultState = {
+    loaded: false,
+    languages: null,
+    language: null,
+    characterSet: null,
+    characterPosition: null,
+    characterOrder: null,
+    disabledClassifications: null,
+    shuffle: false,
+    repeat: false,
+    response: ''
+  };
+  render(<App {...defaultState} />, root);
 });
