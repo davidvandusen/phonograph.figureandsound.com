@@ -3,20 +3,47 @@
   "characterSets": [
     {
       "name": "Hiragana",
-      "arrangement": [
-        "consonant",
-        "vowel"
-      ],
       "classifications": [
         {
-          "name": "Vowels",
-          "property": "vowel"
+          "name": "Consonants",
+          "property": "consonant",
+          "values": [
+            "∅",
+            "k",
+            "s",
+            "t",
+            "n",
+            "h",
+            "m",
+            "y",
+            "r",
+            "w",
+            "g",
+            "z",
+            "d",
+            "b",
+            "p"
+          ]
         },
         {
-          "name": "Consonants",
-          "property": "consonant"
+          "name": "Vowels",
+          "property": "vowel",
+          "values": [
+            "a",
+            "i",
+            "u",
+            "e",
+            "o",
+            "ya",
+            "yu",
+            "yo"
+          ]
         }
       ],
+      "arrangement": {
+        "rowClassification": 0,
+        "columnClassification": 1
+      },
       "characters": [
         {
           "consonant": "∅",
@@ -729,20 +756,47 @@
     },
     {
       "name": "Katakana",
-      "arrangement": [
-        "consonant",
-        "vowel"
-      ],
       "classifications": [
         {
-          "name": "Vowels",
-          "property": "vowel"
+          "name": "Consonants",
+          "property": "consonant",
+          "values": [
+            "∅",
+            "k",
+            "s",
+            "t",
+            "n",
+            "h",
+            "m",
+            "y",
+            "r",
+            "w",
+            "g",
+            "z",
+            "d",
+            "b",
+            "p"
+          ]
         },
         {
-          "name": "Consonants",
-          "property": "consonant"
+          "name": "Vowels",
+          "property": "vowel",
+          "values": [
+            "a",
+            "i",
+            "u",
+            "e",
+            "o",
+            "ya",
+            "yu",
+            "yo"
+          ]
         }
       ],
+      "arrangement": {
+        "rowClassification": 0,
+        "columnClassification": 1
+      },
       "characters": [
         {
           "character": "ア",
@@ -1455,20 +1509,44 @@
     },
     {
       "name": "Numbers (0-99)",
-      "arrangement": [
-        "tens",
-        "ones"
-      ],
       "classifications": [
         {
-          "name": "Ones",
-          "property": "ones"
+          "name": "Tens",
+          "property": "tens",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
         },
         {
-          "name": "Tens",
-          "property": "tens"
+          "name": "Ones",
+          "property": "ones",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
         }
       ],
+      "arrangement": {
+        "rowClassification": 0,
+        "columnClassification": 1
+      },
       "characters": [
         {
           "character": "零",
@@ -2074,20 +2152,45 @@
     },
     {
       "name": "Numbers (100-10000)",
-      "arrangement": [
-        "thousands",
-        "hundreds"
-      ],
       "classifications": [
         {
-          "name": "Hundreds",
-          "property": "hundreds"
+          "name": "Thousands",
+          "property": "thousands",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
         },
         {
-          "name": "Thousands",
-          "property": "thousands"
+          "name": "Hundreds",
+          "property": "hundreds",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
         }
       ],
+      "arrangement": {
+        "rowClassification": 0,
+        "columnClassification": 1
+      },
       "characters": [
         {
           "character": "百",

@@ -88,8 +88,8 @@ class App extends Component {
   setCharacterSet(idx) {
     const characterSets = this.getCharacterSets();
     const characterSet = characterSets[idx];
-    const disabledClassifications = {};
-    characterSet.classifications.forEach(classification => disabledClassifications[classification.property] = []);
+    const disabledClassifications = [];
+    characterSet.classifications.forEach((classification, idx) => disabledClassifications[idx] = []);
     const characterOrder = Object.keys(characterSet.characters);
     this.setState({
       characterSet: idx,
@@ -114,13 +114,6 @@ class App extends Component {
     return characterOrder;
   }
 
-  getClassificationValues(property) {
-    return this.getCharacterSet().characters.reduce((classificationValues, character) => {
-      if (!classificationValues.includes(character[property])) classificationValues.push(character[property]);
-      return classificationValues;
-    }, []);
-  }
-
   getCharacter(position) {
     const characters = this.getCharacterSet().characters;
     const characterPosition = position === undefined ? this.state.characterPosition : position;
@@ -128,25 +121,28 @@ class App extends Component {
     return characters[characterIndex];
   }
 
-  toggleClassification(property, value) {
+  toggleClassification(classIdx, value) {
     const disabledClassifications = this.state.disabledClassifications;
-    const classification = disabledClassifications[property];
+    const classification = disabledClassifications[classIdx];
     const idx = classification.indexOf(value);
     if (idx === -1) classification.push(value);
     else classification.splice(idx, 1);
     this.setState({disabledClassifications});
   }
 
-  toggleClassificationAll(property) {
-    const values = this.getClassificationValues(property);
-    values.forEach(value => this.toggleClassification(property, value));
+  toggleClassificationAll(idx) {
+    const values = this.getCharacterSet().classifications[idx].values;
+    values.forEach(value => this.toggleClassification(idx, value));
   }
 
   characterExcluded(position) {
+    const classifications = this.getCharacterSet().classifications;
     const character = this.getCharacter(position);
-    for (const property in this.state.disabledClassifications) {
-      const classification = this.state.disabledClassifications[property];
-      if (classification.includes(character[property])) return true;
+    for (const idx in this.state.disabledClassifications) {
+      const disabledValues = this.state.disabledClassifications[idx];
+      const property = classifications[idx].property;
+      const value = character[property];
+      if (disabledValues.includes(value)) return true;
     }
     return false;
   }
@@ -244,6 +240,18 @@ class App extends Component {
     return this.state.characterPosition !== null;
   }
 
+  getCharacterAt(rowValue, columnValue) {
+    const characterSet = this.getCharacterSet();
+    const rowProperty = characterSet.classifications[characterSet.arrangement.rowClassification].property;
+    const columnProperty = characterSet.classifications[characterSet.arrangement.columnClassification].property;
+    return characterSet.characters.find(character => character[rowProperty] === rowValue && character[columnProperty] === columnValue);
+  }
+
+  isCurrentCharacter(character) {
+    const character2 = this.getCharacter();
+    return !!character && !!character2 && character.character === character2.character;
+  }
+
   renderMainUI() {
     return (
       <div className="app">
@@ -280,14 +288,14 @@ class App extends Component {
                     {classification.name}
                     <span
                       className="group-action"
-                      onClick={() => this.toggleClassificationAll(classification.property)}>toggle all</span>
+                      onClick={() => this.toggleClassificationAll(idx)}>toggle all</span>
                   </div>
                   <div className="character-classification-values">
-                    {this.getClassificationValues(classification.property).map((classificationValue) => (
+                    {classification.values.map((classificationValue) => (
                       <div
                         key={classificationValue}
-                        className={disabled(this.state.disabledClassifications[classification.property].includes(classificationValue), 'character-classification-value')}
-                        onClick={() => this.toggleClassification(classification.property, classificationValue)}>
+                        className={disabled(this.state.disabledClassifications[idx].includes(classificationValue), 'character-classification-value')}
+                        onClick={() => this.toggleClassification(idx, classificationValue)}>
                         {classificationValue.toUpperCase()}
                       </div>
                     ))}
@@ -300,15 +308,18 @@ class App extends Component {
             <div className="character-table">
               <table>
                 <tbody>
-                {this.getClassificationValues(this.getCharacterSet().arrangement[0]).map(rowValue => (
+                {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
                   <tr key={rowValue}>
-                    {this.getClassificationValues(this.getCharacterSet().arrangement[1]).map(columnValue => (
-                      <td
-                        key={columnValue}
-                        className={active(this.state.characterPosition !== null && this.getCharacter()[this.getCharacterSet().arrangement[0]] === rowValue && this.getCharacter()[this.getCharacterSet().arrangement[1]] === columnValue)}>
-                        {(this.getCharacterSet().characters.find(character => character[this.getCharacterSet().arrangement[0]] === rowValue && character[this.getCharacterSet().arrangement[1]] === columnValue) || {}).character}
-                      </td>
-                    ))}
+                    {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.columnClassification].values.map(columnValue => {
+                      const character = this.getCharacterAt(rowValue, columnValue);
+                      return (
+                        <td
+                          key={columnValue}
+                          className={active(this.isCurrentCharacter(character))}>
+                          {(character || {}).character}
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))}
                 </tbody>
