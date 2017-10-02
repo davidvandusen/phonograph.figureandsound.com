@@ -9,7 +9,18 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = props;
+    this.state = {
+      loaded: false,
+      languages: null,
+      language: null,
+      characterSet: null,
+      characterPosition: null,
+      characterOrder: null,
+      disabledClassifications: null,
+      shuffle: false,
+      repeat: false,
+      response: ''
+    };
   }
 
   loadLanguages() {
@@ -57,7 +68,7 @@ class App extends Component {
   }
 
   renderLoadingScreen() {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   getLanguage() {
@@ -173,31 +184,49 @@ class App extends Component {
         return Promise.resolve();
       }
     }
-    return new Promise((resolve, reject) => {
-      this.setState({characterPosition: characterPosition}, () => {
-        resolve();
-      });
-    });
+    return new Promise(resolve => this.setState({characterPosition: characterPosition}, resolve));
   }
 
   setCharacterOrder() {
     const characterOrder = this.state.shuffle ? this.shuffledCharacters() : this.defaultCharacterOrder();
-    return new Promise((resolve, reject) => {
-      this.setState({characterOrder}, resolve);
-    });
+    return new Promise(resolve => this.setState({characterOrder}, resolve));
   }
 
   startQuiz() {
-    this.setCharacterOrder().then(() => {
-      this.advanceCharacter(null);
-    });
+    this.setCharacterOrder().then(() => this.advanceCharacter(null));
+  }
+
+  getIdProperty() {
+    const characterSet = this.getCharacterSet();
+    return characterSet.idProperty;
+  }
+
+  getQueryProperty() {
+    const characterSet = this.getCharacterSet();
+    return characterSet.queryProperty;
+  }
+
+  getSpokenProperty() {
+    const characterSet = this.getCharacterSet();
+    return characterSet.spokenProperty;
+  }
+
+  getDisplayProperty() {
+    const characterSet = this.getCharacterSet();
+    return characterSet.displayProperty;
+  }
+
+  getResponseProperty() {
+    const characterSet = this.getCharacterSet();
+    return characterSet.responseProperty;
   }
 
   speakCharacter() {
     if (this.state.characterPosition === null) return Promise.resolve();
     const character = this.getCharacter();
     const language = this.getLanguage();
-    return speak(character.character, language.lang);
+    const property = this.getSpokenProperty();
+    return speak(character[property], language.lang);
   }
 
   moveToNextCharacter() {
@@ -216,7 +245,7 @@ class App extends Component {
   onResponseType() {
     this.setState({response: this.responseInput.value}, () => {
       const character = this.getCharacter();
-      if (this.state.response.toLowerCase() === character.roman.toLowerCase()) {
+      if (this.state.response.toLowerCase() === character[this.getResponseProperty()].toLowerCase()) {
         this.moveToNextCharacter();
       }
     });
@@ -249,7 +278,8 @@ class App extends Component {
 
   isCurrentCharacter(character) {
     const character2 = this.getCharacter();
-    return !!character && !!character2 && character.character === character2.character;
+    const idProperty = this.getIdProperty();
+    return !!character && !!character2 && character[idProperty] === character2[idProperty];
   }
 
   renderMainUI() {
@@ -306,24 +336,26 @@ class App extends Component {
           )}
           {this.state.characterSet !== null && (
             <div className="character-table">
-              <table>
-                <tbody>
-                {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
-                  <tr key={rowValue}>
-                    {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.columnClassification].values.map(columnValue => {
-                      const character = this.getCharacterAt(rowValue, columnValue);
-                      return (
-                        <td
-                          key={columnValue}
-                          className={active(this.isCurrentCharacter(character))}>
-                          {(character || {}).character}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                ))}
-                </tbody>
-              </table>
+              <div className="responsive-table">
+                <table>
+                  <tbody>
+                  {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
+                    <tr key={rowValue}>
+                      {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.columnClassification].values.map(columnValue => {
+                        const character = this.getCharacterAt(rowValue, columnValue);
+                        return (
+                          <td
+                            key={columnValue}
+                            className={active(this.isCurrentCharacter(character))}>
+                            {(character || {})[this.getDisplayProperty()]}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
         </div>
@@ -339,9 +371,9 @@ class App extends Component {
                 transitionLeaveTimeout={255}>
                 <label
                   className="display-character"
-                  key={this.getCharacter().character}
+                  key={this.getCharacter()[this.getIdProperty()]}
                   htmlFor="response-input">
-                  {this.getCharacter().character}
+                  {this.getCharacter()[this.getQueryProperty()]}
                 </label>
               </ReactCSSTransitionGroup>
               <div className="display-character-response">

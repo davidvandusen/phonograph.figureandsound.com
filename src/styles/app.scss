@@ -31,6 +31,7 @@ button {
 }
 
 table {
+  background-color: rgba(0,0,0,0.0125);
   border-collapse: collapse;
   width: 100%;
 }
@@ -38,6 +39,7 @@ table {
 td {
   border: 1px solid rgb(220, 220, 220);
   margin: 0;
+  padding: 3px 6px;
   text-align: center;
 
   &.active {
@@ -79,6 +81,17 @@ tr {
   }
 }
 
+.loading {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 .language,
 .character-set {
   @extend %interactable;
@@ -112,6 +125,12 @@ tr {
 
 .character-table {
   padding: 21px;
+  white-space: nowrap;
+}
+
+.responsive-table {
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow: auto;
 }
 
 .group-action {
@@ -230,7 +249,7 @@ tr {
   height: 100vh;
   overflow: auto;
   position: relative;
-  width: 380px;
+  width: 33%;
   z-index: 2;
 
   @media (orientation: portrait) and (max-width: 480px) {
