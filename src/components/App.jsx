@@ -10,38 +10,47 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false,
-      languages: null,
-      language: null,
-      characterSet: null,
-      characterPosition: null,
-      characterOrder: null,
-      disabledClassifications: null,
-      shuffle: false,
-      repeat: false,
-      response: ''
+      data: {
+        languages: null
+      },
+      ui: {
+        loaded: false,
+        language: null,
+        characterSet: null,
+        characterPosition: null,
+        characterOrder: null,
+        disabledClassifications: null,
+        shuffle: false,
+        repeat: false,
+        response: ''
+      }
     };
   }
 
   loadLanguages() {
-    if (!this.state.languages) {
+    if (!this.state.data.languages) {
       return fetch('/data/languages/index.json')
         .then(res => res.json())
-        .then(languages => this.setState({languages}));
+        .then(languages => this.setState({data: {...this.state.data, languages}}));
     } else {
-      return Promise.resolve(this.state.languages);
+      return Promise.resolve(this.state.data.languages);
     }
   }
 
   loadLanguage(lang) {
-    const language = this.state.languages.find(l => l.lang === lang);
+    const language = this.state.data.languages.find(l => l.lang === lang);
     if (language) {
       if (!language.data) {
         return fetch(language.href)
           .then(res => res.json())
           .then(data => {
             language.data = data;
-            this.setState({languages: this.state.languages})
+            this.setState({
+              data: {
+                ...this.state.data,
+                languages: this.state.data.languages
+              }
+            })
           });
       } else {
         return Promise.resolve(language.data);
@@ -58,7 +67,12 @@ class App extends Component {
         new Promise((resolve, reject) => speechSynthesis.addEventListener('voiceschanged', resolve))
       ])
       .then(() => {
-        this.setState({loaded: true});
+        this.setState({
+          ui: {
+            ...this.state.ui,
+            loaded: true
+          }
+        });
       })
       .catch(console.error.bind(console));
   }
@@ -72,17 +86,20 @@ class App extends Component {
   }
 
   getLanguage() {
-    return this.state.languages[this.state.language];
+    return this.state.data.languages[this.state.ui.language];
   }
 
   setLanguage(idx) {
-    const language = this.state.languages[idx];
+    const language = this.state.data.languages[idx];
     this.loadLanguage(language.lang).then(() => this.setState({
-      language: idx,
-      characterSet: null,
-      disabledClassifications: null,
-      characterOrder: null,
-      characterPosition: null
+      ui: {
+        ...this.state.ui,
+        language: idx,
+        characterSet: null,
+        disabledClassifications: null,
+        characterOrder: null,
+        characterPosition: null
+      }
     }));
   }
 
@@ -93,7 +110,7 @@ class App extends Component {
 
   getCharacterSet() {
     const characterSets = this.getCharacterSets();
-    return characterSets[this.state.characterSet];
+    return characterSets[this.state.ui.characterSet];
   }
 
   setCharacterSet(idx) {
@@ -103,10 +120,13 @@ class App extends Component {
     characterSet.classifications.forEach((classification, idx) => disabledClassifications[idx] = []);
     const characterOrder = Object.keys(characterSet.characters);
     this.setState({
-      characterSet: idx,
-      disabledClassifications,
-      characterOrder,
-      characterPosition: null
+      ui: {
+        ...this.state.ui,
+        characterSet: idx,
+        disabledClassifications,
+        characterOrder,
+        characterPosition: null
+      }
     });
   }
 
@@ -127,18 +147,23 @@ class App extends Component {
 
   getCharacter(position) {
     const characters = this.getCharacterSet().characters;
-    const characterPosition = position === undefined ? this.state.characterPosition : position;
-    const characterIndex = this.state.characterOrder[characterPosition];
+    const characterPosition = position === undefined ? this.state.ui.characterPosition : position;
+    const characterIndex = this.state.ui.characterOrder[characterPosition];
     return characters[characterIndex];
   }
 
   toggleClassification(classIdx, value) {
-    const disabledClassifications = this.state.disabledClassifications;
+    const disabledClassifications = this.state.ui.disabledClassifications;
     const classification = disabledClassifications[classIdx];
     const idx = classification.indexOf(value);
     if (idx === -1) classification.push(value);
     else classification.splice(idx, 1);
-    this.setState({disabledClassifications});
+    this.setState({
+      ui: {
+        ...this.state.ui,
+        disabledClassifications
+      }
+    });
   }
 
   toggleClassificationAll(idx) {
@@ -149,8 +174,8 @@ class App extends Component {
   characterExcluded(position) {
     const classifications = this.getCharacterSet().classifications;
     const character = this.getCharacter(position);
-    for (const idx in this.state.disabledClassifications) {
-      const disabledValues = this.state.disabledClassifications[idx];
+    for (const idx in this.state.ui.disabledClassifications) {
+      const disabledValues = this.state.ui.disabledClassifications[idx];
       const property = classifications[idx].property;
       const value = character[property];
       if (disabledValues.includes(value)) return true;
@@ -160,7 +185,7 @@ class App extends Component {
 
   advanceCharacter(from, by = 1) {
     const characters = this.getCharacterSet().characters;
-    let characterPosition = from === undefined ? this.state.characterPosition : from;
+    let characterPosition = from === undefined ? this.state.ui.characterPosition : from;
     let fromBeginning = false;
     if (characterPosition === null) {
       fromBeginning = true;
@@ -179,17 +204,27 @@ class App extends Component {
         return Promise.reject('All characters have been excluded. Enable some character sets.');
       }
       characterPosition = null;
-      if (this.state.repeat) {
+      if (this.state.ui.repeat) {
         this.startQuiz();
         return Promise.resolve();
       }
     }
-    return new Promise(resolve => this.setState({characterPosition: characterPosition}, resolve));
+    return new Promise(resolve => this.setState({
+      ui: {
+        ...this.state.ui,
+        characterPosition
+      }
+    }, resolve));
   }
 
   setCharacterOrder() {
-    const characterOrder = this.state.shuffle ? this.shuffledCharacters() : this.defaultCharacterOrder();
-    return new Promise(resolve => this.setState({characterOrder}, resolve));
+    const characterOrder = this.state.ui.shuffle ? this.shuffledCharacters() : this.defaultCharacterOrder();
+    return new Promise(resolve => this.setState({
+      ui: {
+        ...this.state.ui,
+        characterOrder
+      }
+    }, resolve));
   }
 
   startQuiz() {
@@ -222,7 +257,7 @@ class App extends Component {
   }
 
   speakCharacter() {
-    if (this.state.characterPosition === null) return Promise.resolve();
+    if (this.state.ui.characterPosition === null) return Promise.resolve();
     const character = this.getCharacter();
     const language = this.getLanguage();
     const property = this.getSpokenProperty();
@@ -236,37 +271,57 @@ class App extends Component {
       this.speakCharacter(),
       new Promise(resolve => setTimeout(resolve, 1000))
     ]).then(() => {
-      this.setState({response: ''}, () => {
+      this.setState({
+        ui: {
+          ...this.state.ui,
+          response: ''
+        }
+      }, () => {
         this.advanceCharacter();
       });
     });
   }
 
   onResponseType() {
-    this.setState({response: this.responseInput.value}, () => {
+    this.setState({
+      ui: {
+        ...this.state.ui,
+        response: this.responseInput.value
+      }
+    }, () => {
       const character = this.getCharacter();
-      if (this.state.response.toLowerCase() === character[this.getResponseProperty()].toLowerCase()) {
+      if (this.state.ui.response.toLowerCase() === character[this.getResponseProperty()].toLowerCase()) {
         this.moveToNextCharacter();
       }
     });
   }
 
   toggleRepeat() {
-    this.setState({repeat: !this.state.repeat});
+    this.setState({
+      ui: {
+        ...this.state.ui,
+        repeat: !this.state.ui.repeat
+      }
+    });
   }
 
   toggleShuffle() {
-    this.setState({shuffle: !this.state.shuffle}, () => {
-      if (this.state.characterPosition !== null) this.setCharacterOrder();
+    this.setState({
+      ui: {
+        ...this.state.ui,
+        shuffle: !this.state.ui.shuffle
+      }
+    }, () => {
+      if (this.state.ui.characterPosition !== null) this.setCharacterOrder();
     });
   }
 
   canGoBack() {
-    return this.state.characterPosition !== null && this.state.characterPosition !== 0;
+    return this.state.ui.characterPosition !== null && this.state.ui.characterPosition !== 0;
   }
 
   canGoForward() {
-    return this.state.characterPosition !== null;
+    return this.state.ui.characterPosition !== null;
   }
 
   getCharacterAt(rowValue, columnValue) {
@@ -287,28 +342,28 @@ class App extends Component {
       <div className="app">
         <div className="settings">
           <div className="languages">
-            {this.state.languages.map((language, idx) => (
+            {this.state.data.languages.map((language, idx) => (
               <div
                 key={language.lang}
-                className={active(idx === this.state.language, 'language')}
+                className={active(idx === this.state.ui.language, 'language')}
                 onClick={() => this.setLanguage(idx)}>
                 {language.name}
               </div>
             ))}
           </div>
-          {this.state.language !== null && (
+          {this.state.ui.language !== null && (
             <div className="character-sets">
               {this.getCharacterSets().map((characterSet, idx) => (
                 <div
                   key={characterSet.name}
-                  className={active(idx === this.state.characterSet, 'character-set')}
+                  className={active(idx === this.state.ui.characterSet, 'character-set')}
                   onClick={() => this.setCharacterSet(idx)}>
                   {characterSet.name}
                 </div>
               ))}
             </div>
           )}
-          {this.state.characterSet !== null && (
+          {this.state.ui.characterSet !== null && (
             <div className="character-classifications">
               {this.getCharacterSet().classifications.map((classification, idx) => (
                 <div
@@ -324,7 +379,7 @@ class App extends Component {
                     {classification.values.map((classificationValue) => (
                       <div
                         key={classificationValue}
-                        className={disabled(this.state.disabledClassifications[idx].includes(classificationValue), 'character-classification-value')}
+                        className={disabled(this.state.ui.disabledClassifications[idx].includes(classificationValue), 'character-classification-value')}
                         onClick={() => this.toggleClassification(idx, classificationValue)}>
                         {classificationValue.toUpperCase()}
                       </div>
@@ -334,36 +389,34 @@ class App extends Component {
               ))}
             </div>
           )}
-          {this.state.characterSet !== null && (
-            <div className="character-table">
-              <div className="responsive-table">
-                <table>
-                  <tbody>
-                  {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
-                    <tr key={rowValue}>
-                      {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.columnClassification].values.map(columnValue => {
-                        const character = this.getCharacterAt(rowValue, columnValue);
-                        return (
-                          <td
-                            key={columnValue}
-                            className={active(this.isCurrentCharacter(character))}>
-                            {(character || {})[this.getDisplayProperty()]}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                  </tbody>
-                </table>
-              </div>
+          {this.state.ui.characterSet !== null && (
+            <div className="character-table responsive-table">
+              <table>
+                <tbody>
+                {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
+                  <tr key={rowValue}>
+                    {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.columnClassification].values.map(columnValue => {
+                      const character = this.getCharacterAt(rowValue, columnValue);
+                      return (
+                        <td
+                          key={columnValue}
+                          className={active(this.isCurrentCharacter(character))}>
+                          {(character || {})[this.getDisplayProperty()]}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+                </tbody>
+              </table>
             </div>
           )}
         </div>
         <div className="content">
-          {this.state.characterSet !== null && this.state.characterPosition === null && (
+          {this.state.ui.characterSet !== null && this.state.ui.characterPosition === null && (
             <button onClick={() => this.startQuiz()}>Start</button>
           )}
-          {this.state.characterSet !== null && this.state.characterPosition !== null && (
+          {this.state.ui.characterSet !== null && this.state.ui.characterPosition !== null && (
             <div className="present-character">
               <ReactCSSTransitionGroup
                 transitionName="display-character"
@@ -379,23 +432,23 @@ class App extends Component {
               <div className="display-character-response">
                 <input
                   id="response-input"
-                  value={this.state.response}
+                  value={this.state.ui.response}
                   ref={el => this.responseInput = el}
                   onChange={() => this.onResponseType()} />
               </div>
             </div>
           )}
-          {this.state.characterSet !== null && (
+          {this.state.ui.characterSet !== null && (
             <div className="player-controls">
               <div
                 title="Repeat"
-                className={disabled(!this.state.repeat, 'player-control')}
+                className={disabled(!this.state.ui.repeat, 'player-control')}
                 onClick={() => this.toggleRepeat()}>
                 R
               </div>
               <div
                 title="Shuffle"
-                className={disabled(!this.state.shuffle, 'player-control')}
+                className={disabled(!this.state.ui.shuffle, 'player-control')}
                 onClick={() => this.toggleShuffle()}>
                 S
               </div>
@@ -417,7 +470,7 @@ class App extends Component {
               </div>
             </div>
           )}
-          {this.state.characterSet === null && (
+          {this.state.ui.characterSet === null && (
             <div>Select characters to practice...</div>
           )}
         </div>
@@ -426,7 +479,7 @@ class App extends Component {
   }
 
   render() {
-    return this.state.loaded ? this.renderMainUI() : this.renderLoadingScreen();
+    return this.state.ui.loaded ? this.renderMainUI() : this.renderLoadingScreen();
   }
 }
 

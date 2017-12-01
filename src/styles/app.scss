@@ -31,16 +31,19 @@ button {
 }
 
 table {
-  background-color: rgba(0,0,0,0.0125);
   border-collapse: collapse;
   width: 100%;
 }
 
 td {
-  border: 1px solid rgb(220, 220, 220);
+  background: rgba(0, 0, 0, 0.0125);
+  border: 1px solid rgb(225,225,225);
   margin: 0;
   padding: 3px 6px;
-  text-align: center;
+
+  &:empty {
+    background: rgb(255, 255, 255);
+  }
 
   &.active {
     background: rgb(255, 20, 147);
@@ -129,7 +132,6 @@ tr {
 }
 
 .responsive-table {
-  border: 1px solid rgba(0,0,0,0.1);
   overflow: auto;
 }
 
@@ -151,13 +153,12 @@ tr {
 }
 
 .display-character {
-  font-size: 161px;
+  bottom: 50px;
+  font-size: 140px;
   left: 0;
   line-height: 161px;
   position: absolute;
   text-align: center;
-  top: 0;
-  white-space: nowrap;
   width: 100%;
 }
 
@@ -249,7 +250,7 @@ tr {
   height: 100vh;
   overflow: auto;
   position: relative;
-  width: 33%;
+  width: 350px;
   z-index: 2;
 
   @media (orientation: portrait) and (max-width: 480px) {
