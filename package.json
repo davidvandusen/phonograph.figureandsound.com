@@ -1,13 +1,11 @@
 {
   "name": "language-learning",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Application for learning character sets from different languages",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server"
   },
-  "keywords": [],
-  "author": "",
+  "author": "David VanDusen",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
