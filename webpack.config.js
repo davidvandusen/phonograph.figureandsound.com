@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
-    path: 'dist'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{
@@ -29,6 +31,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Language Learning',
       template: 'src/index.ejs'
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: 'data',
+      to: 'data'
+    }])
   ]
 };

@@ -29,7 +29,7 @@ class App extends Component {
 
   loadLanguages() {
     if (!this.state.data.languages) {
-      return fetch('/data/languages/index.json')
+      return fetch('data/languages/index.json')
         .then(res => res.json())
         .then(languages => this.setState({data: {...this.state.data, languages}}));
     } else {
