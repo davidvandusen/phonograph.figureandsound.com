@@ -22,7 +22,8 @@ class App extends Component {
         disabledClassifications: null,
         shuffle: false,
         repeat: false,
-        response: ''
+        response: '',
+        hasSpeech: false
       }
     };
   }
@@ -61,11 +62,16 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Promise
-      .all([
-        this.loadLanguages(),
-        new Promise((resolve, reject) => speechSynthesis.addEventListener('voiceschanged', resolve))
-      ])
+    new Promise((resolve, reject) => speechSynthesis.addEventListener('voiceschanged', resolve))
+      .then(() => {
+        this.setState({
+          ui: {
+            ...this.state.ui,
+            hasSpeech: true
+          }
+        });
+      });
+    this.loadLanguages()
       .then(() => {
         this.setState({
           ui: {
@@ -340,6 +346,9 @@ class App extends Component {
   renderMainUI() {
     return (
       <div className="app">
+        {!this.state.ui.hasSpeech && (
+          <div className="notification">Speech synthesis is not available in this web browser</div>
+        )}
         <div className="settings">
           <div className="languages">
             {this.state.data.languages.map((language, idx) => (
