@@ -346,9 +346,6 @@ class App extends Component {
   renderMainUI() {
     return (
       <div className="app">
-        {!this.state.ui.hasSpeech && (
-          <div className="notification">Speech synthesis is not available in this web browser</div>
-        )}
         <div className="settings">
           <div className="languages">
             {this.state.data.languages.map((language, idx) => (
