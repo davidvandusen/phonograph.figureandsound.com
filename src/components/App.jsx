@@ -62,15 +62,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    new Promise((resolve, reject) => speechSynthesis.addEventListener('voiceschanged', resolve))
-      .then(() => {
-        this.setState({
-          ui: {
-            ...this.state.ui,
-            hasSpeech: true
-          }
-        });
+    new Promise((resolve, reject) => {
+      if (speechSynthesis && speechSynthesis.addEventListener) {
+        speechSynthesis.addEventListener('voiceschanged', resolve);
+      }
+    }).then(() => {
+      this.setState({
+        ui: {
+          ...this.state.ui,
+          hasSpeech: true
+        }
       });
+    });
     this.loadLanguages()
       .then(() => {
         this.setState({
