@@ -1,6 +1,6 @@
 require('../styles/app.scss');
 
-import React, {Component} from 'react';
+import {h, Component} from 'preact';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {speak} from '../lib/speechSynthesis';
 import {active, disabled} from '../lib/className';

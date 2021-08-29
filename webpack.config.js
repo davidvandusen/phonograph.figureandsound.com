@@ -42,5 +42,11 @@ module.exports = {
       from: 'data',
       to: 'data'
     }])
-  ]
+  ],
+  "resolve": {
+    "alias": {
+      "react": "preact/compat",
+      "react-dom": "preact/compat"
+    },
+  }
 };
