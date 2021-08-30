@@ -54,707 +54,606 @@
           "consonant": "∅",
           "hiragana": "あ",
           "roman": "a",
-          "ipa": "a",
           "vowel": "a"
         },
         {
           "consonant": "∅",
           "hiragana": "い",
           "roman": "i",
-          "ipa": "i",
           "vowel": "i"
         },
         {
           "consonant": "∅",
           "hiragana": "う",
           "roman": "u",
-          "ipa": "ɯ",
           "vowel": "u"
         },
         {
           "consonant": "∅",
           "hiragana": "え",
           "roman": "e",
-          "ipa": "e",
           "vowel": "e"
         },
         {
           "consonant": "∅",
           "hiragana": "お",
           "roman": "o",
-          "ipa": "o",
           "vowel": "o"
         },
         {
           "consonant": "k",
           "hiragana": "か",
           "roman": "ka",
-          "ipa": "ka",
           "vowel": "a"
         },
         {
           "consonant": "k",
           "hiragana": "き",
           "roman": "ki",
-          "ipa": "kʲi",
           "vowel": "i"
         },
         {
           "consonant": "k",
           "hiragana": "く",
           "roman": "ku",
-          "ipa": "kɯ",
           "vowel": "u"
         },
         {
           "consonant": "k",
           "hiragana": "け",
           "roman": "ke",
-          "ipa": "ke",
           "vowel": "e"
         },
         {
           "consonant": "k",
           "hiragana": "こ",
           "roman": "ko",
-          "ipa": "ko",
           "vowel": "o"
         },
         {
           "consonant": "k",
           "hiragana": "きゃ",
           "roman": "kya",
-          "ipa": "kʲa",
           "vowel": "ya"
         },
         {
           "consonant": "k",
           "hiragana": "きゅ",
           "roman": "kyu",
-          "ipa": "kʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "k",
           "hiragana": "きょ",
           "roman": "kyo",
-          "ipa": "kʲo",
           "vowel": "yo"
         },
         {
           "consonant": "s",
           "hiragana": "さ",
           "roman": "sa",
-          "ipa": "sa",
           "vowel": "a"
         },
         {
           "consonant": "s",
           "hiragana": "し",
           "roman": "shi",
-          "ipa": "ɕi",
           "vowel": "i"
         },
         {
           "consonant": "s",
           "hiragana": "す",
           "roman": "su",
-          "ipa": "sɯ",
           "vowel": "u"
         },
         {
           "consonant": "s",
           "hiragana": "せ",
           "roman": "se",
-          "ipa": "se",
           "vowel": "e"
         },
         {
           "consonant": "s",
           "hiragana": "そ",
           "roman": "so",
-          "ipa": "so",
           "vowel": "o"
         },
         {
           "consonant": "s",
           "hiragana": "しゃ",
           "roman": "sha",
-          "ipa": "ɕa",
           "vowel": "ya"
         },
         {
           "consonant": "s",
           "hiragana": "しゅ",
           "roman": "shu",
-          "ipa": "ɕɯ",
           "vowel": "yu"
         },
         {
           "consonant": "s",
           "hiragana": "しょ",
           "roman": "sho",
-          "ipa": "ɕo",
           "vowel": "yo"
         },
         {
           "consonant": "t",
           "hiragana": "た",
           "roman": "ta",
-          "ipa": "ta",
           "vowel": "a"
         },
         {
           "consonant": "t",
           "hiragana": "ち",
           "roman": "chi",
-          "ipa": "t͡ɕi",
           "vowel": "i"
         },
         {
           "consonant": "t",
           "hiragana": "つ",
           "roman": "tsu",
-          "ipa": "t͡sɯ",
           "vowel": "u"
         },
         {
           "consonant": "t",
           "hiragana": "て",
           "roman": "te",
-          "ipa": "te",
           "vowel": "e"
         },
         {
           "consonant": "t",
           "hiragana": "と",
           "roman": "to",
-          "ipa": "to",
           "vowel": "o"
         },
         {
           "consonant": "t",
           "hiragana": "ちゃ",
           "roman": "cha",
-          "ipa": "t͡ɕa",
           "vowel": "ya"
         },
         {
           "consonant": "t",
           "hiragana": "ちゅ",
           "roman": "chu",
-          "ipa": "t͡ɕɯ",
           "vowel": "yu"
         },
         {
           "consonant": "t",
           "hiragana": "ちょ",
           "roman": "cho",
-          "ipa": "t͡ɕo",
           "vowel": "yo"
         },
         {
           "consonant": "n",
           "hiragana": "な",
           "roman": "na",
-          "ipa": "na",
           "vowel": "a"
         },
         {
           "consonant": "n",
           "hiragana": "に",
           "roman": "ni",
-          "ipa": "ɲi",
           "vowel": "i"
         },
         {
           "consonant": "n",
           "hiragana": "ぬ",
           "roman": "nu",
-          "ipa": "nɯ",
           "vowel": "u"
         },
         {
           "consonant": "n",
           "hiragana": "ね",
           "roman": "ne",
-          "ipa": "ne",
           "vowel": "e"
         },
         {
           "consonant": "n",
           "hiragana": "の",
           "roman": "no",
-          "ipa": "no",
           "vowel": "o"
         },
         {
           "consonant": "n",
           "hiragana": "にゃ",
           "roman": "nya",
-          "ipa": "ɲa",
           "vowel": "ya"
         },
         {
           "consonant": "n",
           "hiragana": "にゅ",
           "roman": "nyu",
-          "ipa": "ɲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "n",
           "hiragana": "にょ",
           "roman": "nyo",
-          "ipa": "ɲo",
           "vowel": "yo"
         },
         {
           "consonant": "h",
           "hiragana": "は",
           "roman": "ha",
-          "ipa": "ha",
           "vowel": "a"
         },
         {
           "consonant": "h",
           "hiragana": "ひ",
           "roman": "hi",
-          "ipa": "çi",
           "vowel": "i"
         },
         {
           "consonant": "h",
           "hiragana": "ふ",
           "roman": "fu",
-          "ipa": "ɸɯ",
           "vowel": "u"
         },
         {
           "consonant": "h",
           "hiragana": "へ",
           "roman": "he",
-          "ipa": "he",
           "vowel": "e"
         },
         {
           "consonant": "h",
           "hiragana": "ほ",
           "roman": "ho",
-          "ipa": "ho",
           "vowel": "o"
         },
         {
           "consonant": "h",
           "hiragana": "ひゃ",
           "roman": "hya",
-          "ipa": "ça",
           "vowel": "ya"
         },
         {
           "consonant": "h",
           "hiragana": "ひゅ",
           "roman": "hyu",
-          "ipa": "çɯ",
           "vowel": "yu"
         },
         {
           "consonant": "h",
           "hiragana": "ひょ",
           "roman": "hyo",
-          "ipa": "ço",
           "vowel": "yo"
         },
         {
           "consonant": "m",
           "hiragana": "ま",
           "roman": "ma",
-          "ipa": "ma",
           "vowel": "a"
         },
         {
           "consonant": "m",
           "hiragana": "み",
           "roman": "mi",
-          "ipa": "mi",
           "vowel": "i"
         },
         {
           "consonant": "m",
           "hiragana": "む",
           "roman": "mu",
-          "ipa": "mɯ",
           "vowel": "u"
         },
         {
           "consonant": "m",
           "hiragana": "め",
           "roman": "me",
-          "ipa": "me",
           "vowel": "e"
         },
         {
           "consonant": "m",
           "hiragana": "も",
           "roman": "mo",
-          "ipa": "mo",
           "vowel": "o"
         },
         {
           "consonant": "m",
           "hiragana": "みゃ",
           "roman": "mya",
-          "ipa": "mʲa",
           "vowel": "ya"
         },
         {
           "consonant": "m",
           "hiragana": "みゅ",
           "roman": "myu",
-          "ipa": "mʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "m",
           "hiragana": "みょ",
           "roman": "myo",
-          "ipa": "mʲo",
           "vowel": "yo"
         },
         {
           "consonant": "y",
           "hiragana": "や",
           "roman": "ya",
-          "ipa": "ja",
           "vowel": "a"
         },
         {
           "consonant": "y",
           "hiragana": "ゆ",
           "roman": "yu",
-          "ipa": "jɯ",
           "vowel": "u"
         },
         {
           "consonant": "y",
           "hiragana": "よ",
           "roman": "yo",
-          "ipa": "jo",
           "vowel": "o"
         },
         {
           "consonant": "r",
           "hiragana": "ら",
           "roman": "ra",
-          "ipa": "ɾa",
           "vowel": "a"
         },
         {
           "consonant": "r",
           "hiragana": "り",
           "roman": "ri",
-          "ipa": "ɾi",
           "vowel": "i"
         },
         {
           "consonant": "r",
           "hiragana": "る",
           "roman": "ru",
-          "ipa": "ɾɯ",
           "vowel": "u"
         },
         {
           "consonant": "r",
           "hiragana": "れ",
           "roman": "re",
-          "ipa": "ɾe",
           "vowel": "e"
         },
         {
           "consonant": "r",
           "hiragana": "ろ",
           "roman": "ro",
-          "ipa": "ɾo",
           "vowel": "o"
         },
         {
           "consonant": "r",
           "hiragana": "りゃ",
           "roman": "rya",
-          "ipa": "ɾʲa",
           "vowel": "ya"
         },
         {
           "consonant": "r",
           "hiragana": "りゅ",
           "roman": "ryu",
-          "ipa": "ɾʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "r",
           "hiragana": "りょ",
           "roman": "ryo",
-          "ipa": "ɾʲo",
           "vowel": "yo"
         },
         {
           "consonant": "w",
           "hiragana": "わ",
           "roman": "wa",
-          "ipa": "wa",
           "vowel": "a"
         },
         {
           "consonant": "w",
           "hiragana": "を",
           "roman": "wo",
-          "ipa": "(w)o",
           "vowel": "o"
         },
         {
           "consonant": "g",
           "hiragana": "が",
           "roman": "ga",
-          "ipa": "ɡa",
           "vowel": "a"
         },
         {
           "consonant": "g",
           "hiragana": "ぎ",
           "roman": "gi",
-          "ipa": "ɡʲi",
           "vowel": "i"
         },
         {
           "consonant": "g",
           "hiragana": "ぐ",
           "roman": "gu",
-          "ipa": "ɡɯ",
           "vowel": "u"
         },
         {
           "consonant": "g",
           "hiragana": "げ",
           "roman": "ge",
-          "ipa": "ɡe",
           "vowel": "e"
         },
         {
           "consonant": "g",
           "hiragana": "ご",
           "roman": "go",
-          "ipa": "ɡo",
           "vowel": "o"
         },
         {
           "consonant": "g",
           "hiragana": "ぎゃ",
           "roman": "gya",
-          "ipa": "ɡʲa",
           "vowel": "ya"
         },
         {
           "consonant": "g",
           "hiragana": "ぎゅ",
           "roman": "gyu",
-          "ipa": "ɡʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "g",
           "hiragana": "ぎょ",
           "roman": "gyo",
-          "ipa": "ɡʲo",
           "vowel": "yo"
         },
         {
           "consonant": "z",
           "hiragana": "ざ",
           "roman": "za",
-          "ipa": "za",
           "vowel": "a"
         },
         {
           "consonant": "z",
           "hiragana": "じ",
           "roman": "ji",
-          "ipa": "(d)ʑi",
           "vowel": "i"
         },
         {
           "consonant": "z",
           "hiragana": "ず",
           "roman": "zu",
-          "ipa": "(d)zɯ",
           "vowel": "u"
         },
         {
           "consonant": "z",
           "hiragana": "ぜ",
           "roman": "ze",
-          "ipa": "ze",
           "vowel": "e"
         },
         {
           "consonant": "z",
           "hiragana": "ぞ",
           "roman": "zo",
-          "ipa": "zo",
           "vowel": "o"
         },
         {
           "consonant": "z",
           "hiragana": "じゃ",
           "roman": "ja",
-          "ipa": "(d)ʑa",
           "vowel": "ya"
         },
         {
           "consonant": "z",
           "hiragana": "じゅ",
           "roman": "ju",
-          "ipa": "(d)ʑɯ",
           "vowel": "yu"
         },
         {
           "consonant": "z",
           "hiragana": "じょ",
           "roman": "jo",
-          "ipa": "(d)ʑo",
           "vowel": "yo"
         },
         {
           "consonant": "d",
           "hiragana": "だ",
           "roman": "da",
-          "ipa": "da",
           "vowel": "a"
         },
         {
           "consonant": "d",
           "hiragana": "で",
           "roman": "de",
-          "ipa": "de",
           "vowel": "e"
         },
         {
           "consonant": "d",
           "hiragana": "ど",
           "roman": "do",
-          "ipa": "do",
           "vowel": "o"
         },
         {
           "consonant": "b",
           "hiragana": "ば",
           "roman": "ba",
-          "ipa": "ba",
           "vowel": "a"
         },
         {
           "consonant": "b",
           "hiragana": "び",
           "roman": "bi",
-          "ipa": "bi",
           "vowel": "i"
         },
         {
           "consonant": "b",
           "hiragana": "ぶ",
           "roman": "bu",
-          "ipa": "bɯ",
           "vowel": "u"
         },
         {
           "consonant": "b",
           "hiragana": "べ",
           "roman": "be",
-          "ipa": "be",
           "vowel": "e"
         },
         {
           "consonant": "b",
           "hiragana": "ぼ",
           "roman": "bo",
-          "ipa": "bo",
           "vowel": "o"
         },
         {
           "consonant": "b",
           "hiragana": "びゃ",
           "roman": "bya",
-          "ipa": "bʲa",
           "vowel": "ya"
         },
         {
           "consonant": "b",
           "hiragana": "びゅ",
           "roman": "byu",
-          "ipa": "bʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "b",
           "hiragana": "びょ",
           "roman": "byo",
-          "ipa": "bʲo",
           "vowel": "yo"
         },
         {
           "consonant": "p",
           "hiragana": "ぱ",
           "roman": "pa",
-          "ipa": "pa",
           "vowel": "a"
         },
         {
           "consonant": "p",
           "hiragana": "ぴ",
           "roman": "pi",
-          "ipa": "pi",
           "vowel": "i"
         },
         {
           "consonant": "p",
           "hiragana": "ぷ",
           "roman": "pu",
-          "ipa": "pɯ",
           "vowel": "u"
         },
         {
           "consonant": "p",
           "hiragana": "ぺ",
           "roman": "pe",
-          "ipa": "pe",
           "vowel": "e"
         },
         {
           "consonant": "p",
           "hiragana": "ぽ",
           "roman": "po",
-          "ipa": "po",
           "vowel": "o"
         },
         {
           "consonant": "p",
           "hiragana": "ぴゃ",
           "roman": "pya",
-          "ipa": "pʲa",
           "vowel": "ya"
         },
         {
           "consonant": "p",
           "hiragana": "ぴゅ",
           "roman": "pyu",
-          "ipa": "pʲɯ",
           "vowel": "yu"
         },
         {
           "consonant": "p",
           "hiragana": "ぴょ",
           "roman": "pyo",
-          "ipa": "pʲo",
           "vowel": "yo"
         }
       ]
@@ -812,2005 +711,607 @@
           "katakana": "ア",
           "roman": "a",
           "vowel": "a",
-          "consonant": "∅",
-          "ipa": ""
+          "consonant": "∅"
         },
         {
           "katakana": "イ",
           "roman": "i",
           "vowel": "i",
-          "consonant": "∅",
-          "ipa": ""
+          "consonant": "∅"
         },
         {
           "katakana": "ウ",
           "roman": "u",
           "vowel": "u",
-          "consonant": "∅",
-          "ipa": ""
+          "consonant": "∅"
         },
         {
           "katakana": "エ",
           "roman": "e",
           "vowel": "e",
-          "consonant": "∅",
-          "ipa": ""
+          "consonant": "∅"
         },
         {
           "katakana": "オ",
           "roman": "o",
           "vowel": "o",
-          "consonant": "∅",
-          "ipa": ""
+          "consonant": "∅"
         },
         {
           "katakana": "カ",
           "roman": "ka",
           "vowel": "a",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "キ",
           "roman": "ki",
           "vowel": "i",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "ク",
           "roman": "ku",
           "vowel": "u",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "ケ",
           "roman": "ke",
           "vowel": "e",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "コ",
           "roman": "ko",
           "vowel": "o",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "キャ",
           "roman": "kya",
           "vowel": "ya",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "キュ",
           "roman": "kyu",
           "vowel": "yu",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "キョ",
           "roman": "kyo",
           "vowel": "yo",
-          "consonant": "k",
-          "ipa": ""
+          "consonant": "k"
         },
         {
           "katakana": "サ",
           "roman": "sa",
           "vowel": "a",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "シ",
           "roman": "shi",
           "vowel": "i",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "ス",
           "roman": "su",
           "vowel": "u",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "セ",
           "roman": "se",
           "vowel": "e",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "ソ",
           "roman": "so",
           "vowel": "o",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "シャ",
           "roman": "sha",
           "vowel": "ya",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "シュ",
           "roman": "shu",
           "vowel": "yu",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "ショ",
           "roman": "sho",
           "vowel": "yo",
-          "consonant": "s",
-          "ipa": ""
+          "consonant": "s"
         },
         {
           "katakana": "タ",
           "roman": "ta",
           "vowel": "a",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "チ",
           "roman": "chi",
           "vowel": "i",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "ツ",
           "roman": "tsu",
           "vowel": "u",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "テ",
           "roman": "te",
           "vowel": "e",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "ト",
           "roman": "to",
           "vowel": "o",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "チャ",
           "roman": "cha",
           "vowel": "ya",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "チュ",
           "roman": "chu",
           "vowel": "yu",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "チョ",
           "roman": "cho",
           "vowel": "yo",
-          "consonant": "t",
-          "ipa": ""
+          "consonant": "t"
         },
         {
           "katakana": "ナ",
           "roman": "na",
           "vowel": "a",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ニ",
           "roman": "ni",
           "vowel": "i",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ヌ",
           "roman": "nu",
           "vowel": "u",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ネ",
           "roman": "ne",
           "vowel": "e",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ノ",
           "roman": "no",
           "vowel": "o",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ニャ",
           "roman": "nya",
           "vowel": "ya",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ニュ",
           "roman": "nyu",
           "vowel": "yu",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ニョ",
           "roman": "nyo",
           "vowel": "yo",
-          "consonant": "n",
-          "ipa": ""
+          "consonant": "n"
         },
         {
           "katakana": "ハ",
           "roman": "ha",
           "vowel": "a",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ヒ",
           "roman": "hi",
           "vowel": "i",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "フ",
           "roman": "fu",
           "vowel": "u",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ヘ",
           "roman": "he",
           "vowel": "e",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ホ",
           "roman": "ho",
           "vowel": "o",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ヒャ",
           "roman": "hya",
           "vowel": "ya",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ヒュ",
           "roman": "hyu",
           "vowel": "yu",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "ヒョ",
           "roman": "hyo",
           "vowel": "yo",
-          "consonant": "h",
-          "ipa": ""
+          "consonant": "h"
         },
         {
           "katakana": "マ",
           "roman": "ma",
           "vowel": "a",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ミ",
           "roman": "mi",
           "vowel": "i",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ム",
           "roman": "mu",
           "vowel": "u",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "メ",
           "roman": "me",
           "vowel": "e",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "モ",
           "roman": "mo",
           "vowel": "o",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ミャ",
           "roman": "mya",
           "vowel": "ya",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ミュ",
           "roman": "myu",
           "vowel": "yu",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ミョ",
           "roman": "myo",
           "vowel": "yo",
-          "consonant": "m",
-          "ipa": ""
+          "consonant": "m"
         },
         {
           "katakana": "ヤ",
           "roman": "ya",
           "vowel": "a",
-          "consonant": "y",
-          "ipa": ""
+          "consonant": "y"
         },
         {
           "katakana": "ユ",
           "roman": "yu",
           "vowel": "u",
-          "consonant": "y",
-          "ipa": ""
+          "consonant": "y"
         },
         {
           "katakana": "ヨ",
           "roman": "yo",
           "vowel": "o",
-          "consonant": "y",
-          "ipa": ""
+          "consonant": "y"
         },
         {
           "katakana": "ラ",
           "roman": "ra",
           "vowel": "a",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "リ",
           "roman": "ri",
           "vowel": "i",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "ル",
           "roman": "ru",
           "vowel": "u",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "レ",
           "roman": "re",
           "vowel": "e",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "ロ",
           "roman": "ro",
           "vowel": "o",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "リャ",
           "roman": "rya",
           "vowel": "ya",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "リュ",
           "roman": "ryu",
           "vowel": "yu",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "リョ",
           "roman": "ryo",
           "vowel": "yo",
-          "consonant": "r",
-          "ipa": ""
+          "consonant": "r"
         },
         {
           "katakana": "ワ",
           "roman": "wa",
           "vowel": "a",
-          "consonant": "w",
-          "ipa": ""
+          "consonant": "w"
         },
         {
           "katakana": "ヲ",
           "roman": "wo",
           "vowel": "o",
-          "consonant": "w",
-          "ipa": ""
+          "consonant": "w"
         },
         {
           "katakana": "ガ",
           "roman": "ga",
           "vowel": "a",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ギ",
           "roman": "gi",
           "vowel": "i",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "グ",
           "roman": "gu",
           "vowel": "u",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ゲ",
           "roman": "ge",
           "vowel": "e",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ゴ",
           "roman": "go",
           "vowel": "o",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ギャ",
           "roman": "gya",
           "vowel": "ya",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ギュ",
           "roman": "gyu",
           "vowel": "yu",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ギョ",
           "roman": "gyo",
           "vowel": "yo",
-          "consonant": "g",
-          "ipa": ""
+          "consonant": "g"
         },
         {
           "katakana": "ザ",
           "roman": "za",
           "vowel": "a",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ジ",
           "roman": "ji",
           "vowel": "i",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ズ",
           "roman": "zu",
           "vowel": "u",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ゼ",
           "roman": "ze",
           "vowel": "e",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ゾ",
           "roman": "zo",
           "vowel": "o",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ジャ",
           "roman": "ja",
           "vowel": "ya",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ジュ",
           "roman": "ju",
           "vowel": "yu",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ジョ",
           "roman": "jo",
           "vowel": "yo",
-          "consonant": "z",
-          "ipa": ""
+          "consonant": "z"
         },
         {
           "katakana": "ダ",
           "roman": "da",
           "vowel": "a",
-          "consonant": "d",
-          "ipa": ""
+          "consonant": "d"
         },
         {
           "katakana": "デ",
           "roman": "de",
           "vowel": "e",
-          "consonant": "d",
-          "ipa": ""
+          "consonant": "d"
         },
         {
           "katakana": "ド",
           "roman": "do",
           "vowel": "o",
-          "consonant": "d",
-          "ipa": ""
+          "consonant": "d"
         },
         {
           "katakana": "バ",
           "roman": "ba",
           "vowel": "a",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ビ",
           "roman": "bi",
           "vowel": "i",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ブ",
           "roman": "bu",
           "vowel": "u",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ベ",
           "roman": "be",
           "vowel": "e",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ボ",
           "roman": "bo",
           "vowel": "o",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ビャ",
           "roman": "bya",
           "vowel": "ya",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ビュ",
           "roman": "byu",
           "vowel": "yu",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "ビョ",
           "roman": "byo",
           "vowel": "yo",
-          "consonant": "b",
-          "ipa": ""
+          "consonant": "b"
         },
         {
           "katakana": "パ",
           "roman": "pa",
           "vowel": "a",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ピ",
           "roman": "pi",
           "vowel": "i",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "プ",
           "roman": "pu",
           "vowel": "u",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ペ",
           "roman": "pe",
           "vowel": "e",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ポ",
           "roman": "po",
           "vowel": "o",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ピャ",
           "roman": "pya",
           "vowel": "ya",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ピュ",
           "roman": "pyu",
           "vowel": "yu",
-          "consonant": "p",
-          "ipa": ""
+          "consonant": "p"
         },
         {
           "katakana": "ピョ",
           "roman": "pyo",
           "vowel": "yo",
-          "consonant": "p",
-          "ipa": ""
-        }
-      ]
-    },
-    {
-      "name": "Kanji (0-99)",
-      "idProperty": "arabic",
-      "spokenProperty": "kanji",
-      "displayProperty": "kanji",
-      "queryProperty": "kanji",
-      "responseProperty": "arabic",
-      "classifications": [
-        {
-          "name": "Tens",
-          "property": "tens",
-          "values": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
-          ]
-        },
-        {
-          "name": "Ones",
-          "property": "ones",
-          "values": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
-          ]
-        }
-      ],
-      "arrangement": {
-        "rowClassification": 0,
-        "columnClassification": 1
-      },
-      "characters": [
-        {
-          "kanji": "零",
-          "ones": "0",
-          "tens": "0",
-          "arabic": "0"
-        },
-        {
-          "kanji": "一",
-          "ones": "1",
-          "tens": "0",
-          "arabic": "1"
-        },
-        {
-          "kanji": "二",
-          "ones": "2",
-          "tens": "0",
-          "arabic": "2"
-        },
-        {
-          "kanji": "三",
-          "ones": "3",
-          "tens": "0",
-          "arabic": "3"
-        },
-        {
-          "kanji": "四",
-          "ones": "4",
-          "tens": "0",
-          "arabic": "4"
-        },
-        {
-          "kanji": "五",
-          "ones": "5",
-          "tens": "0",
-          "arabic": "5"
-        },
-        {
-          "kanji": "六",
-          "ones": "6",
-          "tens": "0",
-          "arabic": "6"
-        },
-        {
-          "kanji": "七",
-          "ones": "7",
-          "tens": "0",
-          "arabic": "7"
-        },
-        {
-          "kanji": "八",
-          "ones": "8",
-          "tens": "0",
-          "arabic": "8"
-        },
-        {
-          "kanji": "九",
-          "ones": "9",
-          "tens": "0",
-          "arabic": "9"
-        },
-        {
-          "kanji": "十",
-          "ones": "0",
-          "tens": "1",
-          "arabic": "10"
-        },
-        {
-          "kanji": "十一",
-          "ones": "1",
-          "tens": "1",
-          "arabic": "11"
-        },
-        {
-          "kanji": "十二",
-          "ones": "2",
-          "tens": "1",
-          "arabic": "12"
-        },
-        {
-          "kanji": "十三",
-          "ones": "3",
-          "tens": "1",
-          "arabic": "13"
-        },
-        {
-          "kanji": "十四",
-          "ones": "4",
-          "tens": "1",
-          "arabic": "14"
-        },
-        {
-          "kanji": "十五",
-          "ones": "5",
-          "tens": "1",
-          "arabic": "15"
-        },
-        {
-          "kanji": "十六",
-          "ones": "6",
-          "tens": "1",
-          "arabic": "16"
-        },
-        {
-          "kanji": "十七",
-          "ones": "7",
-          "tens": "1",
-          "arabic": "17"
-        },
-        {
-          "kanji": "十八",
-          "ones": "8",
-          "tens": "1",
-          "arabic": "18"
-        },
-        {
-          "kanji": "十九",
-          "ones": "9",
-          "tens": "1",
-          "arabic": "19"
-        },
-        {
-          "kanji": "二十",
-          "ones": "0",
-          "tens": "2",
-          "arabic": "20"
-        },
-        {
-          "kanji": "二十一",
-          "ones": "1",
-          "tens": "2",
-          "arabic": "21"
-        },
-        {
-          "kanji": "二十二",
-          "ones": "2",
-          "tens": "2",
-          "arabic": "22"
-        },
-        {
-          "kanji": "二十三",
-          "ones": "3",
-          "tens": "2",
-          "arabic": "23"
-        },
-        {
-          "kanji": "二十四",
-          "ones": "4",
-          "tens": "2",
-          "arabic": "24"
-        },
-        {
-          "kanji": "二十五",
-          "ones": "5",
-          "tens": "2",
-          "arabic": "25"
-        },
-        {
-          "kanji": "二十六",
-          "ones": "6",
-          "tens": "2",
-          "arabic": "26"
-        },
-        {
-          "kanji": "二十七",
-          "ones": "7",
-          "tens": "2",
-          "arabic": "27"
-        },
-        {
-          "kanji": "二十八",
-          "ones": "8",
-          "tens": "2",
-          "arabic": "28"
-        },
-        {
-          "kanji": "二十九",
-          "ones": "9",
-          "tens": "2",
-          "arabic": "29"
-        },
-        {
-          "kanji": "三十",
-          "ones": "0",
-          "tens": "3",
-          "arabic": "30"
-        },
-        {
-          "kanji": "三十一",
-          "ones": "1",
-          "tens": "3",
-          "arabic": "31"
-        },
-        {
-          "kanji": "三十二",
-          "ones": "2",
-          "tens": "3",
-          "arabic": "32"
-        },
-        {
-          "kanji": "三十三",
-          "ones": "3",
-          "tens": "3",
-          "arabic": "33"
-        },
-        {
-          "kanji": "三十四",
-          "ones": "4",
-          "tens": "3",
-          "arabic": "34"
-        },
-        {
-          "kanji": "三十五",
-          "ones": "5",
-          "tens": "3",
-          "arabic": "35"
-        },
-        {
-          "kanji": "三十六",
-          "ones": "6",
-          "tens": "3",
-          "arabic": "36"
-        },
-        {
-          "kanji": "三十七",
-          "ones": "7",
-          "tens": "3",
-          "arabic": "37"
-        },
-        {
-          "kanji": "三十八",
-          "ones": "8",
-          "tens": "3",
-          "arabic": "38"
-        },
-        {
-          "kanji": "三十九",
-          "ones": "9",
-          "tens": "3",
-          "arabic": "39"
-        },
-        {
-          "kanji": "四十",
-          "ones": "0",
-          "tens": "4",
-          "arabic": "40"
-        },
-        {
-          "kanji": "四十一",
-          "ones": "1",
-          "tens": "4",
-          "arabic": "41"
-        },
-        {
-          "kanji": "四十二",
-          "ones": "2",
-          "tens": "4",
-          "arabic": "42"
-        },
-        {
-          "kanji": "四十三",
-          "ones": "3",
-          "tens": "4",
-          "arabic": "43"
-        },
-        {
-          "kanji": "四十四",
-          "ones": "4",
-          "tens": "4",
-          "arabic": "44"
-        },
-        {
-          "kanji": "四十五",
-          "ones": "5",
-          "tens": "4",
-          "arabic": "45"
-        },
-        {
-          "kanji": "四十六",
-          "ones": "6",
-          "tens": "4",
-          "arabic": "46"
-        },
-        {
-          "kanji": "四十七",
-          "ones": "7",
-          "tens": "4",
-          "arabic": "47"
-        },
-        {
-          "kanji": "四十八",
-          "ones": "8",
-          "tens": "4",
-          "arabic": "48"
-        },
-        {
-          "kanji": "四十九",
-          "ones": "9",
-          "tens": "4",
-          "arabic": "49"
-        },
-        {
-          "kanji": "五十",
-          "ones": "0",
-          "tens": "5",
-          "arabic": "50"
-        },
-        {
-          "kanji": "五十一",
-          "ones": "1",
-          "tens": "5",
-          "arabic": "51"
-        },
-        {
-          "kanji": "五十二",
-          "ones": "2",
-          "tens": "5",
-          "arabic": "52"
-        },
-        {
-          "kanji": "五十三",
-          "ones": "3",
-          "tens": "5",
-          "arabic": "53"
-        },
-        {
-          "kanji": "五十四",
-          "ones": "4",
-          "tens": "5",
-          "arabic": "54"
-        },
-        {
-          "kanji": "五十五",
-          "ones": "5",
-          "tens": "5",
-          "arabic": "55"
-        },
-        {
-          "kanji": "五十六",
-          "ones": "6",
-          "tens": "5",
-          "arabic": "56"
-        },
-        {
-          "kanji": "五十七",
-          "ones": "7",
-          "tens": "5",
-          "arabic": "57"
-        },
-        {
-          "kanji": "五十八",
-          "ones": "8",
-          "tens": "5",
-          "arabic": "58"
-        },
-        {
-          "kanji": "五十九",
-          "ones": "9",
-          "tens": "5",
-          "arabic": "59"
-        },
-        {
-          "kanji": "六十",
-          "ones": "0",
-          "tens": "6",
-          "arabic": "60"
-        },
-        {
-          "kanji": "六十一",
-          "ones": "1",
-          "tens": "6",
-          "arabic": "61"
-        },
-        {
-          "kanji": "六十二",
-          "ones": "2",
-          "tens": "6",
-          "arabic": "62"
-        },
-        {
-          "kanji": "六十三",
-          "ones": "3",
-          "tens": "6",
-          "arabic": "63"
-        },
-        {
-          "kanji": "六十四",
-          "ones": "4",
-          "tens": "6",
-          "arabic": "64"
-        },
-        {
-          "kanji": "六十五",
-          "ones": "5",
-          "tens": "6",
-          "arabic": "65"
-        },
-        {
-          "kanji": "六十六",
-          "ones": "6",
-          "tens": "6",
-          "arabic": "66"
-        },
-        {
-          "kanji": "六十七",
-          "ones": "7",
-          "tens": "6",
-          "arabic": "67"
-        },
-        {
-          "kanji": "六十八",
-          "ones": "8",
-          "tens": "6",
-          "arabic": "68"
-        },
-        {
-          "kanji": "六十九",
-          "ones": "9",
-          "tens": "6",
-          "arabic": "69"
-        },
-        {
-          "kanji": "七十",
-          "ones": "0",
-          "tens": "7",
-          "arabic": "70"
-        },
-        {
-          "kanji": "七十一",
-          "ones": "1",
-          "tens": "7",
-          "arabic": "71"
-        },
-        {
-          "kanji": "七十二",
-          "ones": "2",
-          "tens": "7",
-          "arabic": "72"
-        },
-        {
-          "kanji": "七十三",
-          "ones": "3",
-          "tens": "7",
-          "arabic": "73"
-        },
-        {
-          "kanji": "七十四",
-          "ones": "4",
-          "tens": "7",
-          "arabic": "74"
-        },
-        {
-          "kanji": "七十五",
-          "ones": "5",
-          "tens": "7",
-          "arabic": "75"
-        },
-        {
-          "kanji": "七十六",
-          "ones": "6",
-          "tens": "7",
-          "arabic": "76"
-        },
-        {
-          "kanji": "七十七",
-          "ones": "7",
-          "tens": "7",
-          "arabic": "77"
-        },
-        {
-          "kanji": "七十八",
-          "ones": "8",
-          "tens": "7",
-          "arabic": "78"
-        },
-        {
-          "kanji": "七十九",
-          "ones": "9",
-          "tens": "7",
-          "arabic": "79"
-        },
-        {
-          "kanji": "八十",
-          "ones": "0",
-          "tens": "8",
-          "arabic": "80"
-        },
-        {
-          "kanji": "八十一",
-          "ones": "1",
-          "tens": "8",
-          "arabic": "81"
-        },
-        {
-          "kanji": "八十二",
-          "ones": "2",
-          "tens": "8",
-          "arabic": "82"
-        },
-        {
-          "kanji": "八十三",
-          "ones": "3",
-          "tens": "8",
-          "arabic": "83"
-        },
-        {
-          "kanji": "八十四",
-          "ones": "4",
-          "tens": "8",
-          "arabic": "84"
-        },
-        {
-          "kanji": "八十五",
-          "ones": "5",
-          "tens": "8",
-          "arabic": "85"
-        },
-        {
-          "kanji": "八十六",
-          "ones": "6",
-          "tens": "8",
-          "arabic": "86"
-        },
-        {
-          "kanji": "八十七",
-          "ones": "7",
-          "tens": "8",
-          "arabic": "87"
-        },
-        {
-          "kanji": "八十八",
-          "ones": "8",
-          "tens": "8",
-          "arabic": "88"
-        },
-        {
-          "kanji": "八十九",
-          "ones": "9",
-          "tens": "8",
-          "arabic": "89"
-        },
-        {
-          "kanji": "九十",
-          "ones": "0",
-          "tens": "9",
-          "arabic": "90"
-        },
-        {
-          "kanji": "九十一",
-          "ones": "1",
-          "tens": "9",
-          "arabic": "91"
-        },
-        {
-          "kanji": "九十二",
-          "ones": "2",
-          "tens": "9",
-          "arabic": "92"
-        },
-        {
-          "kanji": "九十三",
-          "ones": "3",
-          "tens": "9",
-          "arabic": "93"
-        },
-        {
-          "kanji": "九十四",
-          "ones": "4",
-          "tens": "9",
-          "arabic": "94"
-        },
-        {
-          "kanji": "九十五",
-          "ones": "5",
-          "tens": "9",
-          "arabic": "95"
-        },
-        {
-          "kanji": "九十六",
-          "ones": "6",
-          "tens": "9",
-          "arabic": "96"
-        },
-        {
-          "kanji": "九十七",
-          "ones": "7",
-          "tens": "9",
-          "arabic": "97"
-        },
-        {
-          "kanji": "九十八",
-          "ones": "8",
-          "tens": "9",
-          "arabic": "98"
-        },
-        {
-          "kanji": "九十九",
-          "ones": "9",
-          "tens": "9",
-          "arabic": "99"
-        }
-      ]
-    },
-    {
-      "name": "Kanji (100-10000)",
-      "idProperty": "arabic",
-      "spokenProperty": "kanji",
-      "displayProperty": "kanji",
-      "queryProperty": "kanji",
-      "responseProperty": "arabic",
-      "classifications": [
-        {
-          "name": "Thousands",
-          "property": "thousands",
-          "values": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-          ]
-        },
-        {
-          "name": "Hundreds",
-          "property": "hundreds",
-          "values": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
-          ]
-        }
-      ],
-      "arrangement": {
-        "rowClassification": 0,
-        "columnClassification": 1
-      },
-      "characters": [
-        {
-          "kanji": "百",
-          "hundreds": "1",
-          "thousands": "0",
-          "arabic": "100"
-        },
-        {
-          "kanji": "二百",
-          "hundreds": "2",
-          "thousands": "0",
-          "arabic": "200"
-        },
-        {
-          "kanji": "三百",
-          "hundreds": "3",
-          "thousands": "0",
-          "arabic": "300"
-        },
-        {
-          "kanji": "四百",
-          "hundreds": "4",
-          "thousands": "0",
-          "arabic": "400"
-        },
-        {
-          "kanji": "五百",
-          "hundreds": "5",
-          "thousands": "0",
-          "arabic": "500"
-        },
-        {
-          "kanji": "六百",
-          "hundreds": "6",
-          "thousands": "0",
-          "arabic": "600"
-        },
-        {
-          "kanji": "七百",
-          "hundreds": "7",
-          "thousands": "0",
-          "arabic": "700"
-        },
-        {
-          "kanji": "八百",
-          "hundreds": "8",
-          "thousands": "0",
-          "arabic": "800"
-        },
-        {
-          "kanji": "九百",
-          "hundreds": "9",
-          "thousands": "0",
-          "arabic": "900"
-        },
-        {
-          "kanji": "千",
-          "hundreds": "0",
-          "thousands": "1",
-          "arabic": "1000"
-        },
-        {
-          "kanji": "千百",
-          "hundreds": "1",
-          "thousands": "1",
-          "arabic": "1100"
-        },
-        {
-          "kanji": "千二百",
-          "hundreds": "2",
-          "thousands": "1",
-          "arabic": "1200"
-        },
-        {
-          "kanji": "千三百",
-          "hundreds": "3",
-          "thousands": "1",
-          "arabic": "1300"
-        },
-        {
-          "kanji": "千四百",
-          "hundreds": "4",
-          "thousands": "1",
-          "arabic": "1400"
-        },
-        {
-          "kanji": "千五百",
-          "hundreds": "5",
-          "thousands": "1",
-          "arabic": "1500"
-        },
-        {
-          "kanji": "千六百",
-          "hundreds": "6",
-          "thousands": "1",
-          "arabic": "1600"
-        },
-        {
-          "kanji": "千七百",
-          "hundreds": "7",
-          "thousands": "1",
-          "arabic": "1700"
-        },
-        {
-          "kanji": "千八百",
-          "hundreds": "8",
-          "thousands": "1",
-          "arabic": "1800"
-        },
-        {
-          "kanji": "千九百",
-          "hundreds": "9",
-          "thousands": "1",
-          "arabic": "1900"
-        },
-        {
-          "kanji": "二千",
-          "hundreds": "0",
-          "thousands": "2",
-          "arabic": "2000"
-        },
-        {
-          "kanji": "二千百",
-          "hundreds": "1",
-          "thousands": "2",
-          "arabic": "2100"
-        },
-        {
-          "kanji": "二千二百",
-          "hundreds": "2",
-          "thousands": "2",
-          "arabic": "2200"
-        },
-        {
-          "kanji": "二千三百",
-          "hundreds": "3",
-          "thousands": "2",
-          "arabic": "2300"
-        },
-        {
-          "kanji": "二千四百",
-          "hundreds": "4",
-          "thousands": "2",
-          "arabic": "2400"
-        },
-        {
-          "kanji": "二千五百",
-          "hundreds": "5",
-          "thousands": "2",
-          "arabic": "2500"
-        },
-        {
-          "kanji": "二千六百",
-          "hundreds": "6",
-          "thousands": "2",
-          "arabic": "2600"
-        },
-        {
-          "kanji": "二千七百",
-          "hundreds": "7",
-          "thousands": "2",
-          "arabic": "2700"
-        },
-        {
-          "kanji": "二千八百",
-          "hundreds": "8",
-          "thousands": "2",
-          "arabic": "2800"
-        },
-        {
-          "kanji": "二千九百",
-          "hundreds": "9",
-          "thousands": "2",
-          "arabic": "2900"
-        },
-        {
-          "kanji": "三千",
-          "hundreds": "0",
-          "thousands": "3",
-          "arabic": "3000"
-        },
-        {
-          "kanji": "三千百",
-          "hundreds": "1",
-          "thousands": "3",
-          "arabic": "3100"
-        },
-        {
-          "kanji": "三千二百",
-          "hundreds": "2",
-          "thousands": "3",
-          "arabic": "3200"
-        },
-        {
-          "kanji": "三千三百",
-          "hundreds": "3",
-          "thousands": "3",
-          "arabic": "3300"
-        },
-        {
-          "kanji": "三千四百",
-          "hundreds": "4",
-          "thousands": "3",
-          "arabic": "3400"
-        },
-        {
-          "kanji": "三千五百",
-          "hundreds": "5",
-          "thousands": "3",
-          "arabic": "3500"
-        },
-        {
-          "kanji": "三千六百",
-          "hundreds": "6",
-          "thousands": "3",
-          "arabic": "3600"
-        },
-        {
-          "kanji": "三千七百",
-          "hundreds": "7",
-          "thousands": "3",
-          "arabic": "3700"
-        },
-        {
-          "kanji": "三千八百",
-          "hundreds": "8",
-          "thousands": "3",
-          "arabic": "3800"
-        },
-        {
-          "kanji": "三千九百",
-          "hundreds": "9",
-          "thousands": "3",
-          "arabic": "3900"
-        },
-        {
-          "kanji": "四千",
-          "hundreds": "0",
-          "thousands": "4",
-          "arabic": "4000"
-        },
-        {
-          "kanji": "四千百",
-          "hundreds": "1",
-          "thousands": "4",
-          "arabic": "4100"
-        },
-        {
-          "kanji": "四千二百",
-          "hundreds": "2",
-          "thousands": "4",
-          "arabic": "4200"
-        },
-        {
-          "kanji": "四千三百",
-          "hundreds": "3",
-          "thousands": "4",
-          "arabic": "4300"
-        },
-        {
-          "kanji": "四千四百",
-          "hundreds": "4",
-          "thousands": "4",
-          "arabic": "4400"
-        },
-        {
-          "kanji": "四千五百",
-          "hundreds": "5",
-          "thousands": "4",
-          "arabic": "4500"
-        },
-        {
-          "kanji": "四千六百",
-          "hundreds": "6",
-          "thousands": "4",
-          "arabic": "4600"
-        },
-        {
-          "kanji": "四千七百",
-          "hundreds": "7",
-          "thousands": "4",
-          "arabic": "4700"
-        },
-        {
-          "kanji": "四千八百",
-          "hundreds": "8",
-          "thousands": "4",
-          "arabic": "4800"
-        },
-        {
-          "kanji": "四千九百",
-          "hundreds": "9",
-          "thousands": "4",
-          "arabic": "4900"
-        },
-        {
-          "kanji": "五千",
-          "hundreds": "0",
-          "thousands": "5",
-          "arabic": "5000"
-        },
-        {
-          "kanji": "五千百",
-          "hundreds": "1",
-          "thousands": "5",
-          "arabic": "5100"
-        },
-        {
-          "kanji": "五千二百",
-          "hundreds": "2",
-          "thousands": "5",
-          "arabic": "5200"
-        },
-        {
-          "kanji": "五千三百",
-          "hundreds": "3",
-          "thousands": "5",
-          "arabic": "5300"
-        },
-        {
-          "kanji": "五千四百",
-          "hundreds": "4",
-          "thousands": "5",
-          "arabic": "5400"
-        },
-        {
-          "kanji": "五千五百",
-          "hundreds": "5",
-          "thousands": "5",
-          "arabic": "5500"
-        },
-        {
-          "kanji": "五千六百",
-          "hundreds": "6",
-          "thousands": "5",
-          "arabic": "5600"
-        },
-        {
-          "kanji": "五千七百",
-          "hundreds": "7",
-          "thousands": "5",
-          "arabic": "5700"
-        },
-        {
-          "kanji": "五千八百",
-          "hundreds": "8",
-          "thousands": "5",
-          "arabic": "5800"
-        },
-        {
-          "kanji": "五千九百",
-          "hundreds": "9",
-          "thousands": "5",
-          "arabic": "5900"
-        },
-        {
-          "kanji": "六千",
-          "hundreds": "0",
-          "thousands": "6",
-          "arabic": "6000"
-        },
-        {
-          "kanji": "六千百",
-          "hundreds": "1",
-          "thousands": "6",
-          "arabic": "6100"
-        },
-        {
-          "kanji": "六千二百",
-          "hundreds": "2",
-          "thousands": "6",
-          "arabic": "6200"
-        },
-        {
-          "kanji": "六千三百",
-          "hundreds": "3",
-          "thousands": "6",
-          "arabic": "6300"
-        },
-        {
-          "kanji": "六千四百",
-          "hundreds": "4",
-          "thousands": "6",
-          "arabic": "6400"
-        },
-        {
-          "kanji": "六千五百",
-          "hundreds": "5",
-          "thousands": "6",
-          "arabic": "6500"
-        },
-        {
-          "kanji": "六千六百",
-          "hundreds": "6",
-          "thousands": "6",
-          "arabic": "6600"
-        },
-        {
-          "kanji": "六千七百",
-          "hundreds": "7",
-          "thousands": "6",
-          "arabic": "6700"
-        },
-        {
-          "kanji": "六千八百",
-          "hundreds": "8",
-          "thousands": "6",
-          "arabic": "6800"
-        },
-        {
-          "kanji": "六千九百",
-          "hundreds": "9",
-          "thousands": "6",
-          "arabic": "6900"
-        },
-        {
-          "kanji": "七千",
-          "hundreds": "0",
-          "thousands": "7",
-          "arabic": "7000"
-        },
-        {
-          "kanji": "七千百",
-          "hundreds": "1",
-          "thousands": "7",
-          "arabic": "7100"
-        },
-        {
-          "kanji": "七千二百",
-          "hundreds": "2",
-          "thousands": "7",
-          "arabic": "7200"
-        },
-        {
-          "kanji": "七千三百",
-          "hundreds": "3",
-          "thousands": "7",
-          "arabic": "7300"
-        },
-        {
-          "kanji": "七千四百",
-          "hundreds": "4",
-          "thousands": "7",
-          "arabic": "7400"
-        },
-        {
-          "kanji": "七千五百",
-          "hundreds": "5",
-          "thousands": "7",
-          "arabic": "7500"
-        },
-        {
-          "kanji": "七千六百",
-          "hundreds": "6",
-          "thousands": "7",
-          "arabic": "7600"
-        },
-        {
-          "kanji": "七千七百",
-          "hundreds": "7",
-          "thousands": "7",
-          "arabic": "7700"
-        },
-        {
-          "kanji": "七千八百",
-          "hundreds": "8",
-          "thousands": "7",
-          "arabic": "7800"
-        },
-        {
-          "kanji": "七千九百",
-          "hundreds": "9",
-          "thousands": "7",
-          "arabic": "7900"
-        },
-        {
-          "kanji": "八千",
-          "hundreds": "0",
-          "thousands": "8",
-          "arabic": "8000"
-        },
-        {
-          "kanji": "八千百",
-          "hundreds": "1",
-          "thousands": "8",
-          "arabic": "8100"
-        },
-        {
-          "kanji": "八千二百",
-          "hundreds": "2",
-          "thousands": "8",
-          "arabic": "8200"
-        },
-        {
-          "kanji": "八千三百",
-          "hundreds": "3",
-          "thousands": "8",
-          "arabic": "8300"
-        },
-        {
-          "kanji": "八千四百",
-          "hundreds": "4",
-          "thousands": "8",
-          "arabic": "8400"
-        },
-        {
-          "kanji": "八千五百",
-          "hundreds": "5",
-          "thousands": "8",
-          "arabic": "8500"
-        },
-        {
-          "kanji": "八千六百",
-          "hundreds": "6",
-          "thousands": "8",
-          "arabic": "8600"
-        },
-        {
-          "kanji": "八千七百",
-          "hundreds": "7",
-          "thousands": "8",
-          "arabic": "8700"
-        },
-        {
-          "kanji": "八千八百",
-          "hundreds": "8",
-          "thousands": "8",
-          "arabic": "8800"
-        },
-        {
-          "kanji": "八千九百",
-          "hundreds": "9",
-          "thousands": "8",
-          "arabic": "8900"
-        },
-        {
-          "kanji": "九千",
-          "hundreds": "0",
-          "thousands": "9",
-          "arabic": "9000"
-        },
-        {
-          "kanji": "九千百",
-          "hundreds": "1",
-          "thousands": "9",
-          "arabic": "9100"
-        },
-        {
-          "kanji": "九千二百",
-          "hundreds": "2",
-          "thousands": "9",
-          "arabic": "9200"
-        },
-        {
-          "kanji": "九千三百",
-          "hundreds": "3",
-          "thousands": "9",
-          "arabic": "9300"
-        },
-        {
-          "kanji": "九千四百",
-          "hundreds": "4",
-          "thousands": "9",
-          "arabic": "9400"
-        },
-        {
-          "kanji": "九千五百",
-          "hundreds": "5",
-          "thousands": "9",
-          "arabic": "9500"
-        },
-        {
-          "kanji": "九千六百",
-          "hundreds": "6",
-          "thousands": "9",
-          "arabic": "9600"
-        },
-        {
-          "kanji": "九千七百",
-          "hundreds": "7",
-          "thousands": "9",
-          "arabic": "9700"
-        },
-        {
-          "kanji": "九千八百",
-          "hundreds": "8",
-          "thousands": "9",
-          "arabic": "9800"
-        },
-        {
-          "kanji": "九千九百",
-          "hundreds": "9",
-          "thousands": "9",
-          "arabic": "9900"
-        },
-        {
-          "kanji": "一万",
-          "hundreds": "0",
-          "thousands": "10",
-          "arabic": "10000"
+          "consonant": "p"
         }
       ]
     }
