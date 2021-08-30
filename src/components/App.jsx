@@ -1,7 +1,6 @@
 require('../styles/app.scss');
 
 import {h, Component} from 'preact';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {speak} from '../lib/speechSynthesis';
 import {active, disabled} from '../lib/className';
 
@@ -424,17 +423,12 @@ class App extends Component {
           )}
           {this.state.ui.characterSet !== null && this.state.ui.characterPosition !== null && (
             <div className="present-character">
-              <ReactCSSTransitionGroup
-                transitionName="display-character"
-                transitionEnterTimeout={555}
-                transitionLeaveTimeout={255}>
-                <label
-                  className="display-character"
-                  key={this.getCharacter()[this.getIdProperty()]}
-                  htmlFor="response-input">
-                  {this.getCharacter()[this.getQueryProperty()]}
-                </label>
-              </ReactCSSTransitionGroup>
+              <label
+                className="display-character"
+                key={this.getCharacter()[this.getIdProperty()]}
+                htmlFor="response-input">
+                {this.getCharacter()[this.getQueryProperty()]}
+              </label>
               <div className="display-character-response">
                 <input
                   id="response-input"
