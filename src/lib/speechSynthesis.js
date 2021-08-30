@@ -8,16 +8,13 @@ function speak(text, language) {
   utterance.voice = voices[0];
   utterance.rate = 2 / 3;
   return new Promise((resolve, reject) => {
-    utterance.onend = resolve;
-    speechSynthesis.speak(utterance);
+    utterance.addEventListener('end', resolve);
+    try {
+      speechSynthesis.speak(utterance);
+    } catch (e) {
+      reject(e);
+    }
   });
 }
 
-function speakIn(language) {
-  const voices = getVoices(language);
-  return function (text) {
-    speak(text, voices);
-  }
-}
-
-export {getVoices, speak, speakIn};
+export {speak};

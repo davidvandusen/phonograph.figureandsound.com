@@ -434,7 +434,7 @@ class App extends Component {
                   id="response-input"
                   value={this.state.ui.response}
                   ref={el => this.responseInput = el}
-                  onChange={() => this.onResponseType()} />
+                  onInput={() => this.onResponseType()} />
               </div>
             </div>
           )}
