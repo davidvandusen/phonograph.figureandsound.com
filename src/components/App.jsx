@@ -1,8 +1,7 @@
-require('../styles/app.scss');
+require('../styles/app.css');
 
 import {h, Component} from 'preact';
 import {speak} from '../lib/speechSynthesis';
-import {active} from '../lib/className';
 
 class App extends Component {
 
@@ -84,7 +83,7 @@ class App extends Component {
   }
 
   renderLoadingScreen() {
-    return <div className="loading">Loading...</div>;
+    return <div>Loading...</div>;
   }
 
   getLanguage() {
@@ -255,24 +254,22 @@ class App extends Component {
 
   renderMainUI() {
     return (
-      <div className="app">
-        <div className="settings">
-          <div className="languages">
+      <div>
+        <div>
+          <div>
             {this.state.data.languages.map((language, idx) => (
               <div
                 key={language.lang}
-                className={active(idx === this.state.ui.language, 'language')}
                 onClick={() => this.setLanguage(idx)}>
                 {language.name}
               </div>
             ))}
           </div>
           {this.state.ui.language !== null && (
-            <div className="character-sets">
+            <div>
               {this.getCharacterSets().map((characterSet, idx) => (
                 <div
                   key={characterSet.name}
-                  className={active(idx === this.state.ui.characterSet, 'character-set')}
                   onClick={() => this.setCharacterSet(idx)}>
                   {characterSet.name}
                 </div>
@@ -280,7 +277,7 @@ class App extends Component {
             </div>
           )}
           {this.state.ui.characterSet !== null && (
-            <div className="character-table responsive-table">
+            <div>
               <table>
                 <tbody>
                 {this.getCharacterSet().classifications[this.getCharacterSet().arrangement.rowClassification].values.map(rowValue => (
@@ -289,8 +286,7 @@ class App extends Component {
                       const character = this.getCharacterAt(rowValue, columnValue);
                       return (
                         <td
-                          key={columnValue}
-                          className={active(this.isCurrentCharacter(character))}>
+                          key={columnValue}>
                           {(character || {})[this.getDisplayProperty()]}
                         </td>
                       );
@@ -302,19 +298,18 @@ class App extends Component {
             </div>
           )}
         </div>
-        <div className="content">
+        <div>
           {this.state.ui.characterSet !== null && this.state.ui.characterPosition === null && (
             <button onClick={() => this.startQuiz()}>Start</button>
           )}
           {this.state.ui.characterSet !== null && this.state.ui.characterPosition !== null && (
-            <div className="present-character">
+            <div>
               <label
-                className="display-character"
                 key={this.getCharacter()[this.getIdProperty()]}
                 htmlFor="response-input">
                 {this.getCharacter()[this.getQueryProperty()]}
               </label>
-              <div className="display-character-response">
+              <div>
                 <input
                   id="response-input"
                   value={this.state.ui.response}
