@@ -2,7 +2,7 @@ require('../styles/app.scss');
 
 import {h, Component} from 'preact';
 import {speak} from '../lib/speechSynthesis';
-import {active, disabled} from '../lib/className';
+import {active} from '../lib/className';
 
 class App extends Component {
 
@@ -18,8 +18,6 @@ class App extends Component {
         characterSet: null,
         characterPosition: null,
         characterOrder: null,
-        shuffle: false,
-        repeat: false,
         response: '',
         hasSpeech: false
       }
@@ -134,17 +132,6 @@ class App extends Component {
     return Object.keys(this.getCharacterSet().characters);
   }
 
-  shuffledCharacters() {
-    const characterOrder = [];
-    const defaultOrder = this.defaultCharacterOrder();
-    while (defaultOrder.length) {
-      const i = Math.floor(Math.random() * defaultOrder.length);
-      characterOrder.push(defaultOrder[i]);
-      defaultOrder.splice(i, 1);
-    }
-    return characterOrder;
-  }
-
   getCharacter(position) {
     const characters = this.getCharacterSet().characters;
     const characterPosition = position === undefined ? this.state.ui.characterPosition : position;
@@ -152,28 +139,19 @@ class App extends Component {
     return characters[characterIndex];
   }
 
-  advanceCharacter(from, by = 1) {
+  advanceCharacter(from) {
     const characters = this.getCharacterSet().characters;
     let characterPosition = from === undefined ? this.state.ui.characterPosition : from;
-    let fromBeginning = false;
     if (characterPosition === null) {
-      fromBeginning = true;
       characterPosition = 0;
     } else {
-      characterPosition += by;
+      characterPosition += 1;
     }
     if (characterPosition < 0) {
       return Promise.resolve();
     }
     if (characterPosition === characters.length) {
-      if (fromBeginning) {
-        return Promise.reject('All characters have been excluded. Enable some character sets.');
-      }
       characterPosition = null;
-      if (this.state.ui.repeat) {
-        this.startQuiz();
-        return Promise.resolve();
-      }
     }
     return new Promise(resolve => this.setState({
       ui: {
@@ -184,7 +162,7 @@ class App extends Component {
   }
 
   setCharacterOrder() {
-    const characterOrder = this.state.ui.shuffle ? this.shuffledCharacters() : this.defaultCharacterOrder();
+    const characterOrder = this.defaultCharacterOrder();
     return new Promise(resolve => this.setState({
       ui: {
         ...this.state.ui,
@@ -260,34 +238,6 @@ class App extends Component {
         this.moveToNextCharacter();
       }
     });
-  }
-
-  toggleRepeat() {
-    this.setState({
-      ui: {
-        ...this.state.ui,
-        repeat: !this.state.ui.repeat
-      }
-    });
-  }
-
-  toggleShuffle() {
-    this.setState({
-      ui: {
-        ...this.state.ui,
-        shuffle: !this.state.ui.shuffle
-      }
-    }, () => {
-      if (this.state.ui.characterPosition !== null) this.setCharacterOrder();
-    });
-  }
-
-  canGoBack() {
-    return this.state.ui.characterPosition !== null && this.state.ui.characterPosition !== 0;
-  }
-
-  canGoForward() {
-    return this.state.ui.characterPosition !== null;
   }
 
   getCharacterAt(rowValue, columnValue) {
@@ -370,38 +320,6 @@ class App extends Component {
                   value={this.state.ui.response}
                   ref={el => this.responseInput = el}
                   onInput={() => this.onResponseType()} />
-              </div>
-            </div>
-          )}
-          {this.state.ui.characterSet !== null && (
-            <div className="player-controls">
-              <div
-                title="Repeat"
-                className={disabled(!this.state.ui.repeat, 'player-control')}
-                onClick={() => this.toggleRepeat()}>
-                R
-              </div>
-              <div
-                title="Shuffle"
-                className={disabled(!this.state.ui.shuffle, 'player-control')}
-                onClick={() => this.toggleShuffle()}>
-                S
-              </div>
-              <div
-                title="Previous Character"
-                className={disabled(!this.canGoBack(), 'player-control')}
-                onClick={() => {
-                  if (this.canGoBack()) this.advanceCharacter(undefined, -1);
-                }}>
-                ◄
-              </div>
-              <div
-                title="Next Character"
-                className={disabled(!this.canGoForward(), 'player-control')}
-                onClick={() => {
-                  if (this.canGoForward()) this.moveToNextCharacter();
-                }}>
-                ►
               </div>
             </div>
           )}

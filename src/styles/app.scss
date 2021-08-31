@@ -101,28 +101,8 @@ tr {
   @extend %activatable-row;
 }
 
-.character-classification-name {
-  font-weight: 800;
-  padding: 14px 21px 7px;
-}
-
-.character-classification-values {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 7px 14px 14px;
-}
-
-.character-classification-value {
-  @extend %interactable;
-  @extend %disableable-item;
-
-  min-width: 21px;
-  text-align: center;
-}
-
 .languages,
-.character-sets,
-.character-classifications {
+.character-sets {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -209,25 +189,6 @@ tr {
   font-size: 21px;
   outline: none;
   padding: 7px;
-  text-align: center;
-}
-
-.player-controls {
-  bottom: 21px;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
-
-.player-control {
-  @extend %interactable;
-  @extend %disableable-item;
-  font-size: 28px;
-  height: 28px;
-  line-height: 28px;
-  min-width: 28px;
   text-align: center;
 }
 
