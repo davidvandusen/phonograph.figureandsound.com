@@ -18,7 +18,6 @@ class App extends Component {
         characterSet: null,
         characterPosition: null,
         characterOrder: null,
-        disabledClassifications: null,
         shuffle: false,
         repeat: false,
         response: '',
@@ -101,7 +100,6 @@ class App extends Component {
         ...this.state.ui,
         language: idx,
         characterSet: null,
-        disabledClassifications: null,
         characterOrder: null,
         characterPosition: null
       }
@@ -121,14 +119,11 @@ class App extends Component {
   setCharacterSet(idx) {
     const characterSets = this.getCharacterSets();
     const characterSet = characterSets[idx];
-    const disabledClassifications = [];
-    characterSet.classifications.forEach((classification, idx) => disabledClassifications[idx] = []);
     const characterOrder = Object.keys(characterSet.characters);
     this.setState({
       ui: {
         ...this.state.ui,
         characterSet: idx,
-        disabledClassifications,
         characterOrder,
         characterPosition: null
       }
@@ -157,37 +152,6 @@ class App extends Component {
     return characters[characterIndex];
   }
 
-  toggleClassification(classIdx, value) {
-    const disabledClassifications = this.state.ui.disabledClassifications;
-    const classification = disabledClassifications[classIdx];
-    const idx = classification.indexOf(value);
-    if (idx === -1) classification.push(value);
-    else classification.splice(idx, 1);
-    this.setState({
-      ui: {
-        ...this.state.ui,
-        disabledClassifications
-      }
-    });
-  }
-
-  toggleClassificationAll(idx) {
-    const values = this.getCharacterSet().classifications[idx].values;
-    values.forEach(value => this.toggleClassification(idx, value));
-  }
-
-  characterExcluded(position) {
-    const classifications = this.getCharacterSet().classifications;
-    const character = this.getCharacter(position);
-    for (const idx in this.state.ui.disabledClassifications) {
-      const disabledValues = this.state.ui.disabledClassifications[idx];
-      const property = classifications[idx].property;
-      const value = character[property];
-      if (disabledValues.includes(value)) return true;
-    }
-    return false;
-  }
-
   advanceCharacter(from, by = 1) {
     const characters = this.getCharacterSet().characters;
     let characterPosition = from === undefined ? this.state.ui.characterPosition : from;
@@ -200,9 +164,6 @@ class App extends Component {
     }
     if (characterPosition < 0) {
       return Promise.resolve();
-    }
-    while (characterPosition < characters.length && this.characterExcluded(characterPosition)) {
-      characterPosition += by;
     }
     if (characterPosition === characters.length) {
       if (fromBeginning) {
@@ -364,32 +325,6 @@ class App extends Component {
                   className={active(idx === this.state.ui.characterSet, 'character-set')}
                   onClick={() => this.setCharacterSet(idx)}>
                   {characterSet.name}
-                </div>
-              ))}
-            </div>
-          )}
-          {this.state.ui.characterSet !== null && (
-            <div className="character-classifications">
-              {this.getCharacterSet().classifications.map((classification, idx) => (
-                <div
-                  key={classification.name}
-                  className="character-classification">
-                  <div className="character-classification-name">
-                    {classification.name}
-                    <span
-                      className="group-action"
-                      onClick={() => this.toggleClassificationAll(idx)}>toggle all</span>
-                  </div>
-                  <div className="character-classification-values">
-                    {classification.values.map((classificationValue) => (
-                      <div
-                        key={classificationValue}
-                        className={disabled(this.state.ui.disabledClassifications[idx].includes(classificationValue), 'character-classification-value')}
-                        onClick={() => this.toggleClassification(idx, classificationValue)}>
-                        {classificationValue.toUpperCase()}
-                      </div>
-                    ))}
-                  </div>
                 </div>
               ))}
             </div>
