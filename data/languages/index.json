@@ -1,5 +1,10 @@
 [
   {
+    "lang": "el-GR",
+    "name": "Greek (Greece)",
+    "href": "data/languages/el-GR.json"
+  },
+  {
     "lang": "ja-JP",
     "name": "Japanese (Japan)",
     "href": "data/languages/ja-JP.json"

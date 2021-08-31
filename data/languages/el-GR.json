@@ -1,0 +1,203 @@
+{
+  "lang": "el-GR",
+  "characterSets": [
+    {
+      "name": "Greek Alphabet",
+      "idProperty": "name",
+      "spokenProperty": "spoken",
+      "displayProperty": "display",
+      "queryProperty": "display",
+      "responseProperty": "name",
+      "classifications": [
+        {
+          "name": "Row",
+          "property": "row",
+          "values": [
+            ""
+          ]
+        },
+        {
+          "name": "Letter",
+          "property": "name",
+          "values": [
+            "alpha",
+            "beta",
+            "gamma",
+            "delta",
+            "epsilon",
+            "zeta",
+            "eta",
+            "theta",
+            "iota",
+            "kappa",
+            "lambda",
+            "mu",
+            "nu",
+            "xi",
+            "omicron",
+            "pi",
+            "rho",
+            "sigma",
+            "tau",
+            "upsilon",
+            "phi",
+            "chi",
+            "psi",
+            "omega"
+          ]
+        }
+      ],
+      "arrangement": {
+        "rowClassification": 0,
+        "columnClassification": 1
+      },
+      "characters": [
+        {
+          "name": "alpha",
+          "spoken": "άλφα",
+          "display": "Α α",
+          "row": ""
+        },
+        {
+          "name": "beta",
+          "spoken": "βήτα",
+          "display": "Β β",
+          "row": ""
+        },
+        {
+          "name": "gamma",
+          "spoken": "γάμμα",
+          "display": "Γ γ",
+          "row": ""
+        },
+        {
+          "name": "delta",
+          "spoken": "δέλτα",
+          "display": "Δ δ",
+          "row": ""
+        },
+        {
+          "name": "epsilon",
+          "spoken": "έψιλον",
+          "display": "Ε ε",
+          "row": ""
+        },
+        {
+          "name": "zeta",
+          "spoken": "ζήτα",
+          "display": "Ζ ζ",
+          "row": ""
+        },
+        {
+          "name": "eta",
+          "spoken": "ήτα",
+          "display": "Η η",
+          "row": ""
+        },
+        {
+          "name": "theta",
+          "spoken": "θήτα",
+          "display": "Θ θ",
+          "row": ""
+        },
+        {
+          "name": "iota",
+          "spoken": "ιώτα",
+          "display": "Ι ι",
+          "row": ""
+        },
+        {
+          "name": "kappa",
+          "spoken": "κάππα",
+          "display": "Κ κ",
+          "row": ""
+        },
+        {
+          "name": "lambda",
+          "spoken": "λάμβδα",
+          "display": "Λ λ",
+          "row": ""
+        },
+        {
+          "name": "mu",
+          "spoken": "μυ",
+          "display": "Μ μ",
+          "row": ""
+        },
+        {
+          "name": "nu",
+          "spoken": "νυ",
+          "display": "Ν ν",
+          "row": ""
+        },
+        {
+          "name": "xi",
+          "spoken": "ξι",
+          "display": "Ξ ξ",
+          "row": ""
+        },
+        {
+          "name": "omicron",
+          "spoken": "όμικρον",
+          "display": "Ο ο",
+          "row": ""
+        },
+        {
+          "name": "pi",
+          "spoken": "πι",
+          "display": "Π π",
+          "row": ""
+        },
+        {
+          "name": "rho",
+          "spoken": "ρώ",
+          "display": "Ρ ρ",
+          "row": ""
+        },
+        {
+          "name": "sigma",
+          "spoken": "σίγμα",
+          "display": "Σ σ/ς",
+          "row": ""
+        },
+        {
+          "name": "tau",
+          "spoken": "ταυ",
+          "display": "Τ τ",
+          "row": ""
+        },
+        {
+          "name": "upsilon",
+          "spoken": "ύψιλον",
+          "display": "Υ υ",
+          "row": ""
+        },
+        {
+          "name": "phi",
+          "spoken": "φι",
+          "display": "Φ φ",
+          "row": ""
+        },
+        {
+          "name": "chi",
+          "spoken": "χι",
+          "display": "Χ χ",
+          "row": ""
+        },
+        {
+          "name": "psi",
+          "spoken": "ψι",
+          "display": "Ψ ψ",
+          "row": ""
+        },
+        {
+          "name": "omega",
+          "spoken": "ωμέγα",
+          "display": "Ω ω",
+          "row": ""
+        }
+      ]
+    }
+  ]
+}
+
