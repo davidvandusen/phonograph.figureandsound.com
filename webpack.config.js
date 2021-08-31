@@ -41,12 +41,15 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'data',
       to: 'data'
+    }, {
+      from: 'static',
+      to: ''
     }])
   ],
-  "resolve": {
-    "alias": {
-      "react": "preact/compat",
-      "react-dom": "preact/compat"
+  'resolve': {
+    'alias': {
+      'react': 'preact/compat',
+      'react-dom': 'preact/compat'
     },
   }
 };
