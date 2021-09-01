@@ -37,9 +37,6 @@ module.exports = {
       template: 'src/index.ejs'
     }),
     new CopyWebpackPlugin([{
-      from: 'data',
-      to: 'data'
-    }, {
       from: 'static',
       to: ''
     }])

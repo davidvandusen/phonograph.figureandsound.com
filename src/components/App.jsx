@@ -2,6 +2,15 @@ require('../styles/app.css');
 
 import {h, Component} from 'preact';
 import {speak} from '../lib/speechSynthesis';
+import languages from '../data/languages/index.json';
+import greek from '../data/languages/el-GR.json';
+import japanese from '../data/languages/ja-JP.json';
+
+const languageData = [greek, japanese];
+
+languages.forEach(language => {
+  language.data = languageData.find(data => data.lang === language.lang)
+});
 
 class App extends Component {
 
@@ -9,10 +18,9 @@ class App extends Component {
     super(props);
     this.state = {
       data: {
-        languages: null
+        languages
       },
       ui: {
-        loaded: false,
         language: null,
         characterSet: null,
         characterPosition: null,
@@ -21,39 +29,6 @@ class App extends Component {
         hasSpeech: false
       }
     };
-  }
-
-  loadLanguages() {
-    if (!this.state.data.languages) {
-      return fetch('data/languages/index.json')
-        .then(res => res.json())
-        .then(languages => this.setState({data: {...this.state.data, languages}}));
-    } else {
-      return Promise.resolve(this.state.data.languages);
-    }
-  }
-
-  loadLanguage(lang) {
-    const language = this.state.data.languages.find(l => l.lang === lang);
-    if (language) {
-      if (!language.data) {
-        return fetch(language.href)
-          .then(res => res.json())
-          .then(data => {
-            language.data = data;
-            this.setState({
-              data: {
-                ...this.state.data,
-                languages: this.state.data.languages
-              }
-            })
-          });
-      } else {
-        return Promise.resolve(language.data);
-      }
-    } else {
-      return Promise.reject(new Error(`language "${lang}" no found`));
-    }
   }
 
   componentDidMount() {
@@ -66,24 +41,10 @@ class App extends Component {
           }
         });
       });
-    this.loadLanguages()
-      .then(() => {
-        this.setState({
-          ui: {
-            ...this.state.ui,
-            loaded: true
-          }
-        });
-      })
-      .catch(console.error.bind(console));
   }
 
   componentDidUpdate() {
     this.responseInput && this.responseInput.focus();
-  }
-
-  renderLoadingScreen() {
-    return <div>Loading...</div>;
   }
 
   getLanguage() {
@@ -91,8 +52,7 @@ class App extends Component {
   }
 
   setLanguage(idx) {
-    const language = this.state.data.languages[idx];
-    this.loadLanguage(language.lang).then(() => this.setState({
+    this.setState({
       ui: {
         ...this.state.ui,
         language: idx,
@@ -100,7 +60,7 @@ class App extends Component {
         characterOrder: null,
         characterPosition: null
       }
-    }));
+    });
   }
 
   getCharacterSets() {
@@ -327,7 +287,7 @@ class App extends Component {
   }
 
   render() {
-    return this.state.ui.loaded ? this.renderMainUI() : this.renderLoadingScreen();
+    return this.renderMainUI();
   }
 }
 
