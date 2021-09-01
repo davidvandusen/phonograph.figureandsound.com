@@ -1,14 +1,13 @@
-function getVoices(language) {
-  return speechSynthesis
+const speak = (text, language, rate = 0.7) => {
+  const voices = speechSynthesis
     .getVoices()
     .filter(voice => voice.lang.startsWith(language));
-}
-
-function speak(text, language) {
-  const voices = language instanceof Array ? language : getVoices(language);
+  if (voices.length === 0) {
+    return Promise.resolve();
+  }
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.voice = voices[0];
-  utterance.rate = 2 / 3;
+  utterance.rate = rate;
   return new Promise((resolve, reject) => {
     utterance.addEventListener('end', resolve);
     try {
@@ -17,6 +16,6 @@ function speak(text, language) {
       reject(e);
     }
   });
-}
+};
 
 export { speak };
