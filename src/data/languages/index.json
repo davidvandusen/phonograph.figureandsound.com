@@ -1,12 +1,10 @@
 [
   {
     "code": "el-GR",
-    "name": "Greek",
-    "href": "data/languages/el-GR.json"
+    "name": "Greek"
   },
   {
     "code": "ja-JP",
-    "name": "Japanese",
-    "href": "data/languages/ja-JP.json"
+    "name": "Japanese"
   }
 ]

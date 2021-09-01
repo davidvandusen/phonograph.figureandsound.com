@@ -19,7 +19,7 @@ languages.forEach(language => {
 const getWritingSystemState = (languageIndex, writingSystemIndex) => {
   const language = languages[languageIndex];
   const writingSystem = language.data.writingSystems[writingSystemIndex];
-  const characterOrder = Object.keys(writingSystem.characters);
+  const characterOrder = Object.keys(writingSystem.characters).map(Number);
   const characterPosition = 0;
   return {
     characterOrder,
@@ -31,27 +31,48 @@ const getWritingSystemState = (languageIndex, writingSystemIndex) => {
 
 class App extends Component {
   responseInput = createRef();
+  menuDetails = createRef();
+  characterList = createRef();
+  activeCharacter = createRef();
 
   constructor(props) {
     super(props);
     this.state = {
       ...getWritingSystemState(0, 0),
+      transition: 'in',
       response: '',
     };
   }
 
-  componentDidUpdate() {
+  scrollActiveCharacterIntoView() {
+    this.characterList.current.scrollLeft =
+      this.activeCharacter.current.offsetLeft +
+      this.activeCharacter.current.offsetWidth / 2 -
+      this.characterList.current.offsetWidth / 2;
+  }
+
+  componentDidMount() {
+    this.menuDetails.current.open = false;
     this.responseInput.current && this.responseInput.current.focus();
+    this.scrollActiveCharacterIntoView();
+  }
+
+  componentDidUpdate() {
+    this.menuDetails.current.open = false;
+    this.responseInput.current && this.responseInput.current.focus();
+    this.scrollActiveCharacterIntoView();
   }
 
   setWritingSystem(languageIndex, writingSystemIndex) {
     this.setState(getWritingSystemState(languageIndex, writingSystemIndex));
   }
 
+  getCharacterIndex() {
+    return this.state.characterOrder[this.state.characterPosition];
+  }
+
   getCharacter() {
-    const characterIndex =
-      this.state.characterOrder[this.state.characterPosition];
-    return this.state.writingSystem.characters[characterIndex];
+    return this.state.writingSystem.characters[this.getCharacterIndex()];
   }
 
   advanceCharacter = () => {
@@ -61,7 +82,9 @@ class App extends Component {
     } else {
       characterPosition += 1;
     }
-    this.setState({ characterPosition });
+    setTimeout(() => {
+      this.setState({ characterPosition, transition: 'in' });
+    }, 500);
   };
 
   speakCharacter() {
@@ -71,13 +94,18 @@ class App extends Component {
   }
 
   proceedToNextCharacter() {
-    // Sometimes the utterance doesn't trigger its end event, so
-    // automatically advance after a fixed amount of time if that happens
-    Promise.race([
-      this.speakCharacter(),
+    this.setState({ transition: 'congratulate' });
+    // Sometimes the utterance doesn't trigger its end event, so automatically
+    // advance after a fixed amount of time if that happens, but ensure that a
+    // minimum amount of time has elapsed before moving on.
+    Promise.all([
+      Promise.race([
+        this.speakCharacter(),
+        new Promise(resolve => setTimeout(resolve, 1000)),
+      ]),
       new Promise(resolve => setTimeout(resolve, 1000)),
     ]).then(() => {
-      this.setState({ response: '' }, this.advanceCharacter);
+      this.setState({ response: '', transition: 'out' }, this.advanceCharacter);
     });
   }
 
@@ -85,7 +113,7 @@ class App extends Component {
     this.setState({ response: inputEvent.target.value }, () => {
       const character = this.getCharacter();
       if (
-        this.state.response.toLowerCase() ===
+        this.state.response.toLowerCase().trim() ===
         character[this.state.writingSystem.responseProperty].toLowerCase()
       ) {
         this.proceedToNextCharacter();
@@ -95,45 +123,66 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <div>
+      <div className={`app-layout transition-${this.state.transition}`}>
+        <details ref={this.menuDetails} className="writing-system-selector">
+          <summary>
             {this.state.language.name} {this.state.writingSystem.name}
-          </div>
-          <div>
+          </summary>
+          <menu>
             {languages.map((language, languageIndex) =>
               language.data.writingSystems.map(
                 (writingSystem, writingSystemIndex) => (
-                  <div
-                    key={`${language.name}:${writingSystem.name}`}
-                    onClick={() =>
-                      this.setWritingSystem(languageIndex, writingSystemIndex)
-                    }
-                  >
-                    {language.name} {writingSystem.name}
-                  </div>
+                  <li key={`${language.name}:${writingSystem.name}`}>
+                    <button
+                      onClick={() =>
+                        this.setWritingSystem(languageIndex, writingSystemIndex)
+                      }
+                    >
+                      {language.name} {writingSystem.name}
+                    </button>
+                  </li>
                 )
               )
             )}
-          </div>
-        </div>
-        <div>
-          {this.state.writingSystem.characters.map(character => (
-            <span key={character[this.state.writingSystem.idProperty]}>
-              {character[this.state.writingSystem.displayProperty]}
-            </span>
-          ))}
-        </div>
-        <div>
+          </menu>
+        </details>
+        <ol ref={this.characterList} className="character-list">
+          {this.state.writingSystem.characters.map(
+            (character, characterIndex) => {
+              const isActiveCharacter =
+                characterIndex === this.getCharacterIndex();
+              return (
+                <li
+                  key={character[this.state.writingSystem.idProperty]}
+                  ref={isActiveCharacter && this.activeCharacter}
+                  className={isActiveCharacter ? 'active' : ''}
+                >
+                  {character[this.state.writingSystem.displayProperty]}
+                </li>
+              );
+            }
+          )}
+        </ol>
+        <div className="character-query">
           <label htmlFor="response-input">
             {this.getCharacter()[this.state.writingSystem.queryProperty]}
-          </label>{' '}
-          <input
-            ref={this.responseInput}
-            id="response-input"
-            onInput={this.handleResponseInput}
-            value={this.state.response}
-          />
+          </label>
+          <div className="response-prompt">
+            <input
+              ref={this.responseInput}
+              autoCapitalize={false}
+              autoComplete={false}
+              autoCorrect={false}
+              autoFocus={true}
+              id="response-input"
+              onInput={this.handleResponseInput}
+              placeholder={
+                this.getCharacter()[this.state.writingSystem.responseProperty]
+              }
+              spellCheck={false}
+              value={this.state.response}
+            />
+          </div>
         </div>
       </div>
     );
