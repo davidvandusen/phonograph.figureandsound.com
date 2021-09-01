@@ -1,11 +1,11 @@
 [
   {
-    "lang": "el-GR",
+    "code": "el-GR",
     "name": "Greek (Greece)",
     "href": "data/languages/el-GR.json"
   },
   {
-    "lang": "ja-JP",
+    "code": "ja-JP",
     "name": "Japanese (Japan)",
     "href": "data/languages/ja-JP.json"
   }
