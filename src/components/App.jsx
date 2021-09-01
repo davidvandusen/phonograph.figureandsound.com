@@ -1,68 +1,58 @@
 import '../styles/app.css';
 
-import { Component, createRef, Fragment, h } from 'preact';
+// noinspection ES6UnusedImports
+import { Component, createRef, h } from 'preact';
 import { speak } from '../lib/speechSynthesis';
 import languages from '../data/languages/index.json';
-import greek from '../data/languages/el-GR.json';
-import japanese from '../data/languages/ja-JP.json';
+import elGR from '../data/languages/el-GR.json';
+import jaJP from '../data/languages/ja-JP.json';
 
-const languageData = [greek, japanese];
+const languageData = {
+  'el-GR': elGR,
+  'ja-JP': jaJP,
+};
 
 languages.forEach(language => {
-  language.data = languageData.find(data => data.code === language.code);
+  language.data = languageData[language.code];
 });
 
 class App extends Component {
+  responseInput = createRef();
+
   constructor(props) {
     super(props);
-    this.responseInput = createRef();
+    const characterPosition = 0;
+    const characterSet = 0;
+    const language = 0;
+    const { characters } = languages[language].data.characterSets[characterSet];
+    const characterOrder = Object.keys(characters);
     this.state = {
-      languages,
-      language: null,
-      characterSet: null,
-      characterPosition: null,
-      characterOrder: null,
+      characterOrder,
+      characterPosition,
+      characterSet,
+      language,
       response: '',
-      hasSpeech: false,
     };
-  }
-
-  componentDidMount() {
-    new Promise(resolve =>
-      speechSynthesis.addEventListener('voiceschanged', resolve)
-    ).then(() => {
-      this.setState({ hasSpeech: true });
-    });
   }
 
   componentDidUpdate() {
     this.responseInput.current && this.responseInput.current.focus();
   }
 
-  getLanguage() {
-    return this.state.languages[this.state.language];
-  }
-
-  getCharacterSets() {
-    const language = this.getLanguage();
-    return language.data.characterSets;
-  }
-
   getCharacterSet() {
-    const characterSets = this.getCharacterSets();
+    const characterSets = languages[this.state.language].data.characterSets;
     return characterSets[this.state.characterSet];
   }
 
   setCharacterSet(langIdx, characterSetIdx) {
-    this.setState({ language: langIdx }, () => {
-      const characterSets = this.getCharacterSets();
-      const characterSet = characterSets[characterSetIdx];
-      const characterOrder = Object.keys(characterSet.characters);
-      this.setState({
-        characterSet: characterSetIdx,
-        characterOrder,
-        characterPosition: null,
-      });
+    const language = languages[langIdx];
+    const characterSet = language.data.characterSets[characterSetIdx];
+    const characterOrder = Object.keys(characterSet.characters);
+    this.setState({
+      characterSet: characterSetIdx,
+      characterOrder,
+      characterPosition: 0,
+      language: langIdx,
     });
   }
 
@@ -78,25 +68,17 @@ class App extends Component {
     const characters = this.getCharacterSet().characters;
     let characterPosition =
       from === undefined ? this.state.characterPosition : from;
-    if (characterPosition === null) {
-      characterPosition = 0;
-    } else {
-      characterPosition += 1;
-    }
+    characterPosition += 1;
     if (characterPosition < 0) {
       return Promise.resolve();
     }
     if (characterPosition === characters.length) {
-      characterPosition = null;
+      characterPosition = 0;
     }
     return new Promise(resolve =>
       this.setState({ characterPosition }, resolve)
     );
   }
-
-  startQuiz = () => {
-    this.advanceCharacter(null);
-  };
 
   getIdProperty() {
     const characterSet = this.getCharacterSet();
@@ -124,14 +106,13 @@ class App extends Component {
   }
 
   speakCharacter() {
-    if (this.state.characterPosition === null) return Promise.resolve();
     const character = this.getCharacter();
-    const language = this.getLanguage();
+    const language = languages[this.state.language];
     const property = this.getSpokenProperty();
     return speak(character[property], language.code);
   }
 
-  moveToNextCharacter() {
+  proceedToNextCharacter() {
     // Sometimes the utterance doesn't trigger its end event, so
     // automatically advance after a fixed amount of time if that happens
     Promise.race([
@@ -151,89 +132,39 @@ class App extends Component {
         this.state.response.toLowerCase() ===
         character[this.getResponseProperty()].toLowerCase()
       ) {
-        this.moveToNextCharacter();
+        this.proceedToNextCharacter();
       }
     });
   };
 
-  getCharacterAt(rowValue, columnValue) {
-    const characterSet = this.getCharacterSet();
-    const rowProperty =
-      characterSet.classifications[characterSet.arrangement.rowClassification]
-        .property;
-    const columnProperty =
-      characterSet.classifications[
-        characterSet.arrangement.columnClassification
-      ].property;
-    return characterSet.characters.find(
-      character =>
-        character[rowProperty] === rowValue &&
-        character[columnProperty] === columnValue
-    );
-  }
-
   render() {
     return (
-      <>
-        {this.state.languages.map((language, langIdx) => (
-          <div key={language.code}>
-            {language.name}
-            {language.data.characterSets.map(
-              (characterSet, characterSetIdx) => (
-                <div
-                  key={characterSet.name}
-                  onClick={() => this.setCharacterSet(langIdx, characterSetIdx)}
-                >
-                  {characterSet.name}
-                </div>
-              )
-            )}
-          </div>
+      <div>
+        {languages.map((language, langIdx) =>
+          language.data.characterSets.map((characterSet, characterSetIdx) => (
+            <div
+              key={`${language.name}:${characterSet.name}`}
+              onClick={() => this.setCharacterSet(langIdx, characterSetIdx)}
+            >
+              {language.name} {characterSet.name}
+            </div>
+          ))
+        )}
+        {this.getCharacterSet().characters.map(character => (
+          <span key={character[this.getIdProperty()]}>
+            {character[this.getDisplayProperty()]}
+          </span>
         ))}
-        {this.state.characterSet !== null && (
-          <>
-            {this.getCharacterSet().classifications[
-              this.getCharacterSet().arrangement.rowClassification
-            ].values.map(rowValue => (
-              <div key={rowValue}>
-                {this.getCharacterSet().classifications[
-                  this.getCharacterSet().arrangement.columnClassification
-                ].values.map(columnValue => {
-                  const character = this.getCharacterAt(rowValue, columnValue);
-                  return (
-                    <span key={columnValue}>
-                      {(character || {})[this.getDisplayProperty()] || (
-                        <>&nbsp;</>
-                      )}
-                    </span>
-                  );
-                })}
-              </div>
-            ))}
-          </>
-        )}
-        {this.state.characterSet !== null &&
-          this.state.characterPosition === null && (
-            <button onClick={this.startQuiz}>Start</button>
-          )}
-        {this.state.characterSet !== null &&
-          this.state.characterPosition !== null && (
-            <>
-              <label htmlFor="response-input">
-                {this.getCharacter()[this.getQueryProperty()]}
-              </label>
-              <input
-                id="response-input"
-                value={this.state.response}
-                ref={this.responseInput}
-                onInput={this.handleResponseInput}
-              />
-            </>
-          )}
-        {this.state.characterSet === null && (
-          <div>Select characters to practice</div>
-        )}
-      </>
+        <label htmlFor="response-input">
+          {this.getCharacter()[this.getQueryProperty()]}
+        </label>
+        <input
+          id="response-input"
+          value={this.state.response}
+          ref={this.responseInput}
+          onInput={this.handleResponseInput}
+        />
+      </div>
     );
   }
 }

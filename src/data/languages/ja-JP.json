@@ -8,644 +8,410 @@
       "displayProperty": "hiragana",
       "queryProperty": "hiragana",
       "responseProperty": "roman",
-      "classifications": [
-        {
-          "name": "Consonants",
-          "property": "consonant",
-          "values": [
-            "∅",
-            "k",
-            "s",
-            "t",
-            "n",
-            "h",
-            "m",
-            "y",
-            "r",
-            "w",
-            "g",
-            "z",
-            "d",
-            "b",
-            "p"
-          ]
-        },
-        {
-          "name": "Vowels",
-          "property": "vowel",
-          "values": ["a", "i", "u", "e", "o", "ya", "yu", "yo"]
-        }
-      ],
-      "arrangement": {
-        "rowClassification": 0,
-        "columnClassification": 1
-      },
       "characters": [
         {
-          "consonant": "∅",
           "hiragana": "あ",
-          "roman": "a",
-          "vowel": "a"
+          "roman": "a"
         },
         {
-          "consonant": "∅",
           "hiragana": "い",
-          "roman": "i",
-          "vowel": "i"
+          "roman": "i"
         },
         {
-          "consonant": "∅",
           "hiragana": "う",
-          "roman": "u",
-          "vowel": "u"
+          "roman": "u"
         },
         {
-          "consonant": "∅",
           "hiragana": "え",
-          "roman": "e",
-          "vowel": "e"
+          "roman": "e"
         },
         {
-          "consonant": "∅",
           "hiragana": "お",
-          "roman": "o",
-          "vowel": "o"
+          "roman": "o"
         },
         {
-          "consonant": "k",
           "hiragana": "か",
-          "roman": "ka",
-          "vowel": "a"
+          "roman": "ka"
         },
         {
-          "consonant": "k",
           "hiragana": "き",
-          "roman": "ki",
-          "vowel": "i"
+          "roman": "ki"
         },
         {
-          "consonant": "k",
           "hiragana": "く",
-          "roman": "ku",
-          "vowel": "u"
+          "roman": "ku"
         },
         {
-          "consonant": "k",
           "hiragana": "け",
-          "roman": "ke",
-          "vowel": "e"
+          "roman": "ke"
         },
         {
-          "consonant": "k",
           "hiragana": "こ",
-          "roman": "ko",
-          "vowel": "o"
+          "roman": "ko"
         },
         {
-          "consonant": "k",
           "hiragana": "きゃ",
-          "roman": "kya",
-          "vowel": "ya"
+          "roman": "kya"
         },
         {
-          "consonant": "k",
           "hiragana": "きゅ",
-          "roman": "kyu",
-          "vowel": "yu"
+          "roman": "kyu"
         },
         {
-          "consonant": "k",
           "hiragana": "きょ",
-          "roman": "kyo",
-          "vowel": "yo"
+          "roman": "kyo"
         },
         {
-          "consonant": "s",
           "hiragana": "さ",
-          "roman": "sa",
-          "vowel": "a"
+          "roman": "sa"
         },
         {
-          "consonant": "s",
           "hiragana": "し",
-          "roman": "shi",
-          "vowel": "i"
+          "roman": "shi"
         },
         {
-          "consonant": "s",
           "hiragana": "す",
-          "roman": "su",
-          "vowel": "u"
+          "roman": "su"
         },
         {
-          "consonant": "s",
           "hiragana": "せ",
-          "roman": "se",
-          "vowel": "e"
+          "roman": "se"
         },
         {
-          "consonant": "s",
           "hiragana": "そ",
-          "roman": "so",
-          "vowel": "o"
+          "roman": "so"
         },
         {
-          "consonant": "s",
           "hiragana": "しゃ",
-          "roman": "sha",
-          "vowel": "ya"
+          "roman": "sha"
         },
         {
-          "consonant": "s",
           "hiragana": "しゅ",
-          "roman": "shu",
-          "vowel": "yu"
+          "roman": "shu"
         },
         {
-          "consonant": "s",
           "hiragana": "しょ",
-          "roman": "sho",
-          "vowel": "yo"
+          "roman": "sho"
         },
         {
-          "consonant": "t",
           "hiragana": "た",
-          "roman": "ta",
-          "vowel": "a"
+          "roman": "ta"
         },
         {
-          "consonant": "t",
           "hiragana": "ち",
-          "roman": "chi",
-          "vowel": "i"
+          "roman": "chi"
         },
         {
-          "consonant": "t",
           "hiragana": "つ",
-          "roman": "tsu",
-          "vowel": "u"
+          "roman": "tsu"
         },
         {
-          "consonant": "t",
           "hiragana": "て",
-          "roman": "te",
-          "vowel": "e"
+          "roman": "te"
         },
         {
-          "consonant": "t",
           "hiragana": "と",
-          "roman": "to",
-          "vowel": "o"
+          "roman": "to"
         },
         {
-          "consonant": "t",
           "hiragana": "ちゃ",
-          "roman": "cha",
-          "vowel": "ya"
+          "roman": "cha"
         },
         {
-          "consonant": "t",
           "hiragana": "ちゅ",
-          "roman": "chu",
-          "vowel": "yu"
+          "roman": "chu"
         },
         {
-          "consonant": "t",
           "hiragana": "ちょ",
-          "roman": "cho",
-          "vowel": "yo"
+          "roman": "cho"
         },
         {
-          "consonant": "n",
           "hiragana": "な",
-          "roman": "na",
-          "vowel": "a"
+          "roman": "na"
         },
         {
-          "consonant": "n",
           "hiragana": "に",
-          "roman": "ni",
-          "vowel": "i"
+          "roman": "ni"
         },
         {
-          "consonant": "n",
           "hiragana": "ぬ",
-          "roman": "nu",
-          "vowel": "u"
+          "roman": "nu"
         },
         {
-          "consonant": "n",
           "hiragana": "ね",
-          "roman": "ne",
-          "vowel": "e"
+          "roman": "ne"
         },
         {
-          "consonant": "n",
           "hiragana": "の",
-          "roman": "no",
-          "vowel": "o"
+          "roman": "no"
         },
         {
-          "consonant": "n",
           "hiragana": "にゃ",
-          "roman": "nya",
-          "vowel": "ya"
+          "roman": "nya"
         },
         {
-          "consonant": "n",
           "hiragana": "にゅ",
-          "roman": "nyu",
-          "vowel": "yu"
+          "roman": "nyu"
         },
         {
-          "consonant": "n",
           "hiragana": "にょ",
-          "roman": "nyo",
-          "vowel": "yo"
+          "roman": "nyo"
         },
         {
-          "consonant": "h",
           "hiragana": "は",
-          "roman": "ha",
-          "vowel": "a"
+          "roman": "ha"
         },
         {
-          "consonant": "h",
           "hiragana": "ひ",
-          "roman": "hi",
-          "vowel": "i"
+          "roman": "hi"
         },
         {
-          "consonant": "h",
           "hiragana": "ふ",
-          "roman": "fu",
-          "vowel": "u"
+          "roman": "fu"
         },
         {
-          "consonant": "h",
           "hiragana": "へ",
-          "roman": "he",
-          "vowel": "e"
+          "roman": "he"
         },
         {
-          "consonant": "h",
           "hiragana": "ほ",
-          "roman": "ho",
-          "vowel": "o"
+          "roman": "ho"
         },
         {
-          "consonant": "h",
           "hiragana": "ひゃ",
-          "roman": "hya",
-          "vowel": "ya"
+          "roman": "hya"
         },
         {
-          "consonant": "h",
           "hiragana": "ひゅ",
-          "roman": "hyu",
-          "vowel": "yu"
+          "roman": "hyu"
         },
         {
-          "consonant": "h",
           "hiragana": "ひょ",
-          "roman": "hyo",
-          "vowel": "yo"
+          "roman": "hyo"
         },
         {
-          "consonant": "m",
           "hiragana": "ま",
-          "roman": "ma",
-          "vowel": "a"
+          "roman": "ma"
         },
         {
-          "consonant": "m",
           "hiragana": "み",
-          "roman": "mi",
-          "vowel": "i"
+          "roman": "mi"
         },
         {
-          "consonant": "m",
           "hiragana": "む",
-          "roman": "mu",
-          "vowel": "u"
+          "roman": "mu"
         },
         {
-          "consonant": "m",
           "hiragana": "め",
-          "roman": "me",
-          "vowel": "e"
+          "roman": "me"
         },
         {
-          "consonant": "m",
           "hiragana": "も",
-          "roman": "mo",
-          "vowel": "o"
+          "roman": "mo"
         },
         {
-          "consonant": "m",
           "hiragana": "みゃ",
-          "roman": "mya",
-          "vowel": "ya"
+          "roman": "mya"
         },
         {
-          "consonant": "m",
           "hiragana": "みゅ",
-          "roman": "myu",
-          "vowel": "yu"
+          "roman": "myu"
         },
         {
-          "consonant": "m",
           "hiragana": "みょ",
-          "roman": "myo",
-          "vowel": "yo"
+          "roman": "myo"
         },
         {
-          "consonant": "y",
           "hiragana": "や",
-          "roman": "ya",
-          "vowel": "a"
+          "roman": "ya"
         },
         {
-          "consonant": "y",
           "hiragana": "ゆ",
-          "roman": "yu",
-          "vowel": "u"
+          "roman": "yu"
         },
         {
-          "consonant": "y",
           "hiragana": "よ",
-          "roman": "yo",
-          "vowel": "o"
+          "roman": "yo"
         },
         {
-          "consonant": "r",
           "hiragana": "ら",
-          "roman": "ra",
-          "vowel": "a"
+          "roman": "ra"
         },
         {
-          "consonant": "r",
           "hiragana": "り",
-          "roman": "ri",
-          "vowel": "i"
+          "roman": "ri"
         },
         {
-          "consonant": "r",
           "hiragana": "る",
-          "roman": "ru",
-          "vowel": "u"
+          "roman": "ru"
         },
         {
-          "consonant": "r",
           "hiragana": "れ",
-          "roman": "re",
-          "vowel": "e"
+          "roman": "re"
         },
         {
-          "consonant": "r",
           "hiragana": "ろ",
-          "roman": "ro",
-          "vowel": "o"
+          "roman": "ro"
         },
         {
-          "consonant": "r",
           "hiragana": "りゃ",
-          "roman": "rya",
-          "vowel": "ya"
+          "roman": "rya"
         },
         {
-          "consonant": "r",
           "hiragana": "りゅ",
-          "roman": "ryu",
-          "vowel": "yu"
+          "roman": "ryu"
         },
         {
-          "consonant": "r",
           "hiragana": "りょ",
-          "roman": "ryo",
-          "vowel": "yo"
+          "roman": "ryo"
         },
         {
-          "consonant": "w",
           "hiragana": "わ",
-          "roman": "wa",
-          "vowel": "a"
+          "roman": "wa"
         },
         {
-          "consonant": "w",
           "hiragana": "を",
-          "roman": "wo",
-          "vowel": "o"
+          "roman": "wo"
         },
         {
-          "consonant": "g",
           "hiragana": "が",
-          "roman": "ga",
-          "vowel": "a"
+          "roman": "ga"
         },
         {
-          "consonant": "g",
           "hiragana": "ぎ",
-          "roman": "gi",
-          "vowel": "i"
+          "roman": "gi"
         },
         {
-          "consonant": "g",
           "hiragana": "ぐ",
-          "roman": "gu",
-          "vowel": "u"
+          "roman": "gu"
         },
         {
-          "consonant": "g",
           "hiragana": "げ",
-          "roman": "ge",
-          "vowel": "e"
+          "roman": "ge"
         },
         {
-          "consonant": "g",
           "hiragana": "ご",
-          "roman": "go",
-          "vowel": "o"
+          "roman": "go"
         },
         {
-          "consonant": "g",
           "hiragana": "ぎゃ",
-          "roman": "gya",
-          "vowel": "ya"
+          "roman": "gya"
         },
         {
-          "consonant": "g",
           "hiragana": "ぎゅ",
-          "roman": "gyu",
-          "vowel": "yu"
+          "roman": "gyu"
         },
         {
-          "consonant": "g",
           "hiragana": "ぎょ",
-          "roman": "gyo",
-          "vowel": "yo"
+          "roman": "gyo"
         },
         {
-          "consonant": "z",
           "hiragana": "ざ",
-          "roman": "za",
-          "vowel": "a"
+          "roman": "za"
         },
         {
-          "consonant": "z",
           "hiragana": "じ",
-          "roman": "ji",
-          "vowel": "i"
+          "roman": "ji"
         },
         {
-          "consonant": "z",
           "hiragana": "ず",
-          "roman": "zu",
-          "vowel": "u"
+          "roman": "zu"
         },
         {
-          "consonant": "z",
           "hiragana": "ぜ",
-          "roman": "ze",
-          "vowel": "e"
+          "roman": "ze"
         },
         {
-          "consonant": "z",
           "hiragana": "ぞ",
-          "roman": "zo",
-          "vowel": "o"
+          "roman": "zo"
         },
         {
-          "consonant": "z",
           "hiragana": "じゃ",
-          "roman": "ja",
-          "vowel": "ya"
+          "roman": "ja"
         },
         {
-          "consonant": "z",
           "hiragana": "じゅ",
-          "roman": "ju",
-          "vowel": "yu"
+          "roman": "ju"
         },
         {
-          "consonant": "z",
           "hiragana": "じょ",
-          "roman": "jo",
-          "vowel": "yo"
+          "roman": "jo"
         },
         {
-          "consonant": "d",
           "hiragana": "だ",
-          "roman": "da",
-          "vowel": "a"
+          "roman": "da"
         },
         {
-          "consonant": "d",
           "hiragana": "で",
-          "roman": "de",
-          "vowel": "e"
+          "roman": "de"
         },
         {
-          "consonant": "d",
           "hiragana": "ど",
-          "roman": "do",
-          "vowel": "o"
+          "roman": "do"
         },
         {
-          "consonant": "b",
           "hiragana": "ば",
-          "roman": "ba",
-          "vowel": "a"
+          "roman": "ba"
         },
         {
-          "consonant": "b",
           "hiragana": "び",
-          "roman": "bi",
-          "vowel": "i"
+          "roman": "bi"
         },
         {
-          "consonant": "b",
           "hiragana": "ぶ",
-          "roman": "bu",
-          "vowel": "u"
+          "roman": "bu"
         },
         {
-          "consonant": "b",
           "hiragana": "べ",
-          "roman": "be",
-          "vowel": "e"
+          "roman": "be"
         },
         {
-          "consonant": "b",
           "hiragana": "ぼ",
-          "roman": "bo",
-          "vowel": "o"
+          "roman": "bo"
         },
         {
-          "consonant": "b",
           "hiragana": "びゃ",
-          "roman": "bya",
-          "vowel": "ya"
+          "roman": "bya"
         },
         {
-          "consonant": "b",
           "hiragana": "びゅ",
-          "roman": "byu",
-          "vowel": "yu"
+          "roman": "byu"
         },
         {
-          "consonant": "b",
           "hiragana": "びょ",
-          "roman": "byo",
-          "vowel": "yo"
+          "roman": "byo"
         },
         {
-          "consonant": "p",
           "hiragana": "ぱ",
-          "roman": "pa",
-          "vowel": "a"
+          "roman": "pa"
         },
         {
-          "consonant": "p",
           "hiragana": "ぴ",
-          "roman": "pi",
-          "vowel": "i"
+          "roman": "pi"
         },
         {
-          "consonant": "p",
           "hiragana": "ぷ",
-          "roman": "pu",
-          "vowel": "u"
+          "roman": "pu"
         },
         {
-          "consonant": "p",
           "hiragana": "ぺ",
-          "roman": "pe",
-          "vowel": "e"
+          "roman": "pe"
         },
         {
-          "consonant": "p",
           "hiragana": "ぽ",
-          "roman": "po",
-          "vowel": "o"
+          "roman": "po"
         },
         {
-          "consonant": "p",
           "hiragana": "ぴゃ",
-          "roman": "pya",
-          "vowel": "ya"
+          "roman": "pya"
         },
         {
-          "consonant": "p",
           "hiragana": "ぴゅ",
-          "roman": "pyu",
-          "vowel": "yu"
+          "roman": "pyu"
         },
         {
-          "consonant": "p",
           "hiragana": "ぴょ",
-          "roman": "pyo",
-          "vowel": "yo"
+          "roman": "pyo"
         }
       ]
     },
@@ -656,644 +422,410 @@
       "displayProperty": "katakana",
       "queryProperty": "katakana",
       "responseProperty": "roman",
-      "classifications": [
-        {
-          "name": "Consonants",
-          "property": "consonant",
-          "values": [
-            "∅",
-            "k",
-            "s",
-            "t",
-            "n",
-            "h",
-            "m",
-            "y",
-            "r",
-            "w",
-            "g",
-            "z",
-            "d",
-            "b",
-            "p"
-          ]
-        },
-        {
-          "name": "Vowels",
-          "property": "vowel",
-          "values": ["a", "i", "u", "e", "o", "ya", "yu", "yo"]
-        }
-      ],
-      "arrangement": {
-        "rowClassification": 0,
-        "columnClassification": 1
-      },
       "characters": [
         {
           "katakana": "ア",
-          "roman": "a",
-          "vowel": "a",
-          "consonant": "∅"
+          "roman": "a"
         },
         {
           "katakana": "イ",
-          "roman": "i",
-          "vowel": "i",
-          "consonant": "∅"
+          "roman": "i"
         },
         {
           "katakana": "ウ",
-          "roman": "u",
-          "vowel": "u",
-          "consonant": "∅"
+          "roman": "u"
         },
         {
           "katakana": "エ",
-          "roman": "e",
-          "vowel": "e",
-          "consonant": "∅"
+          "roman": "e"
         },
         {
           "katakana": "オ",
-          "roman": "o",
-          "vowel": "o",
-          "consonant": "∅"
+          "roman": "o"
         },
         {
           "katakana": "カ",
-          "roman": "ka",
-          "vowel": "a",
-          "consonant": "k"
+          "roman": "ka"
         },
         {
           "katakana": "キ",
-          "roman": "ki",
-          "vowel": "i",
-          "consonant": "k"
+          "roman": "ki"
         },
         {
           "katakana": "ク",
-          "roman": "ku",
-          "vowel": "u",
-          "consonant": "k"
+          "roman": "ku"
         },
         {
           "katakana": "ケ",
-          "roman": "ke",
-          "vowel": "e",
-          "consonant": "k"
+          "roman": "ke"
         },
         {
           "katakana": "コ",
-          "roman": "ko",
-          "vowel": "o",
-          "consonant": "k"
+          "roman": "ko"
         },
         {
           "katakana": "キャ",
-          "roman": "kya",
-          "vowel": "ya",
-          "consonant": "k"
+          "roman": "kya"
         },
         {
           "katakana": "キュ",
-          "roman": "kyu",
-          "vowel": "yu",
-          "consonant": "k"
+          "roman": "kyu"
         },
         {
           "katakana": "キョ",
-          "roman": "kyo",
-          "vowel": "yo",
-          "consonant": "k"
+          "roman": "kyo"
         },
         {
           "katakana": "サ",
-          "roman": "sa",
-          "vowel": "a",
-          "consonant": "s"
+          "roman": "sa"
         },
         {
           "katakana": "シ",
-          "roman": "shi",
-          "vowel": "i",
-          "consonant": "s"
+          "roman": "shi"
         },
         {
           "katakana": "ス",
-          "roman": "su",
-          "vowel": "u",
-          "consonant": "s"
+          "roman": "su"
         },
         {
           "katakana": "セ",
-          "roman": "se",
-          "vowel": "e",
-          "consonant": "s"
+          "roman": "se"
         },
         {
           "katakana": "ソ",
-          "roman": "so",
-          "vowel": "o",
-          "consonant": "s"
+          "roman": "so"
         },
         {
           "katakana": "シャ",
-          "roman": "sha",
-          "vowel": "ya",
-          "consonant": "s"
+          "roman": "sha"
         },
         {
           "katakana": "シュ",
-          "roman": "shu",
-          "vowel": "yu",
-          "consonant": "s"
+          "roman": "shu"
         },
         {
           "katakana": "ショ",
-          "roman": "sho",
-          "vowel": "yo",
-          "consonant": "s"
+          "roman": "sho"
         },
         {
           "katakana": "タ",
-          "roman": "ta",
-          "vowel": "a",
-          "consonant": "t"
+          "roman": "ta"
         },
         {
           "katakana": "チ",
-          "roman": "chi",
-          "vowel": "i",
-          "consonant": "t"
+          "roman": "chi"
         },
         {
           "katakana": "ツ",
-          "roman": "tsu",
-          "vowel": "u",
-          "consonant": "t"
+          "roman": "tsu"
         },
         {
           "katakana": "テ",
-          "roman": "te",
-          "vowel": "e",
-          "consonant": "t"
+          "roman": "te"
         },
         {
           "katakana": "ト",
-          "roman": "to",
-          "vowel": "o",
-          "consonant": "t"
+          "roman": "to"
         },
         {
           "katakana": "チャ",
-          "roman": "cha",
-          "vowel": "ya",
-          "consonant": "t"
+          "roman": "cha"
         },
         {
           "katakana": "チュ",
-          "roman": "chu",
-          "vowel": "yu",
-          "consonant": "t"
+          "roman": "chu"
         },
         {
           "katakana": "チョ",
-          "roman": "cho",
-          "vowel": "yo",
-          "consonant": "t"
+          "roman": "cho"
         },
         {
           "katakana": "ナ",
-          "roman": "na",
-          "vowel": "a",
-          "consonant": "n"
+          "roman": "na"
         },
         {
           "katakana": "ニ",
-          "roman": "ni",
-          "vowel": "i",
-          "consonant": "n"
+          "roman": "ni"
         },
         {
           "katakana": "ヌ",
-          "roman": "nu",
-          "vowel": "u",
-          "consonant": "n"
+          "roman": "nu"
         },
         {
           "katakana": "ネ",
-          "roman": "ne",
-          "vowel": "e",
-          "consonant": "n"
+          "roman": "ne"
         },
         {
           "katakana": "ノ",
-          "roman": "no",
-          "vowel": "o",
-          "consonant": "n"
+          "roman": "no"
         },
         {
           "katakana": "ニャ",
-          "roman": "nya",
-          "vowel": "ya",
-          "consonant": "n"
+          "roman": "nya"
         },
         {
           "katakana": "ニュ",
-          "roman": "nyu",
-          "vowel": "yu",
-          "consonant": "n"
+          "roman": "nyu"
         },
         {
           "katakana": "ニョ",
-          "roman": "nyo",
-          "vowel": "yo",
-          "consonant": "n"
+          "roman": "nyo"
         },
         {
           "katakana": "ハ",
-          "roman": "ha",
-          "vowel": "a",
-          "consonant": "h"
+          "roman": "ha"
         },
         {
           "katakana": "ヒ",
-          "roman": "hi",
-          "vowel": "i",
-          "consonant": "h"
+          "roman": "hi"
         },
         {
           "katakana": "フ",
-          "roman": "fu",
-          "vowel": "u",
-          "consonant": "h"
+          "roman": "fu"
         },
         {
           "katakana": "ヘ",
-          "roman": "he",
-          "vowel": "e",
-          "consonant": "h"
+          "roman": "he"
         },
         {
           "katakana": "ホ",
-          "roman": "ho",
-          "vowel": "o",
-          "consonant": "h"
+          "roman": "ho"
         },
         {
           "katakana": "ヒャ",
-          "roman": "hya",
-          "vowel": "ya",
-          "consonant": "h"
+          "roman": "hya"
         },
         {
           "katakana": "ヒュ",
-          "roman": "hyu",
-          "vowel": "yu",
-          "consonant": "h"
+          "roman": "hyu"
         },
         {
           "katakana": "ヒョ",
-          "roman": "hyo",
-          "vowel": "yo",
-          "consonant": "h"
+          "roman": "hyo"
         },
         {
           "katakana": "マ",
-          "roman": "ma",
-          "vowel": "a",
-          "consonant": "m"
+          "roman": "ma"
         },
         {
           "katakana": "ミ",
-          "roman": "mi",
-          "vowel": "i",
-          "consonant": "m"
+          "roman": "mi"
         },
         {
           "katakana": "ム",
-          "roman": "mu",
-          "vowel": "u",
-          "consonant": "m"
+          "roman": "mu"
         },
         {
           "katakana": "メ",
-          "roman": "me",
-          "vowel": "e",
-          "consonant": "m"
+          "roman": "me"
         },
         {
           "katakana": "モ",
-          "roman": "mo",
-          "vowel": "o",
-          "consonant": "m"
+          "roman": "mo"
         },
         {
           "katakana": "ミャ",
-          "roman": "mya",
-          "vowel": "ya",
-          "consonant": "m"
+          "roman": "mya"
         },
         {
           "katakana": "ミュ",
-          "roman": "myu",
-          "vowel": "yu",
-          "consonant": "m"
+          "roman": "myu"
         },
         {
           "katakana": "ミョ",
-          "roman": "myo",
-          "vowel": "yo",
-          "consonant": "m"
+          "roman": "myo"
         },
         {
           "katakana": "ヤ",
-          "roman": "ya",
-          "vowel": "a",
-          "consonant": "y"
+          "roman": "ya"
         },
         {
           "katakana": "ユ",
-          "roman": "yu",
-          "vowel": "u",
-          "consonant": "y"
+          "roman": "yu"
         },
         {
           "katakana": "ヨ",
-          "roman": "yo",
-          "vowel": "o",
-          "consonant": "y"
+          "roman": "yo"
         },
         {
           "katakana": "ラ",
-          "roman": "ra",
-          "vowel": "a",
-          "consonant": "r"
+          "roman": "ra"
         },
         {
           "katakana": "リ",
-          "roman": "ri",
-          "vowel": "i",
-          "consonant": "r"
+          "roman": "ri"
         },
         {
           "katakana": "ル",
-          "roman": "ru",
-          "vowel": "u",
-          "consonant": "r"
+          "roman": "ru"
         },
         {
           "katakana": "レ",
-          "roman": "re",
-          "vowel": "e",
-          "consonant": "r"
+          "roman": "re"
         },
         {
           "katakana": "ロ",
-          "roman": "ro",
-          "vowel": "o",
-          "consonant": "r"
+          "roman": "ro"
         },
         {
           "katakana": "リャ",
-          "roman": "rya",
-          "vowel": "ya",
-          "consonant": "r"
+          "roman": "rya"
         },
         {
           "katakana": "リュ",
-          "roman": "ryu",
-          "vowel": "yu",
-          "consonant": "r"
+          "roman": "ryu"
         },
         {
           "katakana": "リョ",
-          "roman": "ryo",
-          "vowel": "yo",
-          "consonant": "r"
+          "roman": "ryo"
         },
         {
           "katakana": "ワ",
-          "roman": "wa",
-          "vowel": "a",
-          "consonant": "w"
+          "roman": "wa"
         },
         {
           "katakana": "ヲ",
-          "roman": "wo",
-          "vowel": "o",
-          "consonant": "w"
+          "roman": "wo"
         },
         {
           "katakana": "ガ",
-          "roman": "ga",
-          "vowel": "a",
-          "consonant": "g"
+          "roman": "ga"
         },
         {
           "katakana": "ギ",
-          "roman": "gi",
-          "vowel": "i",
-          "consonant": "g"
+          "roman": "gi"
         },
         {
           "katakana": "グ",
-          "roman": "gu",
-          "vowel": "u",
-          "consonant": "g"
+          "roman": "gu"
         },
         {
           "katakana": "ゲ",
-          "roman": "ge",
-          "vowel": "e",
-          "consonant": "g"
+          "roman": "ge"
         },
         {
           "katakana": "ゴ",
-          "roman": "go",
-          "vowel": "o",
-          "consonant": "g"
+          "roman": "go"
         },
         {
           "katakana": "ギャ",
-          "roman": "gya",
-          "vowel": "ya",
-          "consonant": "g"
+          "roman": "gya"
         },
         {
           "katakana": "ギュ",
-          "roman": "gyu",
-          "vowel": "yu",
-          "consonant": "g"
+          "roman": "gyu"
         },
         {
           "katakana": "ギョ",
-          "roman": "gyo",
-          "vowel": "yo",
-          "consonant": "g"
+          "roman": "gyo"
         },
         {
           "katakana": "ザ",
-          "roman": "za",
-          "vowel": "a",
-          "consonant": "z"
+          "roman": "za"
         },
         {
           "katakana": "ジ",
-          "roman": "ji",
-          "vowel": "i",
-          "consonant": "z"
+          "roman": "ji"
         },
         {
           "katakana": "ズ",
-          "roman": "zu",
-          "vowel": "u",
-          "consonant": "z"
+          "roman": "zu"
         },
         {
           "katakana": "ゼ",
-          "roman": "ze",
-          "vowel": "e",
-          "consonant": "z"
+          "roman": "ze"
         },
         {
           "katakana": "ゾ",
-          "roman": "zo",
-          "vowel": "o",
-          "consonant": "z"
+          "roman": "zo"
         },
         {
           "katakana": "ジャ",
-          "roman": "ja",
-          "vowel": "ya",
-          "consonant": "z"
+          "roman": "ja"
         },
         {
           "katakana": "ジュ",
-          "roman": "ju",
-          "vowel": "yu",
-          "consonant": "z"
+          "roman": "ju"
         },
         {
           "katakana": "ジョ",
-          "roman": "jo",
-          "vowel": "yo",
-          "consonant": "z"
+          "roman": "jo"
         },
         {
           "katakana": "ダ",
-          "roman": "da",
-          "vowel": "a",
-          "consonant": "d"
+          "roman": "da"
         },
         {
           "katakana": "デ",
-          "roman": "de",
-          "vowel": "e",
-          "consonant": "d"
+          "roman": "de"
         },
         {
           "katakana": "ド",
-          "roman": "do",
-          "vowel": "o",
-          "consonant": "d"
+          "roman": "do"
         },
         {
           "katakana": "バ",
-          "roman": "ba",
-          "vowel": "a",
-          "consonant": "b"
+          "roman": "ba"
         },
         {
           "katakana": "ビ",
-          "roman": "bi",
-          "vowel": "i",
-          "consonant": "b"
+          "roman": "bi"
         },
         {
           "katakana": "ブ",
-          "roman": "bu",
-          "vowel": "u",
-          "consonant": "b"
+          "roman": "bu"
         },
         {
           "katakana": "ベ",
-          "roman": "be",
-          "vowel": "e",
-          "consonant": "b"
+          "roman": "be"
         },
         {
           "katakana": "ボ",
-          "roman": "bo",
-          "vowel": "o",
-          "consonant": "b"
+          "roman": "bo"
         },
         {
           "katakana": "ビャ",
-          "roman": "bya",
-          "vowel": "ya",
-          "consonant": "b"
+          "roman": "bya"
         },
         {
           "katakana": "ビュ",
-          "roman": "byu",
-          "vowel": "yu",
-          "consonant": "b"
+          "roman": "byu"
         },
         {
           "katakana": "ビョ",
-          "roman": "byo",
-          "vowel": "yo",
-          "consonant": "b"
+          "roman": "byo"
         },
         {
           "katakana": "パ",
-          "roman": "pa",
-          "vowel": "a",
-          "consonant": "p"
+          "roman": "pa"
         },
         {
           "katakana": "ピ",
-          "roman": "pi",
-          "vowel": "i",
-          "consonant": "p"
+          "roman": "pi"
         },
         {
           "katakana": "プ",
-          "roman": "pu",
-          "vowel": "u",
-          "consonant": "p"
+          "roman": "pu"
         },
         {
           "katakana": "ペ",
-          "roman": "pe",
-          "vowel": "e",
-          "consonant": "p"
+          "roman": "pe"
         },
         {
           "katakana": "ポ",
-          "roman": "po",
-          "vowel": "o",
-          "consonant": "p"
+          "roman": "po"
         },
         {
           "katakana": "ピャ",
-          "roman": "pya",
-          "vowel": "ya",
-          "consonant": "p"
+          "roman": "pya"
         },
         {
           "katakana": "ピュ",
-          "roman": "pyu",
-          "vowel": "yu",
-          "consonant": "p"
+          "roman": "pyu"
         },
         {
           "katakana": "ピョ",
-          "roman": "pyo",
-          "vowel": "yo",
-          "consonant": "p"
+          "roman": "pyo"
         }
       ]
     }
