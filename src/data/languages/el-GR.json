@@ -12,9 +12,7 @@
         {
           "name": "Row",
           "property": "row",
-          "values": [
-            ""
-          ]
+          "values": [""]
         },
         {
           "name": "Letter",
@@ -200,4 +198,3 @@
     }
   ]
 }
-

@@ -33,16 +33,7 @@
         {
           "name": "Vowels",
           "property": "vowel",
-          "values": [
-            "a",
-            "i",
-            "u",
-            "e",
-            "o",
-            "ya",
-            "yu",
-            "yo"
-          ]
+          "values": ["a", "i", "u", "e", "o", "ya", "yu", "yo"]
         }
       ],
       "arrangement": {
@@ -690,16 +681,7 @@
         {
           "name": "Vowels",
           "property": "vowel",
-          "values": [
-            "a",
-            "i",
-            "u",
-            "e",
-            "o",
-            "ya",
-            "yu",
-            "yo"
-          ]
+          "values": ["a", "i", "u", "e", "o", "ya", "yu", "yo"]
         }
       ],
       "arrangement": {

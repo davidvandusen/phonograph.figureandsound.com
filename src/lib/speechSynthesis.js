@@ -1,5 +1,7 @@
 function getVoices(language) {
-  return speechSynthesis.getVoices().filter(voice => voice.lang.startsWith(language));
+  return speechSynthesis
+    .getVoices()
+    .filter(voice => voice.lang.startsWith(language));
 }
 
 function speak(text, language) {
@@ -17,4 +19,4 @@ function speak(text, language) {
   });
 }
 
-export {speak};
+export { speak };

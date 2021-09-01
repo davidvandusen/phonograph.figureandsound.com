@@ -1,4 +1,4 @@
-import {h, Component, render} from 'preact';
+import { h, Component, render } from 'preact';
 import App from './components/App.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
