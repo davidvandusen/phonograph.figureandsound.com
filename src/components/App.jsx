@@ -51,18 +51,6 @@ class App extends Component {
     return this.state.data.languages[this.state.ui.language];
   }
 
-  setLanguage(idx) {
-    this.setState({
-      ui: {
-        ...this.state.ui,
-        language: idx,
-        characterSet: null,
-        characterOrder: null,
-        characterPosition: null
-      }
-    });
-  }
-
   getCharacterSets() {
     const language = this.getLanguage();
     return language.data.characterSets;
@@ -73,17 +61,24 @@ class App extends Component {
     return characterSets[this.state.ui.characterSet];
   }
 
-  setCharacterSet(idx) {
-    const characterSets = this.getCharacterSets();
-    const characterSet = characterSets[idx];
-    const characterOrder = Object.keys(characterSet.characters);
+  setCharacterSet(langIdx, characterSetIdx) {
     this.setState({
       ui: {
         ...this.state.ui,
-        characterSet: idx,
-        characterOrder,
-        characterPosition: null
+        language: langIdx
       }
+    }, () => {
+      const characterSets = this.getCharacterSets();
+      const characterSet = characterSets[characterSetIdx];
+      const characterOrder = Object.keys(characterSet.characters);
+      this.setState({
+        ui: {
+          ...this.state.ui,
+          characterSet: characterSetIdx,
+          characterOrder,
+          characterPosition: null
+        }
+      });
     });
   }
 
@@ -217,25 +212,20 @@ class App extends Component {
       <div>
         <div>
           <div>
-            {this.state.data.languages.map((language, idx) => (
+            {this.state.data.languages.map((language, langIdx) => (
               <div
-                key={language.lang}
-                onClick={() => this.setLanguage(idx)}>
+                key={language.lang}>
                 {language.name}
+                <div>
+                  {language.data.characterSets.map((characterSet, characterSetIdx) => (
+                    <div key={characterSet.name} onClick={() => this.setCharacterSet(langIdx, characterSetIdx)}>
+                      {characterSet.name}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
-          {this.state.ui.language !== null && (
-            <div>
-              {this.getCharacterSets().map((characterSet, idx) => (
-                <div
-                  key={characterSet.name}
-                  onClick={() => this.setCharacterSet(idx)}>
-                  {characterSet.name}
-                </div>
-              ))}
-            </div>
-          )}
           {this.state.ui.characterSet !== null && (
             <div>
               <table>
