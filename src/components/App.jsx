@@ -16,21 +16,26 @@ languages.forEach(language => {
   language.data = languageData[language.code];
 });
 
+const getCharacterSetState = (languageIndex, characterSetIndex) => {
+  const language = languages[languageIndex];
+  const characterSet = language.data.characterSets[characterSetIndex];
+  const characterOrder = Object.keys(characterSet.characters);
+  const characterPosition = 0;
+  return {
+    characterOrder,
+    characterPosition,
+    characterSet,
+    language,
+  };
+};
+
 class App extends Component {
   responseInput = createRef();
 
   constructor(props) {
     super(props);
-    const characterPosition = 0;
-    const characterSet = 0;
-    const language = 0;
-    const { characters } = languages[language].data.characterSets[characterSet];
-    const characterOrder = Object.keys(characters);
     this.state = {
-      characterOrder,
-      characterPosition,
-      characterSet,
-      language,
+      ...getCharacterSetState(0, 0),
       response: '',
     };
   }
@@ -39,77 +44,30 @@ class App extends Component {
     this.responseInput.current && this.responseInput.current.focus();
   }
 
-  getCharacterSet() {
-    const characterSets = languages[this.state.language].data.characterSets;
-    return characterSets[this.state.characterSet];
+  setCharacterSet(languageIndex, characterSetIndex) {
+    this.setState(getCharacterSetState(languageIndex, characterSetIndex));
   }
 
-  setCharacterSet(langIdx, characterSetIdx) {
-    const language = languages[langIdx];
-    const characterSet = language.data.characterSets[characterSetIdx];
-    const characterOrder = Object.keys(characterSet.characters);
-    this.setState({
-      characterSet: characterSetIdx,
-      characterOrder,
-      characterPosition: 0,
-      language: langIdx,
-    });
+  getCharacter() {
+    const characterIndex =
+      this.state.characterOrder[this.state.characterPosition];
+    return this.state.characterSet.characters[characterIndex];
   }
 
-  getCharacter(position) {
-    const characters = this.getCharacterSet().characters;
-    const characterPosition =
-      position === undefined ? this.state.characterPosition : position;
-    const characterIndex = this.state.characterOrder[characterPosition];
-    return characters[characterIndex];
-  }
-
-  advanceCharacter(from) {
-    const characters = this.getCharacterSet().characters;
-    let characterPosition =
-      from === undefined ? this.state.characterPosition : from;
-    characterPosition += 1;
-    if (characterPosition < 0) {
-      return Promise.resolve();
-    }
-    if (characterPosition === characters.length) {
+  advanceCharacter = () => {
+    let { characterPosition } = this.state;
+    if (characterPosition === this.state.characterSet.characters.length - 1) {
       characterPosition = 0;
+    } else {
+      characterPosition += 1;
     }
-    return new Promise(resolve =>
-      this.setState({ characterPosition }, resolve)
-    );
-  }
-
-  getIdProperty() {
-    const characterSet = this.getCharacterSet();
-    return characterSet.idProperty;
-  }
-
-  getQueryProperty() {
-    const characterSet = this.getCharacterSet();
-    return characterSet.queryProperty;
-  }
-
-  getSpokenProperty() {
-    const characterSet = this.getCharacterSet();
-    return characterSet.spokenProperty;
-  }
-
-  getDisplayProperty() {
-    const characterSet = this.getCharacterSet();
-    return characterSet.displayProperty;
-  }
-
-  getResponseProperty() {
-    const characterSet = this.getCharacterSet();
-    return characterSet.responseProperty;
+    this.setState({ characterPosition });
   }
 
   speakCharacter() {
     const character = this.getCharacter();
-    const language = languages[this.state.language];
-    const property = this.getSpokenProperty();
-    return speak(character[property], language.code);
+    const spokenProperty = this.state.characterSet.spokenProperty;
+    return speak(character[spokenProperty], this.state.language.code);
   }
 
   proceedToNextCharacter() {
@@ -119,9 +77,7 @@ class App extends Component {
       this.speakCharacter(),
       new Promise(resolve => setTimeout(resolve, 1000)),
     ]).then(() => {
-      this.setState({ response: '' }, () => {
-        this.advanceCharacter();
-      });
+      this.setState({ response: '' }, this.advanceCharacter);
     });
   }
 
@@ -130,7 +86,7 @@ class App extends Component {
       const character = this.getCharacter();
       if (
         this.state.response.toLowerCase() ===
-        character[this.getResponseProperty()].toLowerCase()
+        character[this.state.characterSet.responseProperty].toLowerCase()
       ) {
         this.proceedToNextCharacter();
       }
@@ -140,23 +96,25 @@ class App extends Component {
   render() {
     return (
       <div>
-        {languages.map((language, langIdx) =>
-          language.data.characterSets.map((characterSet, characterSetIdx) => (
+        {languages.map((language, languageIndex) =>
+          language.data.characterSets.map((characterSet, characterSetIndex) => (
             <div
               key={`${language.name}:${characterSet.name}`}
-              onClick={() => this.setCharacterSet(langIdx, characterSetIdx)}
+              onClick={() =>
+                this.setCharacterSet(languageIndex, characterSetIndex)
+              }
             >
               {language.name} {characterSet.name}
             </div>
           ))
         )}
-        {this.getCharacterSet().characters.map(character => (
-          <span key={character[this.getIdProperty()]}>
-            {character[this.getDisplayProperty()]}
+        {this.state.characterSet.characters.map(character => (
+          <span key={character[this.state.characterSet.idProperty]}>
+            {character[this.state.characterSet.displayProperty]}
           </span>
         ))}
         <label htmlFor="response-input">
-          {this.getCharacter()[this.getQueryProperty()]}
+          {this.getCharacter()[this.state.characterSet.queryProperty]}
         </label>
         <input
           id="response-input"
