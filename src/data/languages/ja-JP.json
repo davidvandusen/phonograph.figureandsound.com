@@ -1,6 +1,6 @@
 {
   "code": "ja-JP",
-  "characterSets": [
+  "writingSystems": [
     {
       "name": "Hiragana",
       "idProperty": "hiragana",

@@ -16,15 +16,15 @@ languages.forEach(language => {
   language.data = languageData[language.code];
 });
 
-const getCharacterSetState = (languageIndex, characterSetIndex) => {
+const getWritingSystemState = (languageIndex, writingSystemIndex) => {
   const language = languages[languageIndex];
-  const characterSet = language.data.characterSets[characterSetIndex];
-  const characterOrder = Object.keys(characterSet.characters);
+  const writingSystem = language.data.writingSystems[writingSystemIndex];
+  const characterOrder = Object.keys(writingSystem.characters);
   const characterPosition = 0;
   return {
     characterOrder,
     characterPosition,
-    characterSet,
+    writingSystem,
     language,
   };
 };
@@ -35,7 +35,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...getCharacterSetState(0, 0),
+      ...getWritingSystemState(0, 0),
       response: '',
     };
   }
@@ -44,29 +44,29 @@ class App extends Component {
     this.responseInput.current && this.responseInput.current.focus();
   }
 
-  setCharacterSet(languageIndex, characterSetIndex) {
-    this.setState(getCharacterSetState(languageIndex, characterSetIndex));
+  setWritingSystem(languageIndex, writingSystemIndex) {
+    this.setState(getWritingSystemState(languageIndex, writingSystemIndex));
   }
 
   getCharacter() {
     const characterIndex =
       this.state.characterOrder[this.state.characterPosition];
-    return this.state.characterSet.characters[characterIndex];
+    return this.state.writingSystem.characters[characterIndex];
   }
 
   advanceCharacter = () => {
     let { characterPosition } = this.state;
-    if (characterPosition === this.state.characterSet.characters.length - 1) {
+    if (characterPosition === this.state.writingSystem.characters.length - 1) {
       characterPosition = 0;
     } else {
       characterPosition += 1;
     }
     this.setState({ characterPosition });
-  }
+  };
 
   speakCharacter() {
     const character = this.getCharacter();
-    const spokenProperty = this.state.characterSet.spokenProperty;
+    const spokenProperty = this.state.writingSystem.spokenProperty;
     return speak(character[spokenProperty], this.state.language.code);
   }
 
@@ -86,7 +86,7 @@ class App extends Component {
       const character = this.getCharacter();
       if (
         this.state.response.toLowerCase() ===
-        character[this.state.characterSet.responseProperty].toLowerCase()
+        character[this.state.writingSystem.responseProperty].toLowerCase()
       ) {
         this.proceedToNextCharacter();
       }
@@ -96,32 +96,45 @@ class App extends Component {
   render() {
     return (
       <div>
-        {languages.map((language, languageIndex) =>
-          language.data.characterSets.map((characterSet, characterSetIndex) => (
-            <div
-              key={`${language.name}:${characterSet.name}`}
-              onClick={() =>
-                this.setCharacterSet(languageIndex, characterSetIndex)
-              }
-            >
-              {language.name} {characterSet.name}
-            </div>
-          ))
-        )}
-        {this.state.characterSet.characters.map(character => (
-          <span key={character[this.state.characterSet.idProperty]}>
-            {character[this.state.characterSet.displayProperty]}
-          </span>
-        ))}
-        <label htmlFor="response-input">
-          {this.getCharacter()[this.state.characterSet.queryProperty]}
-        </label>
-        <input
-          id="response-input"
-          value={this.state.response}
-          ref={this.responseInput}
-          onInput={this.handleResponseInput}
-        />
+        <div>
+          <div>
+            {this.state.language.name} {this.state.writingSystem.name}
+          </div>
+          <div>
+            {languages.map((language, languageIndex) =>
+              language.data.writingSystems.map(
+                (writingSystem, writingSystemIndex) => (
+                  <div
+                    key={`${language.name}:${writingSystem.name}`}
+                    onClick={() =>
+                      this.setWritingSystem(languageIndex, writingSystemIndex)
+                    }
+                  >
+                    {language.name} {writingSystem.name}
+                  </div>
+                )
+              )
+            )}
+          </div>
+        </div>
+        <div>
+          {this.state.writingSystem.characters.map(character => (
+            <span key={character[this.state.writingSystem.idProperty]}>
+              {character[this.state.writingSystem.displayProperty]}
+            </span>
+          ))}
+        </div>
+        <div>
+          <label htmlFor="response-input">
+            {this.getCharacter()[this.state.writingSystem.queryProperty]}
+          </label>{' '}
+          <input
+            ref={this.responseInput}
+            id="response-input"
+            onInput={this.handleResponseInput}
+            value={this.state.response}
+          />
+        </div>
       </div>
     );
   }

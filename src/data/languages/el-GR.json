@@ -1,6 +1,6 @@
 {
   "code": "el-GR",
-  "characterSets": [
+  "writingSystems": [
     {
       "name": "Alphabet",
       "idProperty": "name",
