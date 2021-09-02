@@ -59,6 +59,7 @@ html {
 .character-query label {
   border-bottom: 0.5rem solid #f5f5f5;
   display: inline-block;
+  margin: 2rem 0;
   opacity: 1;
   transform: translateX(0);
 }
@@ -100,14 +101,13 @@ html {
 }
 
 .response-prompt {
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
   max-width: 50rem;
 }
 
 .response-prompt input {
   background: #ededed;
-  border: none #c5c5c5;
-  border-width: 1px 0;
+  border: 0 none;
   box-sizing: border-box;
   color: #353535;
   display: block;
@@ -123,30 +123,40 @@ html {
   transition: color 125ms 250ms;
 }
 
+.transition-out .response-prompt input {
+  color: #ededed;
+  transition: color 125ms 250ms;
+}
+
 .response-prompt input::placeholder {
-  color: #c5c5c5;
+  background-position-x: 100%;
+  color: #ededed;
 }
 
 .transition-in .response-prompt input::placeholder {
-  color: #c5c5c5;
-  transition: color 21s 7s ease-in;
+  background: linear-gradient(90deg, #d5d5d5 50%, #ededed 50%);
+  background-position-x: 0;
+  background-size: 200%;
+  transition: background-position-x 27s 3s linear;
 }
 
 .transition-out .response-prompt input::placeholder {
-  color: #ededed;
   transition: none;
 }
 
 .writing-system-selector {
-  border-top: 1px solid #e4e5e6;
+  margin: 0 auto;
+  max-width: 52rem;
   order: 3;
   position: relative;
+  width: 100%;
 }
 
 .writing-system-selector button {
-  background: #fff;
+  background: transparent;
   border: 0 none;
   box-sizing: border-box;
+  color: #353535;
   cursor: pointer;
   display: block;
   font-size: 1.5rem;
@@ -155,7 +165,11 @@ html {
 }
 
 .writing-system-selector button:hover {
-  background: #f5f5f5;
+  background: #ededed;
+}
+
+.writing-system-selector button.current {
+  background: #ededed;
 }
 
 .writing-system-selector li {
@@ -163,32 +177,44 @@ html {
 }
 
 .writing-system-selector menu {
-  border: solid #e4e5e6;
-  border-width: 1px 0;
+  background: #fff;
+  border: 1px outset #e5e5e5;
+  border-radius: 0.25rem;
   bottom: 100%;
-  left: 0;
+  left: 1rem;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   position: absolute;
-  right: 0;
+  right: 1rem;
 }
 
 .writing-system-selector summary {
-  background: #fff;
-  color: #b5b5b5;
+  background: #f5f5f5;
+  border: 1px outset #e5e5e5;
+  border-radius: 0.25rem;
+  color: #858585;
   cursor: pointer;
   font-size: 1.5rem;
   list-style: none;
+  margin: 0.25rem 1rem 1rem;
   padding: 1rem;
   text-align: center;
+  transition: background 125ms;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.writing-system-selector summary::-webkit-details-marker {
+  display: none;
 }
 
 .writing-system-selector summary:hover {
-  background: #f5f5f5;
+  background: #e5e5e5;
 }
 
 .writing-system-selector[open] summary {
-  background: #ddd;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background: #d5d5d5;
+  color: #656565;
+  transition: none;
 }

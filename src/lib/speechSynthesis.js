@@ -1,17 +1,22 @@
-let hasSpeech = false;
+let voices = [];
 
-speechSynthesis.addEventListener('voiceschanged', () => {
-  hasSpeech = true;
-});
+if (window.speechSynthesis) {
+  if (speechSynthesis.addEventListener) {
+    speechSynthesis.addEventListener('voiceschanged', () => {
+      voices = speechSynthesis.getVoices();
+    });
+  } else {
+    // In Safari, the speechSynthesis object isn't an event emitter, so
+    // getVoices can be called without waiting for a voiceschanged event
+    voices = speechSynthesis.getVoices();
+  }
+}
 
 const speak = (text, language, rate = 0.7) => {
-  if (!hasSpeech) return Promise.resolve();
-  const voices = speechSynthesis
-    .getVoices()
-    .filter(voice => voice.lang.startsWith(language));
-  if (voices.length === 0) return Promise.resolve();
+  const voice = voices.find(voice => voice.lang.startsWith(language));
+  if (!voice) return Promise.resolve();
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.voice = voices[0];
+  utterance.voice = voice;
   utterance.rate = rate;
   return new Promise((resolve, reject) => {
     utterance.addEventListener('end', resolve);

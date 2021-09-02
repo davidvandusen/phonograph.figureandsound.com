@@ -39,7 +39,7 @@ class App extends Component {
     super(props);
     this.state = {
       ...getWritingSystemState(0, 0),
-      transition: 'in',
+      transition: '',
       response: '',
     };
   }
@@ -52,19 +52,26 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.menuDetails.current.open = false;
     this.responseInput.current && this.responseInput.current.focus();
     this.scrollActiveCharacterIntoView();
+    this.setState({ transition: 'in' });
   }
 
   componentDidUpdate() {
     this.menuDetails.current.open = false;
-    this.responseInput.current && this.responseInput.current.focus();
     this.scrollActiveCharacterIntoView();
   }
 
   setWritingSystem(languageIndex, writingSystemIndex) {
-    this.setState(getWritingSystemState(languageIndex, writingSystemIndex));
+    this.setState(
+      {
+        ...getWritingSystemState(languageIndex, writingSystemIndex),
+        transition: '',
+      },
+      () => {
+        this.setState({ transition: 'in' });
+      }
+    );
   }
 
   getCharacterIndex() {
@@ -83,7 +90,9 @@ class App extends Component {
       characterPosition += 1;
     }
     setTimeout(() => {
-      this.setState({ characterPosition, transition: 'in' });
+      this.setState({ characterPosition, response: '' }, () => {
+        this.setState({ transition: 'in' });
+      });
     }, 500);
   };
 
@@ -105,9 +114,20 @@ class App extends Component {
       ]),
       new Promise(resolve => setTimeout(resolve, 1000)),
     ]).then(() => {
-      this.setState({ response: '', transition: 'out' }, this.advanceCharacter);
+      this.setState({ transition: 'out' }, this.advanceCharacter);
     });
   }
+
+  closeMenu = () => {
+    this.menuDetails.current.open = false;
+  };
+
+  handleSummaryClickCapture = clickEvent => {
+    if (this.menuDetails.current.open) {
+      clickEvent.preventDefault();
+      this.closeMenu();
+    }
+  };
 
   handleResponseInput = inputEvent => {
     this.setState({ response: inputEvent.target.value }, () => {
@@ -123,25 +143,37 @@ class App extends Component {
 
   render() {
     return (
-      <div className={`app-layout transition-${this.state.transition}`}>
+      <div
+        className={`app-layout transition-${this.state.transition}`}
+        onClick={this.closeMenu}
+      >
         <details ref={this.menuDetails} className="writing-system-selector">
-          <summary>
+          <summary onClickCapture={this.handleSummaryClickCapture}>
             {this.state.language.name} {this.state.writingSystem.name}
           </summary>
           <menu>
             {languages.map((language, languageIndex) =>
               language.data.writingSystems.map(
-                (writingSystem, writingSystemIndex) => (
-                  <li key={`${language.name}:${writingSystem.name}`}>
-                    <button
-                      onClick={() =>
-                        this.setWritingSystem(languageIndex, writingSystemIndex)
-                      }
-                    >
-                      {language.name} {writingSystem.name}
-                    </button>
-                  </li>
-                )
+                (writingSystem, writingSystemIndex) => {
+                  const isCurrent =
+                    this.state.language === language &&
+                    this.state.writingSystem === writingSystem;
+                  return (
+                    <li key={`${language.name}:${writingSystem.name}`}>
+                      <button
+                        className={isCurrent ? 'current' : ''}
+                        onClick={() =>
+                          this.setWritingSystem(
+                            languageIndex,
+                            writingSystemIndex
+                          )
+                        }
+                      >
+                        {language.name} {writingSystem.name}
+                      </button>
+                    </li>
+                  );
+                }
               )
             )}
           </menu>
@@ -175,6 +207,7 @@ class App extends Component {
               autoCorrect={false}
               autoFocus={true}
               id="response-input"
+              onFocus={this.closeMenu}
               onInput={this.handleResponseInput}
               placeholder={
                 this.getCharacter()[this.state.writingSystem.responseProperty]
