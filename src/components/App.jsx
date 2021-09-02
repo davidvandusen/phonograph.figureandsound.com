@@ -128,6 +128,7 @@ class App extends Component {
   }
 
   setWritingSystem(languageIndex, writingSystemIndex) {
+    clearTimeout(this.failureTimer);
     this.setState(
       {
         ...getWritingSystemState(languageIndex, writingSystemIndex),
