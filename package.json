@@ -5,6 +5,10 @@
   "description": "Memorize the phonemes associated to graphemes in different writing systems.",
   "author": "David VanDusen",
   "license": "UNLICENSED",
+  "scripts": {
+    "build": "webpack --mode production --no-devtool",
+    "start": "webpack serve"
+  },
   "dependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-react-jsx": "^7.14.9",
