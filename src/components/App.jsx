@@ -3,6 +3,7 @@ import '../styles/app.css';
 // noinspection ES6UnusedImports
 import { Component, createRef, h } from 'preact';
 import { speak } from '../lib/speechSynthesis';
+import shuffle from '../lib/shuffle';
 import languages from '../data/languages/index.json';
 import elGR from '../data/languages/el-GR.json';
 import jaJP from '../data/languages/ja-JP.json';
@@ -16,17 +17,81 @@ languages.forEach(language => {
   language.data = languageData[language.code];
 });
 
+let scores;
+
+try {
+  const rawScores = localStorage.getItem('scores');
+  scores = JSON.parse(rawScores);
+} catch (e) {
+  // Can't access storage or bad JSON
+  scores = {};
+}
+
+if (typeof scores !== 'object' || scores === null) {
+  scores = {};
+}
+
+const saveScores = () => {
+  try {
+    localStorage.setItem('scores', JSON.stringify(scores));
+  } catch (e) {
+    // Can't access storage
+  }
+};
+
+const updateScore = (language, writingSystem, character, isCharacterFailed) => {
+  const scoreKey = `${language.code}:${writingSystem.name}`;
+  const scoresForWritingSystem = scores[scoreKey];
+  const currentScore =
+    scoresForWritingSystem[character[writingSystem.idProperty]];
+  const scoreIncrement = isCharacterFailed ? 1 : -1;
+  scoresForWritingSystem[character[writingSystem.idProperty]] = Math.max(
+    0,
+    currentScore + scoreIncrement
+  );
+  saveScores();
+};
+
 const getWritingSystemState = (languageIndex, writingSystemIndex) => {
   const language = languages[languageIndex];
   const writingSystem = language.data.writingSystems[writingSystemIndex];
-  const characterOrder = Object.keys(writingSystem.characters).map(Number);
+  let characterOrder;
+  const scoreKey = `${language.code}:${writingSystem.name}`;
+  const scoresForWritingSystem = scores[scoreKey];
+  if (!scoresForWritingSystem) {
+    scores[scoreKey] = writingSystem.characters.reduce(
+      (scoreObject, character) => {
+        scoreObject[character[writingSystem.idProperty]] = 0;
+        return scoreObject;
+      },
+      {}
+    );
+    saveScores();
+  }
+  characterOrder = Object.keys(writingSystem.characters).map(Number);
   const characterPosition = 0;
+  const isCharacterFailed = false;
   return {
     characterOrder,
     characterPosition,
-    writingSystem,
+    isCharacterFailed,
     language,
+    writingSystem,
   };
+};
+
+const getScoredCharacterOrder = (language, writingSystem) => {
+  const characterOrder = Object.keys(writingSystem.characters).map(Number);
+  const scoreKey = `${language.code}:${writingSystem.name}`;
+  const scoresForWritingSystem = scores[scoreKey];
+  writingSystem.characters.forEach((character, characterIndex) => {
+    const scoreForCharacter =
+      scoresForWritingSystem[character[writingSystem.idProperty]];
+    for (let i = scoreForCharacter; i > 0; i--) {
+      characterOrder.push(characterIndex);
+    }
+  });
+  return shuffle(characterOrder);
 };
 
 class App extends Component {
@@ -83,14 +148,22 @@ class App extends Component {
   }
 
   advanceCharacter = () => {
-    let { characterPosition } = this.state;
-    if (characterPosition === this.state.writingSystem.characters.length - 1) {
+    let { characterOrder, characterPosition } = this.state;
+    if (characterPosition === characterOrder.length - 1) {
+      characterOrder = getScoredCharacterOrder(
+        this.state.language,
+        this.state.writingSystem
+      );
       characterPosition = 0;
     } else {
       characterPosition += 1;
     }
     setTimeout(() => {
-      this.setState({ characterPosition, response: '' }, () => {
+      this.setState({ characterPosition, characterOrder, response: '' }, () => {
+        clearTimeout(this.failureTimer);
+        this.failureTimer = setTimeout(() => {
+          this.setState({ isCharacterFailed: true });
+        }, 15000);
         this.setState({ transition: 'in' });
       });
     }, 500);
@@ -103,7 +176,13 @@ class App extends Component {
   }
 
   proceedToNextCharacter() {
-    this.setState({ transition: 'congratulate' });
+    updateScore(
+      this.state.language,
+      this.state.writingSystem,
+      this.getCharacter(),
+      this.state.isCharacterFailed
+    );
+    this.setState({ isCharacterFailed: false, transition: 'congratulate' });
     // Sometimes the utterance doesn't trigger its end event, so automatically
     // advance after a fixed amount of time if that happens, but ensure that a
     // minimum amount of time has elapsed before moving on.
@@ -130,15 +209,24 @@ class App extends Component {
   };
 
   handleResponseInput = inputEvent => {
-    this.setState({ response: inputEvent.target.value }, () => {
-      const character = this.getCharacter();
-      if (
-        this.state.response.toLowerCase().trim() ===
-        character[this.state.writingSystem.responseProperty].toLowerCase()
-      ) {
-        this.proceedToNextCharacter();
+    const isCharacterFailed = inputEvent.inputType.startsWith('delete')
+      ? true
+      : this.state.isCharacterFailed;
+    this.setState(
+      {
+        isCharacterFailed,
+        response: inputEvent.target.value,
+      },
+      () => {
+        const character = this.getCharacter();
+        if (
+          this.state.response.toLowerCase().trim() ===
+          character[this.state.writingSystem.responseProperty].toLowerCase()
+        ) {
+          this.proceedToNextCharacter();
+        }
       }
-    });
+    );
   };
 
   render() {

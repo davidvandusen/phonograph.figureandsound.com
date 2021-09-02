@@ -3,7 +3,7 @@
   "writingSystems": [
     {
       "name": "Hiragana",
-      "idProperty": "hiragana",
+      "idProperty": "roman",
       "spokenProperty": "hiragana",
       "displayProperty": "hiragana",
       "queryProperty": "hiragana",
