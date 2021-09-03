@@ -137,6 +137,7 @@ class App extends Component {
       {
         ...getWritingSystemState(languageIndex, writingSystemIndex),
         transition: '',
+        response: '',
       },
       () => {
         this.setState({ transition: 'in' });
@@ -299,10 +300,10 @@ class App extends Component {
           <div className="response-prompt">
             <input
               ref={this.responseInput}
-              autoCapitalize={false}
-              autoComplete={false}
-              autoCorrect={false}
-              autoFocus={true}
+              autoCapitalize="false"
+              autoComplete="false"
+              autoCorrect="false"
+              autoFocus="true"
               id="response-input"
               onFocus={this.closeMenu}
               onInput={this.handleResponseInput}
@@ -311,7 +312,7 @@ class App extends Component {
                   this.state.writingSystem.latinResponseProperty
                 ]
               }
-              spellCheck={false}
+              spellCheck="false"
               value={this.state.response}
             />
           </div>
