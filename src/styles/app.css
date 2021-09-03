@@ -39,7 +39,7 @@
 }
 
 html {
-  background: var(--character-list-background-color);
+  background: var(--app-background-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
     'Segoe UI', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, Arial,
     sans-serif;
@@ -53,7 +53,6 @@ html {
 }
 
 .app-layout {
-  background: var(--app-background-color);
   align-content: center;
   bottom: 0;
   display: flex;
@@ -150,7 +149,6 @@ html {
 }
 
 .legal {
-  background: var(--app-background-color);
   order: 5;
 }
 
