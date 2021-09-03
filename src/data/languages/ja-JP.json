@@ -7,7 +7,8 @@
       "spokenProperty": "hiragana",
       "displayProperty": "hiragana",
       "queryProperty": "hiragana",
-      "responseProperty": "roman",
+      "latinResponseProperty": "roman",
+      "localeResponseProperty": "hiragana",
       "characters": [
         {
           "hiragana": "あ",
@@ -289,7 +290,8 @@
       "spokenProperty": "katakana",
       "displayProperty": "katakana",
       "queryProperty": "katakana",
-      "responseProperty": "roman",
+      "latinResponseProperty": "roman",
+      "localeResponseProperty": "katakana",
       "characters": [
         {
           "katakana": "ア",

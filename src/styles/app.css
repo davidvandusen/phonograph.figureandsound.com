@@ -111,6 +111,7 @@ html {
   box-sizing: border-box;
   color: #353535;
   display: block;
+  font-family: inherit;
   font-size: 4rem;
   outline: none;
   padding: 1rem;

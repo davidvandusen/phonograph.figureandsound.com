@@ -2,132 +2,264 @@
   "code": "el-GR",
   "writingSystems": [
     {
-      "name": "Alphabet",
-      "idProperty": "name",
-      "spokenProperty": "spoken",
-      "displayProperty": "display",
-      "queryProperty": "display",
-      "responseProperty": "name",
+      "name": "Alphabet (Capital Letters)",
+      "idProperty": "english",
+      "spokenProperty": "greek",
+      "displayProperty": "capital",
+      "queryProperty": "capital",
+      "latinResponseProperty": "english",
+      "localeResponseProperty": "capital",
       "characters": [
         {
-          "name": "alpha",
-          "spoken": "άλφα",
-          "display": "Α α"
+          "english": "alpha",
+          "greek": "άλφα",
+          "capital": "Α"
         },
         {
-          "name": "beta",
-          "spoken": "βήτα",
-          "display": "Β β"
+          "english": "beta",
+          "greek": "βήτα",
+          "capital": "Β"
         },
         {
-          "name": "gamma",
-          "spoken": "γάμμα",
-          "display": "Γ γ"
+          "english": "gamma",
+          "greek": "γάμμα",
+          "capital": "Γ"
         },
         {
-          "name": "delta",
-          "spoken": "δέλτα",
-          "display": "Δ δ"
+          "english": "delta",
+          "greek": "δέλτα",
+          "capital": "Δ"
         },
         {
-          "name": "epsilon",
-          "spoken": "έψιλον",
-          "display": "Ε ε"
+          "english": "epsilon",
+          "greek": "έψιλον",
+          "capital": "Ε"
         },
         {
-          "name": "zeta",
-          "spoken": "ζήτα",
-          "display": "Ζ ζ"
+          "english": "zeta",
+          "greek": "ζήτα",
+          "capital": "Ζ"
         },
         {
-          "name": "eta",
-          "spoken": "ήτα",
-          "display": "Η η"
+          "english": "eta",
+          "greek": "ήτα",
+          "capital": "Η"
         },
         {
-          "name": "theta",
-          "spoken": "θήτα",
-          "display": "Θ θ"
+          "english": "theta",
+          "greek": "θήτα",
+          "capital": "Θ"
         },
         {
-          "name": "iota",
-          "spoken": "ιώτα",
-          "display": "Ι ι"
+          "english": "iota",
+          "greek": "ιώτα",
+          "capital": "Ι"
         },
         {
-          "name": "kappa",
-          "spoken": "κάππα",
-          "display": "Κ κ"
+          "english": "kappa",
+          "greek": "κάππα",
+          "capital": "Κ"
         },
         {
-          "name": "lambda",
-          "spoken": "λάμβδα",
-          "display": "Λ λ"
+          "english": "lambda",
+          "greek": "λάμβδα",
+          "capital": "Λ"
         },
         {
-          "name": "mu",
-          "spoken": "μυ",
-          "display": "Μ μ"
+          "english": "mu",
+          "greek": "μυ",
+          "capital": "Μ"
         },
         {
-          "name": "nu",
-          "spoken": "νυ",
-          "display": "Ν ν"
+          "english": "nu",
+          "greek": "νυ",
+          "capital": "Ν"
         },
         {
-          "name": "xi",
-          "spoken": "ξι",
-          "display": "Ξ ξ"
+          "english": "xi",
+          "greek": "ξι",
+          "capital": "Ξ"
         },
         {
-          "name": "omicron",
-          "spoken": "όμικρον",
-          "display": "Ο ο"
+          "english": "omicron",
+          "greek": "όμικρον",
+          "capital": "Ο"
         },
         {
-          "name": "pi",
-          "spoken": "πι",
-          "display": "Π π"
+          "english": "pi",
+          "greek": "πι",
+          "capital": "Π"
         },
         {
-          "name": "rho",
-          "spoken": "ρώ",
-          "display": "Ρ ρ"
+          "english": "rho",
+          "greek": "ρώ",
+          "capital": "Ρ"
         },
         {
-          "name": "sigma",
-          "spoken": "σίγμα",
-          "display": "Σ σ"
+          "english": "sigma",
+          "greek": "σίγμα",
+          "capital": "Σ"
         },
         {
-          "name": "tau",
-          "spoken": "ταυ",
-          "display": "Τ τ"
+          "english": "tau",
+          "greek": "ταυ",
+          "capital": "Τ"
         },
         {
-          "name": "upsilon",
-          "spoken": "ύψιλον",
-          "display": "Υ υ"
+          "english": "upsilon",
+          "greek": "ύψιλον",
+          "capital": "Υ"
         },
         {
-          "name": "phi",
-          "spoken": "φι",
-          "display": "Φ φ"
+          "english": "phi",
+          "greek": "φι",
+          "capital": "Φ"
         },
         {
-          "name": "chi",
-          "spoken": "χι",
-          "display": "Χ χ"
+          "english": "chi",
+          "greek": "χι",
+          "capital": "Χ"
         },
         {
-          "name": "psi",
-          "spoken": "ψι",
-          "display": "Ψ ψ"
+          "english": "psi",
+          "greek": "ψι",
+          "capital": "Ψ"
         },
         {
-          "name": "omega",
-          "spoken": "ωμέγα",
-          "display": "Ω ω"
+          "english": "omega",
+          "greek": "ωμέγα",
+          "capital": "Ω"
+        }
+      ]
+    },
+    {
+      "name": "Alphabet (Small Letters)",
+      "idProperty": "english",
+      "spokenProperty": "greek",
+      "displayProperty": "small",
+      "queryProperty": "small",
+      "latinResponseProperty": "english",
+      "localeResponseProperty": "small",
+      "characters": [
+        {
+          "english": "alpha",
+          "greek": "άλφα",
+          "small": "α"
+        },
+        {
+          "english": "beta",
+          "greek": "βήτα",
+          "small": "β"
+        },
+        {
+          "english": "gamma",
+          "greek": "γάμμα",
+          "small": "γ"
+        },
+        {
+          "english": "delta",
+          "greek": "δέλτα",
+          "small": "δ"
+        },
+        {
+          "english": "epsilon",
+          "greek": "έψιλον",
+          "small": "ε"
+        },
+        {
+          "english": "zeta",
+          "greek": "ζήτα",
+          "small": "ζ"
+        },
+        {
+          "english": "eta",
+          "greek": "ήτα",
+          "small": "η"
+        },
+        {
+          "english": "theta",
+          "greek": "θήτα",
+          "small": "θ"
+        },
+        {
+          "english": "iota",
+          "greek": "ιώτα",
+          "small": "ι"
+        },
+        {
+          "english": "kappa",
+          "greek": "κάππα",
+          "small": "κ"
+        },
+        {
+          "english": "lambda",
+          "greek": "λάμβδα",
+          "small": "λ"
+        },
+        {
+          "english": "mu",
+          "greek": "μυ",
+          "small": "μ"
+        },
+        {
+          "english": "nu",
+          "greek": "νυ",
+          "small": "ν"
+        },
+        {
+          "english": "xi",
+          "greek": "ξι",
+          "small": "ξ"
+        },
+        {
+          "english": "omicron",
+          "greek": "όμικρον",
+          "small": "ο"
+        },
+        {
+          "english": "pi",
+          "greek": "πι",
+          "small": "π"
+        },
+        {
+          "english": "rho",
+          "greek": "ρώ",
+          "small": "ρ"
+        },
+        {
+          "english": "sigma",
+          "greek": "σίγμα",
+          "small": "σ"
+        },
+        {
+          "english": "tau",
+          "greek": "ταυ",
+          "small": "τ"
+        },
+        {
+          "english": "upsilon",
+          "greek": "ύψιλον",
+          "small": "υ"
+        },
+        {
+          "english": "phi",
+          "greek": "φι",
+          "small": "φ"
+        },
+        {
+          "english": "chi",
+          "greek": "χι",
+          "small": "χ"
+        },
+        {
+          "english": "psi",
+          "greek": "ψι",
+          "small": "ψ"
+        },
+        {
+          "english": "omega",
+          "greek": "ωμέγα",
+          "small": "ω"
         }
       ]
     }

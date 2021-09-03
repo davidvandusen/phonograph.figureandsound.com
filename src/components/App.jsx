@@ -220,10 +220,14 @@ class App extends Component {
       },
       () => {
         const character = this.getCharacter();
-        if (
-          this.state.response.toLowerCase().trim() ===
-          character[this.state.writingSystem.responseProperty].toLowerCase()
-        ) {
+        const normalizedResponse = this.state.response.trim().normalize('NFC');
+        const isCorrectLatin =
+          character[this.state.writingSystem.latinResponseProperty] ===
+          normalizedResponse.toLocaleLowerCase('en');
+        const isCorrectLocale =
+          character[this.state.writingSystem.localeResponseProperty] ===
+          normalizedResponse;
+        if (isCorrectLatin || isCorrectLocale) {
           this.proceedToNextCharacter();
         }
       }
@@ -299,7 +303,9 @@ class App extends Component {
               onFocus={this.closeMenu}
               onInput={this.handleResponseInput}
               placeholder={
-                this.getCharacter()[this.state.writingSystem.responseProperty]
+                this.getCharacter()[
+                  this.state.writingSystem.latinResponseProperty
+                ]
               }
               spellCheck={false}
               value={this.state.response}
