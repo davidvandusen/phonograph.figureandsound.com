@@ -166,6 +166,7 @@ html {
   order: 3;
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .writing-system-selector button {

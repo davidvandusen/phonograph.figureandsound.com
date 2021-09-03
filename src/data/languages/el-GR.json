@@ -3,7 +3,7 @@
   "writingSystems": [
     {
       "name": "Alphabet (Capital Letters)",
-      "idProperty": "english",
+      "idProperty": "capital",
       "spokenProperty": "greek",
       "displayProperty": "capital",
       "queryProperty": "capital",
@@ -134,7 +134,7 @@
     },
     {
       "name": "Alphabet (Small Letters)",
-      "idProperty": "english",
+      "idProperty": "small",
       "spokenProperty": "greek",
       "displayProperty": "small",
       "queryProperty": "small",

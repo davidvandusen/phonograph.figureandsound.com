@@ -1,10 +1,14 @@
 [
   {
+    "code": "ja-JP",
+    "name": "Japanese"
+  },
+  {
     "code": "el-GR",
     "name": "Greek"
   },
   {
-    "code": "ja-JP",
-    "name": "Japanese"
+    "code": "ru-RU",
+    "name": "Russian"
   }
 ]

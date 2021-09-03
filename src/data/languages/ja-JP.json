@@ -3,7 +3,7 @@
   "writingSystems": [
     {
       "name": "Hiragana",
-      "idProperty": "roman",
+      "idProperty": "hiragana",
       "spokenProperty": "hiragana",
       "displayProperty": "hiragana",
       "queryProperty": "hiragana",
@@ -286,7 +286,7 @@
     },
     {
       "name": "Katakana",
-      "idProperty": "roman",
+      "idProperty": "katakana",
       "spokenProperty": "katakana",
       "displayProperty": "katakana",
       "queryProperty": "katakana",

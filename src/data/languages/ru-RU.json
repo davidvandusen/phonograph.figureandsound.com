@@ -1,0 +1,357 @@
+{
+  "code": "ru-RU",
+  "writingSystems": [
+    {
+      "name": "Alphabet (Capital Letters)",
+      "idProperty": "capital",
+      "spokenProperty": "russian",
+      "displayProperty": "capital",
+      "queryProperty": "capital",
+      "latinResponseProperty": "english",
+      "localeResponseProperty": "capital",
+      "characters": [
+        {
+          "capital": "А",
+          "russian": "а",
+          "english": "a"
+        },
+        {
+          "capital": "Б",
+          "russian": "бэ",
+          "english": "be"
+        },
+        {
+          "capital": "В",
+          "russian": "вэ",
+          "english": "ve"
+        },
+        {
+          "capital": "Г",
+          "russian": "гэ",
+          "english": "ge"
+        },
+        {
+          "capital": "Д",
+          "russian": "дэ",
+          "english": "de"
+        },
+        {
+          "capital": "Е",
+          "russian": "е",
+          "english": "ye"
+        },
+        {
+          "capital": "Ё",
+          "russian": "ё",
+          "english": "yo"
+        },
+        {
+          "capital": "Ж",
+          "russian": "жэ",
+          "english": "zhe"
+        },
+        {
+          "capital": "З",
+          "russian": "зэ",
+          "english": "ze"
+        },
+        {
+          "capital": "И",
+          "russian": "и",
+          "english": "i"
+        },
+        {
+          "capital": "Й",
+          "russian": "и краткое",
+          "english": "i kratkaye"
+        },
+        {
+          "capital": "К",
+          "russian": "ка",
+          "english": "ka"
+        },
+        {
+          "capital": "Л",
+          "russian": "эль",
+          "english": "elj"
+        },
+        {
+          "capital": "М",
+          "russian": "эм",
+          "english": "em"
+        },
+        {
+          "capital": "Н",
+          "russian": "эн",
+          "english": "en"
+        },
+        {
+          "capital": "О",
+          "russian": "о",
+          "english": "o"
+        },
+        {
+          "capital": "П",
+          "russian": "пэ",
+          "english": "pe"
+        },
+        {
+          "capital": "Р",
+          "russian": "эр",
+          "english": "er"
+        },
+        {
+          "capital": "С",
+          "russian": "эс",
+          "english": "es"
+        },
+        {
+          "capital": "Т",
+          "russian": "тэ",
+          "english": "te"
+        },
+        {
+          "capital": "У",
+          "russian": "у",
+          "english": "u"
+        },
+        {
+          "capital": "Ф",
+          "russian": "эф",
+          "english": "ef"
+        },
+        {
+          "capital": "Х",
+          "russian": "ха",
+          "english": "ha"
+        },
+        {
+          "capital": "Ц",
+          "russian": "цэ",
+          "english": "tse"
+        },
+        {
+          "capital": "Ч",
+          "russian": "че",
+          "english": "che"
+        },
+        {
+          "capital": "Ш",
+          "russian": "ша",
+          "english": "sha"
+        },
+        {
+          "capital": "Щ",
+          "russian": "ща",
+          "english": "shsha"
+        },
+        {
+          "capital": "Ъ",
+          "russian": "твёрдый знак",
+          "english": "tvordyy znak"
+        },
+        {
+          "capital": "Ы",
+          "russian": "ы",
+          "english": "y"
+        },
+        {
+          "capital": "Ь",
+          "russian": "мягкий знак",
+          "english": "myagkiy znak"
+        },
+        {
+          "capital": "Э",
+          "russian": "э",
+          "english": "e"
+        },
+        {
+          "capital": "Ю",
+          "russian": "ю",
+          "english": "yu"
+        },
+        {
+          "capital": "Я",
+          "russian": "я",
+          "english": "ya"
+        }
+      ]
+    },
+    {
+      "name": "Alphabet (Small Letters)",
+      "idProperty": "small",
+      "spokenProperty": "russian",
+      "displayProperty": "small",
+      "queryProperty": "small",
+      "latinResponseProperty": "english",
+      "localeResponseProperty": "small",
+      "characters": [
+        {
+          "small": "а",
+          "russian": "а",
+          "english": "a"
+        },
+        {
+          "small": "б",
+          "russian": "бэ",
+          "english": "be"
+        },
+        {
+          "small": "в",
+          "russian": "вэ",
+          "english": "ve"
+        },
+        {
+          "small": "г",
+          "russian": "гэ",
+          "english": "ge"
+        },
+        {
+          "small": "д",
+          "russian": "дэ",
+          "english": "de"
+        },
+        {
+          "small": "е",
+          "russian": "е",
+          "english": "ye"
+        },
+        {
+          "small": "ё",
+          "russian": "ё",
+          "english": "yo"
+        },
+        {
+          "small": "ж",
+          "russian": "жэ",
+          "english": "zhe"
+        },
+        {
+          "small": "з",
+          "russian": "зэ",
+          "english": "ze"
+        },
+        {
+          "small": "и",
+          "russian": "и",
+          "english": "i"
+        },
+        {
+          "small": "й",
+          "russian": "и краткое",
+          "english": "i kratkaye"
+        },
+        {
+          "small": "к",
+          "russian": "ка",
+          "english": "ka"
+        },
+        {
+          "small": "л",
+          "russian": "эль",
+          "english": "elj"
+        },
+        {
+          "small": "м",
+          "russian": "эм",
+          "english": "em"
+        },
+        {
+          "small": "н",
+          "russian": "эн",
+          "english": "en"
+        },
+        {
+          "small": "о",
+          "russian": "о",
+          "english": "o"
+        },
+        {
+          "small": "п",
+          "russian": "пэ",
+          "english": "pe"
+        },
+        {
+          "small": "р",
+          "russian": "эр",
+          "english": "er"
+        },
+        {
+          "small": "с",
+          "russian": "эс",
+          "english": "es"
+        },
+        {
+          "small": "т",
+          "russian": "тэ",
+          "english": "te"
+        },
+        {
+          "small": "у",
+          "russian": "у",
+          "english": "u"
+        },
+        {
+          "small": "ф",
+          "russian": "эф",
+          "english": "ef"
+        },
+        {
+          "small": "х",
+          "russian": "ха",
+          "english": "ha"
+        },
+        {
+          "small": "ц",
+          "russian": "цэ",
+          "english": "tse"
+        },
+        {
+          "small": "ч",
+          "russian": "че",
+          "english": "che"
+        },
+        {
+          "small": "ш",
+          "russian": "ша",
+          "english": "sha"
+        },
+        {
+          "small": "щ",
+          "russian": "ща",
+          "english": "shsha"
+        },
+        {
+          "small": "ъ",
+          "russian": "твёрдый знак",
+          "english": "tvordyy znak"
+        },
+        {
+          "small": "ы",
+          "russian": "ы",
+          "english": "y"
+        },
+        {
+          "small": "ь",
+          "russian": "мягкий знак",
+          "english": "myagkiy znak"
+        },
+        {
+          "small": "э",
+          "russian": "э",
+          "english": "e"
+        },
+        {
+          "small": "ю",
+          "russian": "ю",
+          "english": "yu"
+        },
+        {
+          "small": "я",
+          "russian": "я",
+          "english": "ya"
+        }
+      ]
+    }
+  ]
+}
