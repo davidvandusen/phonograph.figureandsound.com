@@ -1,5 +1,46 @@
+:root {
+  --shade-1:  hsl(190, 50%, 10%);
+  --shade-2:  hsl(191, 52%, 20%);
+  --shade-3:  hsl(192, 54%, 30%);
+  --shade-4:  hsl(193, 56%, 40%);
+  --shade-5:  hsl(194, 58%, 50%);
+  --shade-6:  hsl(195, 60%, 60%);
+  --shade-7:  hsl(196, 62%, 70%);
+  --shade-8:  hsl(197, 64%, 80%);
+  --shade-9:  hsl(198, 66%, 90%);
+  --shade-10: hsl(199, 68%, 99%);
+  --hilite-1: hsl(300, 52%, 52%);
+  --app-background-color: var(--shade-10);
+  --character-list-background-color: var(--shade-8);
+  --character-list-item-background-color: white;
+  --character-list-item-text-color: var(--shade-1);
+  --character-list-active-background-color: var(--shade-5);
+  --character-list-active-text-color: white;
+  --query-text-color: var(--shade-2);
+  --query-shadow-color: var(--shade-9);
+  --response-background-color: var(--shade-8);
+  --response-timer-color: var(--shade-7);
+  --response-text-color: var(--shade-3);
+  --response-congratulations-text-color: var(--hilite-1);
+  --summary-background-color: var(--shade-9);
+  --summary-border-color: var(--shade-5);
+  --summary-text-color: var(--shade-2);
+  --summary-hover-background-color: var(--shade-8);
+  --summary-hover-text-color: var(--shade-1);
+  --summary-open-background-color: var(--shade-7);
+  --summary-open-text-color: var(--shade-1);
+  --menu-background-color: white;
+  --menu-border-color: var(--shade-6);
+  --menu-text-color: var(--shade-1);
+  --menu-item-hover-background-color: var(--shade-8);
+  --menu-item-hover-text-color: var(--shade-1);
+  --menu-item-current-background-color: var(--shade-9);
+  --menu-item-current-text-color: var(--shade-1);
+  --legal-text-color: var(--shade-5);
+}
+
 html {
-  color: #353535;
+  background: var(--character-list-background-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
     'Segoe UI', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, Arial,
     sans-serif;
@@ -13,6 +54,7 @@ html {
 }
 
 .app-layout {
+  background: var(--app-background-color);
   align-content: center;
   bottom: 0;
   display: flex;
@@ -24,8 +66,8 @@ html {
 }
 
 .character-list {
-  background: #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  background: var(--character-list-background-color);
+  border-bottom: 1px solid var(--character-list-background-color);
   margin: 0;
   order: 1;
   overflow: hidden;
@@ -34,7 +76,8 @@ html {
 }
 
 .character-list li {
-  background: #fff;
+  background: var(--character-list-item-background-color);
+  color: var(--character-list-item-text-color);
   display: inline-block;
   font-size: 1.5rem;
   height: 1.5rem;
@@ -44,8 +87,8 @@ html {
 }
 
 .character-list .active {
-  background: #b5b5b5;
-  color: #fff;
+  background: var(--character-list-active-background-color);
+  color: var(--character-list-active-text-color);
 }
 
 .character-query {
@@ -61,7 +104,8 @@ html {
 }
 
 .character-query label {
-  border-bottom: 0.5rem solid #f5f5f5;
+  border-bottom: 0.5rem solid var(--query-shadow-color);
+  color: var(--query-text-color);
   display: inline-block;
   margin: 2rem 0;
   opacity: 1;
@@ -109,7 +153,7 @@ html {
 }
 
 .legal p {
-  color: #b5b5b5;
+  color: var(--legal-text-color);
   margin: 0 0 0.5rem;
   text-align: center;
 }
@@ -121,10 +165,10 @@ html {
 }
 
 .response-prompt input {
-  background: #ededed;
+  background: var(--response-background-color);
   border: 0 none;
   box-sizing: border-box;
-  color: #353535;
+  color: var(--response-text-color);
   display: block;
   font-family: inherit;
   font-size: 4rem;
@@ -135,22 +179,22 @@ html {
 }
 
 .transition-congratulate .response-prompt input {
-  color: #e52dbc;
+  color: var(--response-congratulations-text-color);
   transition: color 125ms 250ms;
 }
 
 .transition-out .response-prompt input {
-  color: #ededed;
+  color: var(--response-text-color);
   transition: color 125ms 250ms;
 }
 
 .response-prompt input::placeholder {
   background-position-x: 100%;
-  color: #ededed;
+  color: var(--response-background-color);
 }
 
 .transition-in .response-prompt input::placeholder {
-  background: linear-gradient(90deg, #d5d5d5 50%, #ededed 50%);
+  background: linear-gradient(90deg, var(--response-timer-color) 50%, var(--response-background-color) 50%);
   background-position-x: 0;
   background-size: 200%;
   transition: background-position-x 27s 3s linear;
@@ -173,7 +217,7 @@ html {
   background: transparent;
   border: 0 none;
   box-sizing: border-box;
-  color: #353535;
+  color: var(--menu-text-color);
   cursor: pointer;
   display: block;
   font-size: 1.5rem;
@@ -182,11 +226,13 @@ html {
 }
 
 .writing-system-selector button:hover {
-  background: #e5e5e5;
+  background: var(--menu-item-hover-background-color);
+  color: var(--menu-item-hover-text-color);
 }
 
 .writing-system-selector button.current {
-  background: #ededed;
+  background: var(--menu-item-current-background-color);
+  color: var(--menu-item-current-text-color);
 }
 
 .writing-system-selector li {
@@ -194,8 +240,8 @@ html {
 }
 
 .writing-system-selector menu {
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: var(--menu-background-color);
+  border: 1px solid var(--menu-border-color);
   border-radius: 0.25rem;
   bottom: 100%;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
@@ -208,10 +254,10 @@ html {
 }
 
 .writing-system-selector summary {
-  background: #f5f5f5;
-  border: 1px solid #e5e5e5;
+  background: var(--summary-background-color);
+  border: 1px solid var(--summary-border-color);
   border-radius: 0.25rem;
-  color: #858585;
+  color: var(--summary-text-color);
   cursor: pointer;
   font-size: 1.5rem;
   list-style: none;
@@ -228,11 +274,12 @@ html {
 }
 
 .writing-system-selector summary:hover {
-  background: #e5e5e5;
+  background: var(--summary-hover-background-color);
+  color: var(--summary-hover-text-color);
 }
 
 .writing-system-selector[open] summary {
-  background: #d5d5d5;
-  color: #656565;
+  background: var(--summary-open-background-color);
+  color: var(--summary-open-text-color);
   transition: none;
 }
