@@ -285,7 +285,7 @@
     },
     {
       "name": "Katakana",
-      "idProperty": "katakana",
+      "idProperty": "roman",
       "spokenProperty": "katakana",
       "displayProperty": "katakana",
       "queryProperty": "katakana",
