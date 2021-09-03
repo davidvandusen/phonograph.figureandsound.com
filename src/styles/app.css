@@ -17,7 +17,6 @@ html {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   left: 0;
   position: absolute;
   right: 0;
@@ -50,7 +49,12 @@ html {
 }
 
 .character-query {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   font-size: 8rem;
+  justify-content: center;
   line-height: 8rem;
   order: 2;
   text-align: center;
@@ -100,9 +104,20 @@ html {
   transform: translateX(-3rem);
 }
 
+.legal {
+  order: 5;
+}
+
+.legal p {
+  color: #b5b5b5;
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
 .response-prompt {
   margin: 0 auto 2rem;
   max-width: 50rem;
+  width: 100%;
 }
 
 .response-prompt input {
