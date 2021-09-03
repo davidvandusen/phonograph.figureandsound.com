@@ -1,0 +1,164 @@
+{
+  "code": "zh-CN",
+  "writingSystems": [
+    {
+      "name": "Zhuyin Fuhao (Bopomofo)",
+      "idProperty": "zhuyin",
+      "spokenProperty": "zhuyin",
+      "displayProperty": "zhuyin",
+      "queryProperty": "zhuyin",
+      "latinResponseProperty": "pinyin",
+      "localeResponseProperty": "zhuyin",
+      "characters": [
+        {
+          "zhuyin": "ㄅ",
+          "pinyin": "b"
+        },
+        {
+          "zhuyin": "ㄆ",
+          "pinyin": "p"
+        },
+        {
+          "zhuyin": "ㄇ",
+          "pinyin": "m"
+        },
+        {
+          "zhuyin": "ㄈ",
+          "pinyin": "f"
+        },
+        {
+          "zhuyin": "ㄉ",
+          "pinyin": "d"
+        },
+        {
+          "zhuyin": "ㄊ",
+          "pinyin": "t"
+        },
+        {
+          "zhuyin": "ㄋ",
+          "pinyin": "n"
+        },
+        {
+          "zhuyin": "ㄌ",
+          "pinyin": "l"
+        },
+        {
+          "zhuyin": "ㄍ",
+          "pinyin": "g"
+        },
+        {
+          "zhuyin": "ㄎ",
+          "pinyin": "k"
+        },
+        {
+          "zhuyin": "ㄏ",
+          "pinyin": "h"
+        },
+        {
+          "zhuyin": "ㄐ",
+          "pinyin": "j"
+        },
+        {
+          "zhuyin": "ㄑ",
+          "pinyin": "q"
+        },
+        {
+          "zhuyin": "ㄒ",
+          "pinyin": "x"
+        },
+        {
+          "zhuyin": "ㄓ",
+          "pinyin": "zh"
+        },
+        {
+          "zhuyin": "ㄔ",
+          "pinyin": "ch"
+        },
+        {
+          "zhuyin": "ㄕ",
+          "pinyin": "sh"
+        },
+        {
+          "zhuyin": "ㄖ",
+          "pinyin": "r"
+        },
+        {
+          "zhuyin": "ㄗ",
+          "pinyin": "z"
+        },
+        {
+          "zhuyin": "ㄘ",
+          "pinyin": "c"
+        },
+        {
+          "zhuyin": "ㄙ",
+          "pinyin": "s"
+        },
+        {
+          "zhuyin": "ㄚ",
+          "pinyin": "a"
+        },
+        {
+          "zhuyin": "ㄛ",
+          "pinyin": "o"
+        },
+        {
+          "zhuyin": "ㄜ",
+          "pinyin": "e"
+        },
+        {
+          "zhuyin": "ㄝ",
+          "pinyin": "eh"
+        },
+        {
+          "zhuyin": "ㄞ",
+          "pinyin": "ai"
+        },
+        {
+          "zhuyin": "ㄟ",
+          "pinyin": "ei"
+        },
+        {
+          "zhuyin": "ㄠ",
+          "pinyin": "au"
+        },
+        {
+          "zhuyin": "ㄡ",
+          "pinyin": "ou"
+        },
+        {
+          "zhuyin": "ㄢ",
+          "pinyin": "an"
+        },
+        {
+          "zhuyin": "ㄣ",
+          "pinyin": "en"
+        },
+        {
+          "zhuyin": "ㄤ",
+          "pinyin": "ang"
+        },
+        {
+          "zhuyin": "ㄥ",
+          "pinyin": "eng"
+        },
+        {
+          "zhuyin": "ㄦ",
+          "pinyin": "er"
+        },
+        {
+          "zhuyin": "ㄧ",
+          "pinyin": "i"
+        },
+        {
+          "zhuyin": "ㄨ",
+          "pinyin": "u"
+        },
+        {
+          "zhuyin": "ㄩ",
+          "pinyin": "ü"
+        }
+      ]
+    }
+  ]
+}

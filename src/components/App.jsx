@@ -8,11 +8,13 @@ import languages from '../data/languages/index.json';
 import elGR from '../data/languages/el-GR.json';
 import jaJP from '../data/languages/ja-JP.json';
 import ruRU from '../data/languages/ru-RU.json';
+import zhCN from '../data/languages/zh-CN.json';
 
 const languageData = {
   'el-GR': elGR,
   'ja-JP': jaJP,
   'ru-RU': ruRU,
+  'zh-CN': zhCN,
 };
 
 languages.forEach(language => {
