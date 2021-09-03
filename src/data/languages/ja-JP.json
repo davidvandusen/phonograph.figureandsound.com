@@ -50,18 +50,6 @@
           "roman": "ko"
         },
         {
-          "hiragana": "きゃ",
-          "roman": "kya"
-        },
-        {
-          "hiragana": "きゅ",
-          "roman": "kyu"
-        },
-        {
-          "hiragana": "きょ",
-          "roman": "kyo"
-        },
-        {
           "hiragana": "さ",
           "roman": "sa"
         },
@@ -80,18 +68,6 @@
         {
           "hiragana": "そ",
           "roman": "so"
-        },
-        {
-          "hiragana": "しゃ",
-          "roman": "sha"
-        },
-        {
-          "hiragana": "しゅ",
-          "roman": "shu"
-        },
-        {
-          "hiragana": "しょ",
-          "roman": "sho"
         },
         {
           "hiragana": "た",
@@ -114,18 +90,6 @@
           "roman": "to"
         },
         {
-          "hiragana": "ちゃ",
-          "roman": "cha"
-        },
-        {
-          "hiragana": "ちゅ",
-          "roman": "chu"
-        },
-        {
-          "hiragana": "ちょ",
-          "roman": "cho"
-        },
-        {
           "hiragana": "な",
           "roman": "na"
         },
@@ -144,18 +108,6 @@
         {
           "hiragana": "の",
           "roman": "no"
-        },
-        {
-          "hiragana": "にゃ",
-          "roman": "nya"
-        },
-        {
-          "hiragana": "にゅ",
-          "roman": "nyu"
-        },
-        {
-          "hiragana": "にょ",
-          "roman": "nyo"
         },
         {
           "hiragana": "は",
@@ -178,18 +130,6 @@
           "roman": "ho"
         },
         {
-          "hiragana": "ひゃ",
-          "roman": "hya"
-        },
-        {
-          "hiragana": "ひゅ",
-          "roman": "hyu"
-        },
-        {
-          "hiragana": "ひょ",
-          "roman": "hyo"
-        },
-        {
           "hiragana": "ま",
           "roman": "ma"
         },
@@ -208,18 +148,6 @@
         {
           "hiragana": "も",
           "roman": "mo"
-        },
-        {
-          "hiragana": "みゃ",
-          "roman": "mya"
-        },
-        {
-          "hiragana": "みゅ",
-          "roman": "myu"
-        },
-        {
-          "hiragana": "みょ",
-          "roman": "myo"
         },
         {
           "hiragana": "や",
@@ -254,18 +182,6 @@
           "roman": "ro"
         },
         {
-          "hiragana": "りゃ",
-          "roman": "rya"
-        },
-        {
-          "hiragana": "りゅ",
-          "roman": "ryu"
-        },
-        {
-          "hiragana": "りょ",
-          "roman": "ryo"
-        },
-        {
           "hiragana": "わ",
           "roman": "wa"
         },
@@ -294,18 +210,6 @@
           "roman": "go"
         },
         {
-          "hiragana": "ぎゃ",
-          "roman": "gya"
-        },
-        {
-          "hiragana": "ぎゅ",
-          "roman": "gyu"
-        },
-        {
-          "hiragana": "ぎょ",
-          "roman": "gyo"
-        },
-        {
           "hiragana": "ざ",
           "roman": "za"
         },
@@ -324,18 +228,6 @@
         {
           "hiragana": "ぞ",
           "roman": "zo"
-        },
-        {
-          "hiragana": "じゃ",
-          "roman": "ja"
-        },
-        {
-          "hiragana": "じゅ",
-          "roman": "ju"
-        },
-        {
-          "hiragana": "じょ",
-          "roman": "jo"
         },
         {
           "hiragana": "だ",
@@ -370,18 +262,6 @@
           "roman": "bo"
         },
         {
-          "hiragana": "びゃ",
-          "roman": "bya"
-        },
-        {
-          "hiragana": "びゅ",
-          "roman": "byu"
-        },
-        {
-          "hiragana": "びょ",
-          "roman": "byo"
-        },
-        {
           "hiragana": "ぱ",
           "roman": "pa"
         },
@@ -400,18 +280,6 @@
         {
           "hiragana": "ぽ",
           "roman": "po"
-        },
-        {
-          "hiragana": "ぴゃ",
-          "roman": "pya"
-        },
-        {
-          "hiragana": "ぴゅ",
-          "roman": "pyu"
-        },
-        {
-          "hiragana": "ぴょ",
-          "roman": "pyo"
         }
       ]
     },
@@ -464,18 +332,6 @@
           "roman": "ko"
         },
         {
-          "katakana": "キャ",
-          "roman": "kya"
-        },
-        {
-          "katakana": "キュ",
-          "roman": "kyu"
-        },
-        {
-          "katakana": "キョ",
-          "roman": "kyo"
-        },
-        {
           "katakana": "サ",
           "roman": "sa"
         },
@@ -494,18 +350,6 @@
         {
           "katakana": "ソ",
           "roman": "so"
-        },
-        {
-          "katakana": "シャ",
-          "roman": "sha"
-        },
-        {
-          "katakana": "シュ",
-          "roman": "shu"
-        },
-        {
-          "katakana": "ショ",
-          "roman": "sho"
         },
         {
           "katakana": "タ",
@@ -528,18 +372,6 @@
           "roman": "to"
         },
         {
-          "katakana": "チャ",
-          "roman": "cha"
-        },
-        {
-          "katakana": "チュ",
-          "roman": "chu"
-        },
-        {
-          "katakana": "チョ",
-          "roman": "cho"
-        },
-        {
           "katakana": "ナ",
           "roman": "na"
         },
@@ -558,18 +390,6 @@
         {
           "katakana": "ノ",
           "roman": "no"
-        },
-        {
-          "katakana": "ニャ",
-          "roman": "nya"
-        },
-        {
-          "katakana": "ニュ",
-          "roman": "nyu"
-        },
-        {
-          "katakana": "ニョ",
-          "roman": "nyo"
         },
         {
           "katakana": "ハ",
@@ -592,18 +412,6 @@
           "roman": "ho"
         },
         {
-          "katakana": "ヒャ",
-          "roman": "hya"
-        },
-        {
-          "katakana": "ヒュ",
-          "roman": "hyu"
-        },
-        {
-          "katakana": "ヒョ",
-          "roman": "hyo"
-        },
-        {
           "katakana": "マ",
           "roman": "ma"
         },
@@ -622,18 +430,6 @@
         {
           "katakana": "モ",
           "roman": "mo"
-        },
-        {
-          "katakana": "ミャ",
-          "roman": "mya"
-        },
-        {
-          "katakana": "ミュ",
-          "roman": "myu"
-        },
-        {
-          "katakana": "ミョ",
-          "roman": "myo"
         },
         {
           "katakana": "ヤ",
@@ -668,18 +464,6 @@
           "roman": "ro"
         },
         {
-          "katakana": "リャ",
-          "roman": "rya"
-        },
-        {
-          "katakana": "リュ",
-          "roman": "ryu"
-        },
-        {
-          "katakana": "リョ",
-          "roman": "ryo"
-        },
-        {
           "katakana": "ワ",
           "roman": "wa"
         },
@@ -706,18 +490,6 @@
         {
           "katakana": "ゴ",
           "roman": "go"
-        },
-        {
-          "katakana": "ギャ",
-          "roman": "gya"
-        },
-        {
-          "katakana": "ギュ",
-          "roman": "gyu"
-        },
-        {
-          "katakana": "ギョ",
-          "roman": "gyo"
         },
         {
           "katakana": "ザ",
@@ -784,18 +556,6 @@
           "roman": "bo"
         },
         {
-          "katakana": "ビャ",
-          "roman": "bya"
-        },
-        {
-          "katakana": "ビュ",
-          "roman": "byu"
-        },
-        {
-          "katakana": "ビョ",
-          "roman": "byo"
-        },
-        {
           "katakana": "パ",
           "roman": "pa"
         },
@@ -814,18 +574,6 @@
         {
           "katakana": "ポ",
           "roman": "po"
-        },
-        {
-          "katakana": "ピャ",
-          "roman": "pya"
-        },
-        {
-          "katakana": "ピュ",
-          "roman": "pyu"
-        },
-        {
-          "katakana": "ピョ",
-          "roman": "pyo"
         }
       ]
     }
