@@ -1,0 +1,16 @@
+name: Code Quality
+on:
+  pull_request:
+    branches: [ $default-branch ]
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn prettier --check src/**/*.{js,jsx,json,css}
