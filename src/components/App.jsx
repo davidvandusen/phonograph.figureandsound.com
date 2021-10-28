@@ -317,7 +317,11 @@ class App extends Component {
             />
           </div>
         </div>
-        <div className="legal"><p><small>© 2021 David VanDusen</small></p></div>
+        <div className="legal">
+          <p>
+            <small>© 2021 David VanDusen</small>
+          </p>
+        </div>
       </div>
     );
   }

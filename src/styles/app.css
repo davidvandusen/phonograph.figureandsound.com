@@ -1,13 +1,13 @@
 :root {
-  --shade-1:  hsl(196, 59%,  8%);
-  --shade-2:  hsl(196, 58%, 18%);
-  --shade-3:  hsl(196, 57%, 28%);
-  --shade-4:  hsl(196, 56%, 38%);
-  --shade-5:  hsl(196, 55%, 48%);
-  --shade-6:  hsl(196, 54%, 58%);
-  --shade-7:  hsl(196, 53%, 68%);
-  --shade-8:  hsl(196, 52%, 78%);
-  --shade-9:  hsl(196, 51%, 88%);
+  --shade-1: hsl(196, 59%, 8%);
+  --shade-2: hsl(196, 58%, 18%);
+  --shade-3: hsl(196, 57%, 28%);
+  --shade-4: hsl(196, 56%, 38%);
+  --shade-5: hsl(196, 55%, 48%);
+  --shade-6: hsl(196, 54%, 58%);
+  --shade-7: hsl(196, 53%, 68%);
+  --shade-8: hsl(196, 52%, 78%);
+  --shade-9: hsl(196, 51%, 88%);
   --shade-10: hsl(196, 50%, 98%);
   --app-background-color: var(--shade-10);
   --character-list-background-color: var(--shade-8);
@@ -215,7 +215,11 @@ html {
 }
 
 .transition-in .response-prompt input::placeholder {
-  background: linear-gradient(90deg, var(--response-timer-color) 50%, var(--response-background-color) 50%);
+  background: linear-gradient(
+    90deg,
+    var(--response-timer-color) 50%,
+    var(--response-background-color) 50%
+  );
   background-position-x: 0;
   background-size: 200%;
   transition: background-position-x 27s 3s linear;
