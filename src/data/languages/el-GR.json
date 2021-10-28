@@ -134,7 +134,7 @@
     },
     {
       "name": "Alphabet (Small Letters)",
-      "idProperty": "small",
+       "idProperty": "small",
       "spokenProperty": "greek",
       "displayProperty": "small",
       "queryProperty": "small",
