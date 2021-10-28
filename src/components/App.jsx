@@ -300,7 +300,7 @@ class App extends Component {
           <div className="response-prompt">
             <input
               ref={this.responseInput}
-              autoCapitalize="false"
+              autoCapitalize="none"
               autoComplete="false"
               autoCorrect="false"
               autoFocus="true"
