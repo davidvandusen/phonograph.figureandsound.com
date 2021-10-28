@@ -1,7 +1,8 @@
 name: Code Quality
 on:
   pull_request:
-    branches: [ $default-branch ]
+    branches:
+      - master
 jobs:
   prettier:
     name: Prettier
